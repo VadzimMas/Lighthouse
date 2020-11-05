@@ -13,7 +13,7 @@ body {
                 background-color: black;
                 &__bg {
                     width: 100%;
-                    height: 90%;
+                    height: 100%;
                     .img {
                         position: absolute;
                         width: 105%;
@@ -39,12 +39,11 @@ body {
                     }
                     .light-1 {
                         position: absolute;
-                        top: 95%;
-                        left: 30%;
-                        width: 1%;
-                        height: 1%;
+                        @include adaptiveBottom(120, 0);
+                        left: 20%;
                         border-radius: 50%;
-                        box-shadow: 0 0 150px 100px rgb(255, 0, 221);
+                        // box-shadow: 0 0 150px 100px rgb(255, 0, 221);
+                        @include adaptiveBoxShadow(0, 0, 150, 100, 0, 0, 50, 40, rgb(255, 0, 221));
 
                         animation-name: light-1-anim;
                         animation-duration: 6s;
@@ -66,12 +65,12 @@ body {
                     }
                     .light-2 {
                         position: absolute;
-                        top: 95%;
+                        @include adaptiveBottom(120, 0);
+
                         left: 50%;
-                        width: 1%;
-                        height: 1%;
                         border-radius: 50%;
-                        box-shadow: 0 0 150px 100px rgb(89, 0, 255);
+                        // box-shadow: 0 0 150px 100px rgb(89, 0, 255);
+                        @include adaptiveBoxShadow(0, 0, 150, 100, 0, 0, 50, 40, rgb(89, 0, 255));
 
                         animation-name: light-2-anim;
                         animation-duration: 8s;
@@ -93,12 +92,12 @@ body {
                     }
                     .light-3 {
                         position: absolute;
-                        top: 95%;
-                        left: 70%;
-                        width: 1%;
-                        height: 1%;
+                        @include adaptiveBottom(120, 0);
+                        left: 80%;
                         border-radius: 50%;
-                        box-shadow: 0 0 150px 100px rgb(255, 187, 0);
+                        // box-shadow: 0 0 150px 100px rgb(255, 187, 0);
+
+                        @include adaptiveBoxShadow(0, 0, 150, 100, 0, 0, 50, 40, rgb(255, 187, 0));
 
                         animation-name: light-3-anim;
                         animation-duration: 7s;
@@ -118,21 +117,11 @@ body {
                             }
                         }
                     }
-                    .black {
-                        position: absolute;
-                        bottom: -20%;
-                        left: 0%;
-                        width: 150%;
-                        height: 25%;
-                        background-color: black;
-                    }
                 }
 
                 &__rope-1 {
                     width: 100%;
                     height: 100%;
-                    top: 0%;
-                    left: -5%;
 
                     // animation-name: rope-1-anim;
                     animation-duration: 50s;
@@ -150,17 +139,20 @@ body {
                         }
                     }
                     .rope {
+                        // display: none;
+
                         position: absolute;
                         top: 0%;
-                        left: -15%;
-                        width: 130%;
-                        height: 100%;
+                        @include adaptiveHeight(1080, 300);
+                        @include adaptiveLeft(-327, -45);
+                        @include adaptiveWidth(2574, 400);
+
                         background: url("../img/rope.png") top center / 100% 30% no-repeat;
                     }
                     .birds {
                         position: absolute;
-                        top: 14.8%;
-                        left: 80%;
+                        top: 15.8%;
+                        left: 70%;
                         width: 12%;
                         height: 18%;
                         background: url("../img/clouds/board-birds.png") 0 0 / 100% 100% no-repeat;
@@ -181,10 +173,10 @@ body {
                     }
                     .cloud-1 {
                         position: absolute;
-                        top: 20%;
+                        top: 19.6%;
                         left: 32%;
-                        width: 12%;
-                        height: 18%;
+                        width: 10%;
+                        height: 14%;
                         background: url("../img/clouds/board-cloud-1.png") 0 0 / 100% 100% no-repeat;
 
                         animation-name: rope-1-cloud-1-anim;
@@ -203,14 +195,37 @@ body {
                     }
                     .cloud-2 {
                         position: absolute;
-                        top: 15%;
-                        left: 10%;
+                        top: 14%;
+                        left: 15%;
                         width: 10%;
-                        height: 15%;
+                        height: 14%;
                         background: url("../img/clouds/board-cloud-2.png") 0 0 / 100% 100% no-repeat;
 
                         animation-name: rope-1-cloud-2-anim;
                         animation-duration: 5s;
+                        transform-origin: top center;
+                        animation-iteration-count: infinite;
+                        animation-direction: alternate;
+                        @keyframes rope-1-cloud-2-anim {
+                            0% {
+                                transform: rotateZ(10deg);
+                            }
+                            100% {
+                                transform: rotateZ(-10deg);
+                            }
+                        }
+                    }
+
+                    .cloud-3 {
+                        position: absolute;
+                        top: 19.5%;
+                        left: 58%;
+                        width: 10%;
+                        height: 14%;
+                        background: url("../img/clouds/board-cloud-2.png") 0 0 / 100% 100% no-repeat;
+
+                        animation-name: rope-1-cloud-2-anim;
+                        animation-duration: 4s;
                         transform-origin: top center;
                         animation-iteration-count: infinite;
                         animation-direction: alternate;
@@ -246,18 +261,18 @@ body {
                     .rope {
                         position: absolute;
                         top: -8%;
-                        left: -20%;
-                        width: 140%;
-                        height: 100%;
+                        @include adaptiveHeight(1080, 300);
+                        @include adaptiveLeft(-327, -45);
+                        @include adaptiveWidth(2574, 400);
                         background: url("../img/rope.png") top center / 100% 30% no-repeat;
                     }
 
                     .cloud-1 {
                         position: absolute;
-                        top: 12.8%;
+                        top: 20.3%;
                         left: 50%;
-                        width: 14%;
-                        height: 20%;
+                        width: 10%;
+                        height: 16%;
                         background: url("../img/clouds/board-cloud-4.png") 0 0 / 100% 100% no-repeat;
 
                         animation-name: rope-2-cloud-1-anim;
@@ -276,10 +291,10 @@ body {
                     }
                     .cloud-2 {
                         position: absolute;
-                        top: 3%;
-                        left: -5%;
-                        width: 10%;
-                        height: 14%;
+                        top: 5%;
+                        left: -2%;
+                        width: 12%;
+                        height: 16%;
                         background: url("../img/clouds/board-cloud-2.png") 0 0 / 100% 100% no-repeat;
 
                         animation-name: rope-2-cloud-2-anim;
@@ -298,10 +313,10 @@ body {
                     }
                     .cloud-3 {
                         position: absolute;
-                        top: 3%;
-                        left: 95%;
-                        width: 10%;
-                        height: 14%;
+                        top: 12%;
+                        left: 78%;
+                        width: 12%;
+                        height: 16%;
                         background: url("../img/clouds/board-cloud-3.png") 0 0 / 100% 100% no-repeat;
 
                         animation-name: rope-2-cloud-2-anim;
@@ -322,8 +337,6 @@ body {
                 &__rope-3 {
                     width: 100%;
                     height: 100%;
-                    top: 0%;
-                    left: -5%;
 
                     // animation-name: rope-3-anim;
                     animation-duration: 40s;
@@ -342,17 +355,19 @@ body {
                     }
 
                     .rope {
+                        // display: none;
+
                         position: absolute;
                         top: -15%;
-                        left: -15%;
-                        width: 130%;
-                        height: 100%;
+                        @include adaptiveHeight(1080, 300);
+                        @include adaptiveLeft(-327, -45);
+                        @include adaptiveWidth(2574, 400);
                         background: url("../img/rope.png") top center / 100% 30% no-repeat;
                     }
                     .birds {
                         position: absolute;
-                        top: 3.5%;
-                        left: 20%;
+                        top: 16.3%;
+                        left: 18%;
                         width: 16%;
                         height: 24%;
                         background: url("../img/clouds/board-birds.png") 0 0 / 100% 100% no-repeat;
@@ -373,8 +388,8 @@ body {
                     }
                     .cloud-1 {
                         position: absolute;
-                        top: -1.5%;
-                        left: 85%;
+                        top: 4.6%;
+                        left: 90%;
                         width: 10%;
                         height: 18%;
                         background: url("../img/clouds/board-cloud-1.png") 0 0 / 100% 100% no-repeat;
@@ -395,14 +410,14 @@ body {
                     }
                     .cloud-2 {
                         position: absolute;
-                        top: 3.5%;
+                        top: 17%;
                         left: 65%;
                         width: 14%;
                         height: 22%;
                         background: url("../img/clouds/board-cloud-2.png") 0 0 / 100% 100% no-repeat;
 
                         animation-name: rope-3-cloud-2-anim;
-                        animation-duration: 5s;
+                        animation-duration: 6s;
                         transform-origin: top center;
                         animation-iteration-count: infinite;
                         animation-direction: alternate;
@@ -417,10 +432,10 @@ body {
                     }
                     .cloud-3 {
                         position: absolute;
-                        top: -4.8%;
-                        left: -5%;
-                        width: 14%;
-                        height: 22%;
+                        top: 10.8%;
+                        left: 5%;
+                        width: 18%;
+                        height: 28%;
                         background: url("../img/clouds/board-cloud-3.png") 0 0 / 100% 100% no-repeat;
 
                         animation-name: rope-3-cloud-3-anim;
@@ -439,10 +454,10 @@ body {
                     }
                     .cloud-4 {
                         position: absolute;
-                        top: 5.8%;
-                        left: 40%;
-                        width: 14%;
-                        height: 22%;
+                        top: 20.5%;
+                        left: 37%;
+                        width: 18%;
+                        height: 28%;
                         background: url("../img/clouds/board-cloud-3.png") 0 0 / 100% 100% no-repeat;
 
                         animation-name: rope-3-cloud-4-anim;
@@ -466,10 +481,10 @@ body {
                     height: 100%;
                     .img {
                         position: absolute;
-                        bottom: 13%;
                         left: -15%;
                         width: 130%;
-                        height: 100%;
+                        @include adaptiveBottom(130, 0);
+                        @include adaptiveHeight(1080, 250);
                         background: url("../img/waves/wave-plain.png") center bottom / 10% 10% repeat-x;
 
                         animation-name: wave-1-anim;
@@ -492,10 +507,10 @@ body {
                     height: 100%;
                     .img {
                         position: absolute;
-                        bottom: 10%;
                         left: -15%;
                         width: 130%;
-                        height: 100%;
+                        @include adaptiveBottom(105, 0);
+                        @include adaptiveHeight(1080, 250);
                         background: url("../img/waves/wave-paint.png") center bottom / 12% 12% repeat-x;
 
                         animation-name: wave-2-anim;
@@ -518,10 +533,10 @@ body {
                     height: 100%;
                     .img {
                         position: absolute;
-                        bottom: 6%;
                         left: -15%;
                         width: 130%;
-                        height: 100%;
+                        @include adaptiveBottom(65, 0);
+                        @include adaptiveHeight(1080, 250);
                         background: url("../img/waves/wave-plain.png") center bottom / 15% 15% repeat-x;
 
                         animation-name: wave-3-anim;
@@ -545,9 +560,9 @@ body {
                     .img {
                         position: absolute;
                         @include adaptiveBottom(50, 0);
-                        @include adaptiveLeft(1600, 200);
-                        @include adaptiveWidth(250, 80);
-                        @include adaptiveHeight(500, 150);
+                        @include adaptiveLeft(1500, 220);
+                        @include adaptiveWidth(260, 70);
+                        @include adaptiveHeight(500, 130);
                         background: url("../img/lighthouse.png") center bottom / 100% 100% no-repeat;
 
                         animation-name: liighthouse-anim;
@@ -566,6 +581,33 @@ body {
                                 transform: rotateZ(-10deg) rotateX(0deg) translate3d(-10%, 5%, 0);
                             }
                         }
+
+                        .light {
+                            display: inline;
+                            position: absolute;
+                            top: 25%;
+                            left: 50%;
+                            // box-shadow: 0 0 150px 100px rgba(255, 0, 221, 0.637);
+                            @include adaptiveBoxShadow(0, 0, 150, 100, 0, 0, 150, 60, rgba(255, 0, 221, 0.637));
+
+                            animation-name: light-anim;
+                            animation-duration: 6s;
+                            animation-iteration-count: infinite;
+                            @keyframes light-anim {
+                                0% {
+                                    transform: scale(1);
+                                    opacity: 0.4;
+                                }
+                                50% {
+                                    transform: scale(0.1);
+                                    opacity: 0.1;
+                                }
+                                100% {
+                                    transform: scale(1);
+                                    opacity: 0.4;
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -574,10 +616,10 @@ body {
                     height: 100%;
                     .img {
                         position: absolute;
-                        bottom: 2%;
                         left: -15%;
                         width: 130%;
-                        height: 100%;
+                        @include adaptiveBottom(22, 0);
+                        @include adaptiveHeight(1080, 250);
                         background: url("../img/waves/wave-paint.png") center bottom / 18% 18% repeat-x;
 
                         animation-name: wave-4-anim;
@@ -600,10 +642,11 @@ body {
                     height: 100%;
                     .img {
                         position: absolute;
-                        bottom: -3%;
+                        // bottom: -3%;
                         left: -15%;
                         width: 130%;
-                        height: 100%;
+                        @include adaptiveBottom(-32, 0);
+                        @include adaptiveHeight(1080, 250);
                         background: url("../img/waves/wave-plain.png") center bottom / 22% 22% repeat-x;
 
                         animation-name: wave-5-anim;
@@ -618,18 +661,29 @@ body {
                                 transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
                             }
                         }
+                        .black {
+                            position: absolute;
+                            width: 130%;
+                            height: 100%;
+                            bottom: -100%;
+                            left: -15%;
+                            background-color: black;
+                        }
                     }
                 }
 
                 &__wave-6 {
                     width: 100%;
                     height: 100%;
+
                     .img {
                         position: absolute;
-                        bottom: -7%;
                         left: -15%;
                         width: 130%;
-                        height: 100%;
+
+                        @include adaptiveBottom(-76, -10);
+                        @include adaptiveHeight(1080, 250);
+
                         background: url("../img/waves/wave-paint.png") center bottom / 25% 25% repeat-x;
 
                         animation-name: wave-6-anim;

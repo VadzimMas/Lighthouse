@@ -2,14 +2,27 @@ $modelWidth: 1920;
 $phoneWidth: 320;
 
 // adaptive sizes for fonts padding margin width height fixed positions wherever you want
-@mixin adaptiveLeft($modelSize, $phoneSize) {
-  left: calc(
-    (((#{$modelSize - $phoneSize}) * ((100vw - #{$phoneWidth}px) * 100) / (#{$modelWidth - $phoneWidth})) / 100) + #{$phoneSize}px
-  );
+
+@mixin adaptiveBoxShadow($mx, $my, $ms, $mr, $px, $py, $ps, $pr, $color) {
+  $mx: calc((((#{$mx - $px}) * ((100vw - #{$phoneWidth}px) * 100) / (#{$modelWidth - $phoneWidth})) / 100) + #{$px}px);
+
+  $my: calc((((#{$my - $py}) * ((100vw - #{$phoneWidth}px) * 100) / (#{$modelWidth - $phoneWidth})) / 100) + #{$py}px);
+
+  $ms: calc((((#{$ms - $ps}) * ((100vw - #{$phoneWidth}px) * 100) / (#{$modelWidth - $phoneWidth})) / 100) + #{$ps}px);
+
+  $mr: calc((((#{$mr - $pr}) * ((100vw - #{$phoneWidth}px) * 100) / (#{$modelWidth - $phoneWidth})) / 100) + #{$pr}px);
+
+  box-shadow: $mx $my $ms $mr $color;
 }
 
 @mixin adaptiveTop($modelSize, $phoneSize) {
   top: calc(
+    (((#{$modelSize - $phoneSize}) * ((100vw - #{$phoneWidth}px) * 100) / (#{$modelWidth - $phoneWidth})) / 100) + #{$phoneSize}px
+  );
+}
+
+@mixin adaptiveLeft($modelSize, $phoneSize) {
+  left: calc(
     (((#{$modelSize - $phoneSize}) * ((100vw - #{$phoneWidth}px) * 100) / (#{$modelWidth - $phoneWidth})) / 100) + #{$phoneSize}px
   );
 }
