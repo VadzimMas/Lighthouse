@@ -83,6 +83,10 @@ h6 {
 body {
 		background-color: black;
 }
+body .wrapper {
+		opacity: 0;
+		transition: all 1s ease 0s;
+}
 body .wrapper .container .parralax {
 		position: relative;
 		width: 100vw;
@@ -117,10 +121,13 @@ body .wrapper .container .parralax__bg .img {
 		}
 }
 body .wrapper .container .parralax__bg .light-1 {
+		bottom: -100%;
+		transition: all 2s ease 2s;
 		position: absolute;
-		bottom: calc( (((120) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px );
-		left: 20%;
+		left: calc( (((435) * ((100vw - 320px) * 100) / (1600)) / 100) + 15px );
 		border-radius: 50%;
+		width: 1px;
+		height: 1px;
 		box-shadow: calc((((0) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px) calc((((0) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px) calc((((100) * ((100vw - 320px) * 100) / (1600)) / 100) + 50px) calc((((60) * ((100vw - 320px) * 100) / (1600)) / 100) + 40px) #ff00dd;
 		animation-name: light-1-anim;
 		animation-duration: 6s;
@@ -140,11 +147,17 @@ body .wrapper .container .parralax__bg .light-1 {
 				opacity: 1;
 		}
 }
+body .wrapper .container .parralax__bg .light-1.active {
+		bottom: calc( (((40) * ((100vw - 320px) * 100) / (1600)) / 100) + 80px );
+}
 body .wrapper .container .parralax__bg .light-2 {
+		bottom: -100%;
+		transition: all 2s ease 1.8s;
 		position: absolute;
-		bottom: calc( (((120) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px );
 		left: 50%;
 		border-radius: 50%;
+		width: 1px;
+		height: 1px;
 		box-shadow: calc((((0) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px) calc((((0) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px) calc((((100) * ((100vw - 320px) * 100) / (1600)) / 100) + 50px) calc((((60) * ((100vw - 320px) * 100) / (1600)) / 100) + 40px) #5900ff;
 		animation-name: light-2-anim;
 		animation-duration: 8s;
@@ -164,11 +177,17 @@ body .wrapper .container .parralax__bg .light-2 {
 				opacity: 1;
 		}
 }
+body .wrapper .container .parralax__bg .light-2.active {
+		bottom: calc( (((40) * ((100vw - 320px) * 100) / (1600)) / 100) + 80px );
+}
 body .wrapper .container .parralax__bg .light-3 {
+		bottom: -100%;
+		transition: all 2s ease 2s;
 		position: absolute;
-		bottom: calc( (((120) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px );
-		left: 80%;
+		left: calc( (((1180) * ((100vw - 320px) * 100) / (1600)) / 100) + 320px );
 		border-radius: 50%;
+		width: 1px;
+		height: 1px;
 		box-shadow: calc((((0) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px) calc((((0) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px) calc((((100) * ((100vw - 320px) * 100) / (1600)) / 100) + 50px) calc((((60) * ((100vw - 320px) * 100) / (1600)) / 100) + 40px) #ffbb00;
 		animation-name: light-3-anim;
 		animation-duration: 7s;
@@ -187,6 +206,9 @@ body .wrapper .container .parralax__bg .light-3 {
 				transform: scale(1);
 				opacity: 1;
 		}
+}
+body .wrapper .container .parralax__bg .light-3.active {
+		bottom: calc( (((40) * ((100vw - 320px) * 100) / (1600)) / 100) + 80px );
 }
 body .wrapper .container .parralax__rope-1 {
 		width: 100%;
@@ -207,12 +229,16 @@ body .wrapper .container .parralax__rope-1 {
 		}
 }
 body .wrapper .container .parralax__rope-1 .rope {
+		top: -100%;
+		transition: all 1s ease 1s;
 		position: absolute;
-		top: calc( (((-80) * ((100vw - 320px) * 100) / (1600)) / 100) + 80px );
 		height: calc( (((780) * ((100vw - 320px) * 100) / (1600)) / 100) + 300px );
 		left: calc( (((-282) * ((100vw - 320px) * 100) / (1600)) / 100) + -45px );
 		width: calc( (((2174) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
 		background: url("../img/rope.png") top center/100% 30% no-repeat;
+}
+body .wrapper .container .parralax__rope-1 .rope.active {
+		top: calc( (((-80) * ((100vw - 320px) * 100) / (1600)) / 100) + 80px );
 }
 body .wrapper .container .parralax__rope-1 .birds {
 		position: absolute;
@@ -317,12 +343,16 @@ body .wrapper .container .parralax__rope-2 {
 		}
 }
 body .wrapper .container .parralax__rope-2 .rope {
+		top: -100%;
+		transition: all 1s ease 1.3s;
 		position: absolute;
-		top: calc( (((-126) * ((100vw - 320px) * 100) / (1600)) / 100) + 40px );
 		height: calc( (((780) * ((100vw - 320px) * 100) / (1600)) / 100) + 300px );
 		left: calc( (((-282) * ((100vw - 320px) * 100) / (1600)) / 100) + -45px );
 		width: calc( (((2174) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
 		background: url("../img/rope.png") top center/100% 30% no-repeat;
+}
+body .wrapper .container .parralax__rope-2 .rope.active {
+		top: calc( (((-126) * ((100vw - 320px) * 100) / (1600)) / 100) + 40px );
 }
 body .wrapper .container .parralax__rope-2 .cloud-1 {
 		position: absolute;
@@ -406,12 +436,16 @@ body .wrapper .container .parralax__rope-3 {
 		}
 }
 body .wrapper .container .parralax__rope-3 .rope {
+		top: -100%;
+		transition: all 1s ease 1.6s;
 		position: absolute;
-		top: calc( (((-162) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px );
 		height: calc( (((780) * ((100vw - 320px) * 100) / (1600)) / 100) + 300px );
 		left: calc( (((-282) * ((100vw - 320px) * 100) / (1600)) / 100) + -45px );
 		width: calc( (((2174) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
 		background: url("../img/rope.png") top center/100% 30% no-repeat;
+}
+body .wrapper .container .parralax__rope-3 .rope.active {
+		top: calc( (((-162) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px );
 }
 body .wrapper .container .parralax__rope-3 .birds {
 		position: absolute;
@@ -523,10 +557,11 @@ body .wrapper .container .parralax__wave-1 {
 		height: 100%;
 }
 body .wrapper .container .parralax__wave-1 .img {
+		bottom: -100%;
+		transition: all 1s ease 0.1s;
 		position: absolute;
 		left: calc( (((-85) * ((100vw - 320px) * 100) / (1600)) / 100) + -203px );
 		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
-		bottom: calc( (((50) * ((100vw - 320px) * 100) / (1600)) / 100) + 80px );
 		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
 		background: url("../img/waves/wave-plain.png") center bottom/10% 10% repeat-x;
 		animation-name: wave-1-anim;
@@ -550,15 +585,19 @@ body .wrapper .container .parralax__wave-1 .img .black {
 		left: -15%;
 		background-color: black;
 }
+body .wrapper .container .parralax__wave-1 .img.active {
+		bottom: calc( (((50) * ((100vw - 320px) * 100) / (1600)) / 100) + 80px );
+}
 body .wrapper .container .parralax__wave-2 {
 		width: 100%;
 		height: 100%;
 }
 body .wrapper .container .parralax__wave-2 .img {
+		bottom: -100%;
+		transition: all 1.1s ease 0.2s;
 		position: absolute;
 		left: calc( (((-94) * ((100vw - 320px) * 100) / (1600)) / 100) + -194px );
 		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
-		bottom: calc( (((38) * ((100vw - 320px) * 100) / (1600)) / 100) + 67px );
 		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
 		background: url("../img/waves/wave-paint.png") center bottom/12% 12% repeat-x;
 		animation-name: wave-2-anim;
@@ -582,15 +621,19 @@ body .wrapper .container .parralax__wave-2 .img .black {
 		left: -15%;
 		background-color: black;
 }
+body .wrapper .container .parralax__wave-2 .img.active {
+		bottom: calc( (((38) * ((100vw - 320px) * 100) / (1600)) / 100) + 67px );
+}
 body .wrapper .container .parralax__wave-3 {
 		width: 100%;
 		height: 100%;
 }
 body .wrapper .container .parralax__wave-3 .img {
+		bottom: -100%;
+		transition: all 1.2s ease 0.3s;
 		position: absolute;
 		left: calc( (((-105) * ((100vw - 320px) * 100) / (1600)) / 100) + -183px );
 		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
-		bottom: calc( (((15) * ((100vw - 320px) * 100) / (1600)) / 100) + 50px );
 		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
 		background: url("../img/waves/wave-plain.png") center bottom/15% 15% repeat-x;
 		animation-name: wave-3-anim;
@@ -614,13 +657,117 @@ body .wrapper .container .parralax__wave-3 .img .black {
 		left: -15%;
 		background-color: black;
 }
+body .wrapper .container .parralax__wave-3 .img.active {
+		bottom: calc( (((15) * ((100vw - 320px) * 100) / (1600)) / 100) + 50px );
+}
+body .wrapper .container .parralax__wave-4 {
+		width: 100%;
+		height: 100%;
+}
+body .wrapper .container .parralax__wave-4 .img {
+		bottom: -100%;
+		transition: all 1.3s ease 0.4s;
+		position: absolute;
+		left: calc( (((-119) * ((100vw - 320px) * 100) / (1600)) / 100) + -169px );
+		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
+		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
+		background: url("../img/waves/wave-paint.png") center bottom/18% 18% repeat-x;
+		animation-name: wave-4-anim;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+}
+@keyframes wave-4-anim {
+		0% {
+				transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
+		}
+		100% {
+				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+		}
+}
+body .wrapper .container .parralax__wave-4 .img .black {
+		position: absolute;
+		width: 130%;
+		height: 20%;
+		bottom: -20%;
+		left: -15%;
+		background-color: black;
+}
+body .wrapper .container .parralax__wave-4 .img.active {
+		bottom: calc( (((-10) * ((100vw - 320px) * 100) / (1600)) / 100) + 33px );
+}
+body .wrapper .container .parralax__wave-5 {
+		width: 100%;
+		height: 100%;
+}
+body .wrapper .container .parralax__wave-5 .img {
+		bottom: -100%;
+		transition: all 1.4s ease 0.5s;
+		position: absolute;
+		left: calc( (((-135) * ((100vw - 320px) * 100) / (1600)) / 100) + -153px );
+		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
+		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
+		background: url("../img/waves/wave-plain.png") center bottom/22% 22% repeat-x;
+		animation-name: wave-5-anim;
+		animation-duration: 4s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+}
+@keyframes wave-5-anim {
+		0% {
+				transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
+		}
+		100% {
+				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+		}
+}
+body .wrapper .container .parralax__wave-5 .img .black {
+		position: absolute;
+		width: 130%;
+		height: 100%;
+		bottom: -100%;
+		left: -15%;
+		background-color: black;
+}
+body .wrapper .container .parralax__wave-5 .img.active {
+		bottom: calc( (((-42) * ((100vw - 320px) * 100) / (1600)) / 100) + 10px );
+}
+body .wrapper .container .parralax__wave-6 {
+		width: 100%;
+		height: 100%;
+}
+body .wrapper .container .parralax__wave-6 .img {
+		bottom: -100%;
+		transition: all 1.5s ease 0.6s;
+		position: absolute;
+		left: calc( (((-148) * ((100vw - 320px) * 100) / (1600)) / 100) + -140px );
+		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
+		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
+		background: url("../img/waves/wave-paint.png") center bottom/25% 25% repeat-x;
+		animation-name: wave-6-anim;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+}
+@keyframes wave-6-anim {
+		0% {
+				transform: rotateZ(0) translate3d(0, 2%, 0) rotateZ(0);
+		}
+		100% {
+				transform: rotateZ(360deg) translate3d(0, 2%, 0) rotateZ(-360deg);
+		}
+}
+body .wrapper .container .parralax__wave-6 .img.active {
+		bottom: calc( (((-66) * ((100vw - 320px) * 100) / (1600)) / 100) + -10px );
+}
 body .wrapper .container .parralax__liighthouse {
 		width: 100%;
 		height: 100%;
 }
 body .wrapper .container .parralax__liighthouse .img {
 		position: absolute;
-		bottom: calc( (((0) * ((100vw - 320px) * 100) / (1600)) / 100) + 45px );
+		bottom: -100%;
+		transition: all 1s ease 2s;
 		left: calc( (((1280) * ((100vw - 320px) * 100) / (1600)) / 100) + 220px );
 		width: calc( (((190) * ((100vw - 320px) * 100) / (1600)) / 100) + 70px );
 		height: calc( (((370) * ((100vw - 320px) * 100) / (1600)) / 100) + 130px );
@@ -665,91 +812,9 @@ body .wrapper .container .parralax__liighthouse .img .light {
 				opacity: 0.4;
 		}
 }
-body .wrapper .container .parralax__wave-4 {
-		width: 100%;
-		height: 100%;
+body .wrapper .container .parralax__liighthouse .img.active {
+		bottom: calc( (((0) * ((100vw - 320px) * 100) / (1600)) / 100) + 45px );
 }
-body .wrapper .container .parralax__wave-4 .img {
-		position: absolute;
-		left: calc( (((-119) * ((100vw - 320px) * 100) / (1600)) / 100) + -169px );
-		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
-		bottom: calc( (((-10) * ((100vw - 320px) * 100) / (1600)) / 100) + 33px );
-		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
-		background: url("../img/waves/wave-paint.png") center bottom/18% 18% repeat-x;
-		animation-name: wave-4-anim;
-		animation-duration: 5s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-}
-@keyframes wave-4-anim {
-		0% {
-				transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
-		}
-		100% {
-				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
-		}
-}
-body .wrapper .container .parralax__wave-4 .img .black {
-		position: absolute;
-		width: 130%;
-		height: 20%;
-		bottom: -20%;
-		left: -15%;
-		background-color: black;
-}
-body .wrapper .container .parralax__wave-5 {
-		width: 100%;
-		height: 100%;
-}
-body .wrapper .container .parralax__wave-5 .img {
-		position: absolute;
-		left: calc( (((-135) * ((100vw - 320px) * 100) / (1600)) / 100) + -153px );
-		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
-		bottom: calc( (((-42) * ((100vw - 320px) * 100) / (1600)) / 100) + 10px );
-		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
-		background: url("../img/waves/wave-plain.png") center bottom/22% 22% repeat-x;
-		animation-name: wave-5-anim;
-		animation-duration: 4s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-}
-@keyframes wave-5-anim {
-		0% {
-				transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
-		}
-		100% {
-				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
-		}
-}
-body .wrapper .container .parralax__wave-5 .img .black {
-		position: absolute;
-		width: 130%;
-		height: 100%;
-		bottom: -100%;
-		left: -15%;
-		background-color: black;
-}
-body .wrapper .container .parralax__wave-6 {
-		width: 100%;
-		height: 100%;
-}
-body .wrapper .container .parralax__wave-6 .img {
-		position: absolute;
-		left: calc( (((-148) * ((100vw - 320px) * 100) / (1600)) / 100) + -140px );
-		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
-		bottom: calc( (((-66) * ((100vw - 320px) * 100) / (1600)) / 100) + -10px );
-		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
-		background: url("../img/waves/wave-paint.png") center bottom/25% 25% repeat-x;
-		animation-name: wave-6-anim;
-		animation-duration: 3s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-}
-@keyframes wave-6-anim {
-		0% {
-				transform: rotateZ(0) translate3d(0, 2%, 0) rotateZ(0);
-		}
-		100% {
-				transform: rotateZ(360deg) translate3d(0, 2%, 0) rotateZ(-360deg);
-		}
+body .wrapper.active {
+		opacity: 1;
 }
