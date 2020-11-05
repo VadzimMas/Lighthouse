@@ -522,6 +522,7 @@ body .wrapper .container .parralax .wave .img.active {
 		opacity: 1;
 }
 body .wrapper .container .parralax__wave-1 {
+		position: relative;
 		width: 100%;
 		height: 100%;
 }
@@ -554,6 +555,7 @@ body .wrapper .container .parralax__wave-1 .img .black {
 		background-color: black;
 }
 body .wrapper .container .parralax__wave-2 {
+		position: relative;
 		width: 100%;
 		height: 100%;
 }
@@ -586,6 +588,7 @@ body .wrapper .container .parralax__wave-2 .img .black {
 		background-color: black;
 }
 body .wrapper .container .parralax__wave-3 {
+		position: relative;
 		width: 100%;
 		height: 100%;
 }
@@ -618,6 +621,7 @@ body .wrapper .container .parralax__wave-3 .img .black {
 		background-color: black;
 }
 body .wrapper .container .parralax__wave-4 {
+		position: relative;
 		width: 100%;
 		height: 100%;
 }
@@ -650,6 +654,7 @@ body .wrapper .container .parralax__wave-4 .img .black {
 		background-color: black;
 }
 body .wrapper .container .parralax__wave-5 {
+		position: relative;
 		width: 100%;
 		height: 100%;
 }
@@ -682,6 +687,7 @@ body .wrapper .container .parralax__wave-5 .img .black {
 		background-color: black;
 }
 body .wrapper .container .parralax__wave-6 {
+		position: relative;
 		width: 100%;
 		height: 100%;
 }

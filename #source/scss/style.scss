@@ -471,6 +471,7 @@ body {
                 }
 
                 &__wave-1 {
+                    position: relative;
                     width: 100%;
                     height: 100%;
                     .img {
@@ -505,6 +506,7 @@ body {
                 }
 
                 &__wave-2 {
+                    position: relative;
                     width: 100%;
                     height: 100%;
                     .img {
@@ -539,6 +541,7 @@ body {
                 }
 
                 &__wave-3 {
+                    position: relative;
                     width: 100%;
                     height: 100%;
                     .img {
@@ -573,6 +576,7 @@ body {
                 }
 
                 &__wave-4 {
+                    position: relative;
                     width: 100%;
                     height: 100%;
                     .img {
@@ -607,6 +611,7 @@ body {
                 }
 
                 &__wave-5 {
+                    position: relative;
                     width: 100%;
                     height: 100%;
                     .img {
@@ -616,7 +621,6 @@ body {
                         @include adaptiveWidth(2496, 800);
                         @include adaptiveHeight(1080, 400);
                         background: url("../img/waves/wave-plain.png") center bottom / 22% 22% repeat-x;
-
                         animation-name: wave-5-anim;
                         animation-duration: 4s;
                         animation-iteration-count: infinite;
@@ -641,6 +645,7 @@ body {
                 }
 
                 &__wave-6 {
+                    position: relative;
                     width: 100%;
                     height: 100%;
                     .img {
@@ -649,7 +654,6 @@ body {
                         @include adaptiveLeft(-288, -140);
                         @include adaptiveWidth(2496, 800);
                         @include adaptiveHeight(1080, 400);
-
                         background: url("../img/waves/wave-paint.png") center bottom / 25% 25% repeat-x;
 
                         animation-name: wave-6-anim;

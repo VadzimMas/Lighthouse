@@ -16,10 +16,6 @@
 
 
 
-
-
-
-
 $(document).ready(function () {
     $(".wrapper").addClass("active");
     $(".parralax__liighthouse .img").addClass("active");
@@ -28,6 +24,28 @@ $(document).ready(function () {
     $(".light-1").addClass("active");
     $(".light-2").addClass("active");
     $(".light-3").addClass("active");
+
+    setTimeout(() => {
+        let lighthouse = document.getElementsByClassName("parralax__liighthouse")[0].getElementsByClassName("img")[0];
+        let wave = document.getElementsByClassName("wave");
+        let rope = document.getElementsByClassName("rope");
+        let light1 = document.getElementsByClassName("light-1")[0];
+        let light2 = document.getElementsByClassName("light-2")[0];
+        let light3 = document.getElementsByClassName("light-3")[0];
+
+
+        lighthouse.style.transition = "none";
+        for (let i = 0; i < wave.length; i++) {
+            let w = wave[i].getElementsByClassName("img")[0];
+            w.style.transition = "none";
+        }
+        for (let i = 0; i < rope.length; i++) {
+            rope[i].style.transition = "none";
+        }
+        light1.style.transition = "none";
+        light2.style.transition = "none";
+        light3.style.transition = "none";
+    }, 4500);
 
 
     var scene = document.getElementById('scene');
