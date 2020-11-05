@@ -20,7 +20,7 @@ body {
                         height: 105%;
                         top: -2.5%;
                         left: -2.5%;
-                        background: url("../img/background.jpg") top center / 100% 100% no-repeat;
+                        background: url("../img/background.jpg") center center / cover no-repeat;
 
                         animation-name: bg-anim;
                         animation-duration: 25s;
@@ -139,14 +139,11 @@ body {
                         }
                     }
                     .rope {
-                        // display: none;
-
                         position: absolute;
-                        top: 0%;
+                        @include adaptiveTop(0, 80);
                         @include adaptiveHeight(1080, 300);
                         @include adaptiveLeft(-327, -45);
                         @include adaptiveWidth(2574, 400);
-
                         background: url("../img/rope.png") top center / 100% 30% no-repeat;
                     }
                     .birds {
@@ -260,7 +257,7 @@ body {
                     }
                     .rope {
                         position: absolute;
-                        top: -8%;
+                        @include adaptiveTop(-86, 40);
                         @include adaptiveHeight(1080, 300);
                         @include adaptiveLeft(-327, -45);
                         @include adaptiveWidth(2574, 400);
@@ -358,7 +355,8 @@ body {
                         // display: none;
 
                         position: absolute;
-                        top: -15%;
+                        @include adaptiveTop(-162, 0);
+
                         @include adaptiveHeight(1080, 300);
                         @include adaptiveLeft(-327, -45);
                         @include adaptiveWidth(2574, 400);
@@ -481,10 +479,10 @@ body {
                     height: 100%;
                     .img {
                         position: absolute;
-                        left: -15%;
-                        width: 130%;
-                        @include adaptiveBottom(130, 0);
-                        @include adaptiveHeight(1080, 250);
+                        @include adaptiveLeft(-288, -203);
+                        @include adaptiveWidth(2496, 800);
+                        @include adaptiveBottom(130, 80);
+                        @include adaptiveHeight(1080, 400);
                         background: url("../img/waves/wave-plain.png") center bottom / 10% 10% repeat-x;
 
                         animation-name: wave-1-anim;
@@ -499,6 +497,14 @@ body {
                                 transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
                             }
                         }
+                        .black {
+                            position: absolute;
+                            width: 130%;
+                            height: 20%;
+                            bottom: -20%;
+                            left: -15%;
+                            background-color: black;
+                        }
                     }
                 }
 
@@ -507,10 +513,10 @@ body {
                     height: 100%;
                     .img {
                         position: absolute;
-                        left: -15%;
-                        width: 130%;
-                        @include adaptiveBottom(105, 0);
-                        @include adaptiveHeight(1080, 250);
+                        @include adaptiveLeft(-288, -194);
+                        @include adaptiveWidth(2496, 800);
+                        @include adaptiveBottom(105, 67);
+                        @include adaptiveHeight(1080, 400);
                         background: url("../img/waves/wave-paint.png") center bottom / 12% 12% repeat-x;
 
                         animation-name: wave-2-anim;
@@ -525,6 +531,14 @@ body {
                                 transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
                             }
                         }
+                        .black {
+                            position: absolute;
+                            width: 130%;
+                            height: 20%;
+                            bottom: -20%;
+                            left: -15%;
+                            background-color: black;
+                        }
                     }
                 }
 
@@ -533,10 +547,10 @@ body {
                     height: 100%;
                     .img {
                         position: absolute;
-                        left: -15%;
-                        width: 130%;
-                        @include adaptiveBottom(65, 0);
-                        @include adaptiveHeight(1080, 250);
+                        @include adaptiveLeft(-288, -183);
+                        @include adaptiveWidth(2496, 800);
+                        @include adaptiveBottom(65, 50);
+                        @include adaptiveHeight(1080, 400);
                         background: url("../img/waves/wave-plain.png") center bottom / 15% 15% repeat-x;
 
                         animation-name: wave-3-anim;
@@ -551,6 +565,14 @@ body {
                                 transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
                             }
                         }
+                        .black {
+                            position: absolute;
+                            width: 130%;
+                            height: 20%;
+                            bottom: -20%;
+                            left: -15%;
+                            background-color: black;
+                        }
                     }
                 }
 
@@ -559,7 +581,7 @@ body {
                     height: 100%;
                     .img {
                         position: absolute;
-                        @include adaptiveBottom(50, 0);
+                        @include adaptiveBottom(45, 45);
                         @include adaptiveLeft(1500, 220);
                         @include adaptiveWidth(260, 70);
                         @include adaptiveHeight(500, 130);
@@ -587,7 +609,6 @@ body {
                             position: absolute;
                             top: 25%;
                             left: 50%;
-                            // box-shadow: 0 0 150px 100px rgba(255, 0, 221, 0.637);
                             @include adaptiveBoxShadow(0, 0, 150, 100, 0, 0, 150, 60, rgba(255, 0, 221, 0.637));
 
                             animation-name: light-anim;
@@ -616,10 +637,10 @@ body {
                     height: 100%;
                     .img {
                         position: absolute;
-                        left: -15%;
-                        width: 130%;
-                        @include adaptiveBottom(22, 0);
-                        @include adaptiveHeight(1080, 250);
+                        @include adaptiveLeft(-288, -169);
+                        @include adaptiveWidth(2496, 800);
+                        @include adaptiveBottom(23, 33);
+                        @include adaptiveHeight(1080, 400);
                         background: url("../img/waves/wave-paint.png") center bottom / 18% 18% repeat-x;
 
                         animation-name: wave-4-anim;
@@ -634,6 +655,14 @@ body {
                                 transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
                             }
                         }
+                        .black {
+                            position: absolute;
+                            width: 130%;
+                            height: 20%;
+                            bottom: -20%;
+                            left: -15%;
+                            background-color: black;
+                        }
                     }
                 }
 
@@ -642,11 +671,10 @@ body {
                     height: 100%;
                     .img {
                         position: absolute;
-                        // bottom: -3%;
-                        left: -15%;
-                        width: 130%;
-                        @include adaptiveBottom(-32, 0);
-                        @include adaptiveHeight(1080, 250);
+                        @include adaptiveLeft(-288, -153);
+                        @include adaptiveWidth(2496, 800);
+                        @include adaptiveBottom(-32, 10);
+                        @include adaptiveHeight(1080, 400);
                         background: url("../img/waves/wave-plain.png") center bottom / 22% 22% repeat-x;
 
                         animation-name: wave-5-anim;
@@ -678,11 +706,10 @@ body {
 
                     .img {
                         position: absolute;
-                        left: -15%;
-                        width: 130%;
-
+                        @include adaptiveLeft(-288, -140);
+                        @include adaptiveWidth(2496, 800);
                         @include adaptiveBottom(-76, -10);
-                        @include adaptiveHeight(1080, 250);
+                        @include adaptiveHeight(1080, 400);
 
                         background: url("../img/waves/wave-paint.png") center bottom / 25% 25% repeat-x;
 

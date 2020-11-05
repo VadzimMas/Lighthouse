@@ -100,7 +100,7 @@ body .wrapper .container .parralax__bg .img {
 		height: 105%;
 		top: -2.5%;
 		left: -2.5%;
-		background: url("../img/background.jpg") top center/100% 100% no-repeat;
+		background: url("../img/background.jpg") center center/cover no-repeat;
 		animation-name: bg-anim;
 		animation-duration: 25s;
 		animation-iteration-count: infinite;
@@ -208,7 +208,7 @@ body .wrapper .container .parralax__rope-1 {
 }
 body .wrapper .container .parralax__rope-1 .rope {
 		position: absolute;
-		top: 0%;
+		top: calc( (((-80) * ((100vw - 320px) * 100) / (1600)) / 100) + 80px );
 		height: calc( (((780) * ((100vw - 320px) * 100) / (1600)) / 100) + 300px );
 		left: calc( (((-282) * ((100vw - 320px) * 100) / (1600)) / 100) + -45px );
 		width: calc( (((2174) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
@@ -318,7 +318,7 @@ body .wrapper .container .parralax__rope-2 {
 }
 body .wrapper .container .parralax__rope-2 .rope {
 		position: absolute;
-		top: -8%;
+		top: calc( (((-126) * ((100vw - 320px) * 100) / (1600)) / 100) + 40px );
 		height: calc( (((780) * ((100vw - 320px) * 100) / (1600)) / 100) + 300px );
 		left: calc( (((-282) * ((100vw - 320px) * 100) / (1600)) / 100) + -45px );
 		width: calc( (((2174) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
@@ -407,7 +407,7 @@ body .wrapper .container .parralax__rope-3 {
 }
 body .wrapper .container .parralax__rope-3 .rope {
 		position: absolute;
-		top: -15%;
+		top: calc( (((-162) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px );
 		height: calc( (((780) * ((100vw - 320px) * 100) / (1600)) / 100) + 300px );
 		left: calc( (((-282) * ((100vw - 320px) * 100) / (1600)) / 100) + -45px );
 		width: calc( (((2174) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
@@ -524,10 +524,10 @@ body .wrapper .container .parralax__wave-1 {
 }
 body .wrapper .container .parralax__wave-1 .img {
 		position: absolute;
-		left: -15%;
-		width: 130%;
-		bottom: calc( (((130) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px );
-		height: calc( (((830) * ((100vw - 320px) * 100) / (1600)) / 100) + 250px );
+		left: calc( (((-85) * ((100vw - 320px) * 100) / (1600)) / 100) + -203px );
+		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
+		bottom: calc( (((50) * ((100vw - 320px) * 100) / (1600)) / 100) + 80px );
+		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
 		background: url("../img/waves/wave-plain.png") center bottom/10% 10% repeat-x;
 		animation-name: wave-1-anim;
 		animation-duration: 8s;
@@ -542,16 +542,24 @@ body .wrapper .container .parralax__wave-1 .img {
 				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
 		}
 }
+body .wrapper .container .parralax__wave-1 .img .black {
+		position: absolute;
+		width: 130%;
+		height: 20%;
+		bottom: -20%;
+		left: -15%;
+		background-color: black;
+}
 body .wrapper .container .parralax__wave-2 {
 		width: 100%;
 		height: 100%;
 }
 body .wrapper .container .parralax__wave-2 .img {
 		position: absolute;
-		left: -15%;
-		width: 130%;
-		bottom: calc( (((105) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px );
-		height: calc( (((830) * ((100vw - 320px) * 100) / (1600)) / 100) + 250px );
+		left: calc( (((-94) * ((100vw - 320px) * 100) / (1600)) / 100) + -194px );
+		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
+		bottom: calc( (((38) * ((100vw - 320px) * 100) / (1600)) / 100) + 67px );
+		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
 		background: url("../img/waves/wave-paint.png") center bottom/12% 12% repeat-x;
 		animation-name: wave-2-anim;
 		animation-duration: 7s;
@@ -566,16 +574,24 @@ body .wrapper .container .parralax__wave-2 .img {
 				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
 		}
 }
+body .wrapper .container .parralax__wave-2 .img .black {
+		position: absolute;
+		width: 130%;
+		height: 20%;
+		bottom: -20%;
+		left: -15%;
+		background-color: black;
+}
 body .wrapper .container .parralax__wave-3 {
 		width: 100%;
 		height: 100%;
 }
 body .wrapper .container .parralax__wave-3 .img {
 		position: absolute;
-		left: -15%;
-		width: 130%;
-		bottom: calc( (((65) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px );
-		height: calc( (((830) * ((100vw - 320px) * 100) / (1600)) / 100) + 250px );
+		left: calc( (((-105) * ((100vw - 320px) * 100) / (1600)) / 100) + -183px );
+		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
+		bottom: calc( (((15) * ((100vw - 320px) * 100) / (1600)) / 100) + 50px );
+		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
 		background: url("../img/waves/wave-plain.png") center bottom/15% 15% repeat-x;
 		animation-name: wave-3-anim;
 		animation-duration: 6s;
@@ -590,13 +606,21 @@ body .wrapper .container .parralax__wave-3 .img {
 				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
 		}
 }
+body .wrapper .container .parralax__wave-3 .img .black {
+		position: absolute;
+		width: 130%;
+		height: 20%;
+		bottom: -20%;
+		left: -15%;
+		background-color: black;
+}
 body .wrapper .container .parralax__liighthouse {
 		width: 100%;
 		height: 100%;
 }
 body .wrapper .container .parralax__liighthouse .img {
 		position: absolute;
-		bottom: calc( (((50) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px );
+		bottom: calc( (((0) * ((100vw - 320px) * 100) / (1600)) / 100) + 45px );
 		left: calc( (((1280) * ((100vw - 320px) * 100) / (1600)) / 100) + 220px );
 		width: calc( (((190) * ((100vw - 320px) * 100) / (1600)) / 100) + 70px );
 		height: calc( (((370) * ((100vw - 320px) * 100) / (1600)) / 100) + 130px );
@@ -647,10 +671,10 @@ body .wrapper .container .parralax__wave-4 {
 }
 body .wrapper .container .parralax__wave-4 .img {
 		position: absolute;
-		left: -15%;
-		width: 130%;
-		bottom: calc( (((22) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px );
-		height: calc( (((830) * ((100vw - 320px) * 100) / (1600)) / 100) + 250px );
+		left: calc( (((-119) * ((100vw - 320px) * 100) / (1600)) / 100) + -169px );
+		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
+		bottom: calc( (((-10) * ((100vw - 320px) * 100) / (1600)) / 100) + 33px );
+		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
 		background: url("../img/waves/wave-paint.png") center bottom/18% 18% repeat-x;
 		animation-name: wave-4-anim;
 		animation-duration: 5s;
@@ -665,16 +689,24 @@ body .wrapper .container .parralax__wave-4 .img {
 				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
 		}
 }
+body .wrapper .container .parralax__wave-4 .img .black {
+		position: absolute;
+		width: 130%;
+		height: 20%;
+		bottom: -20%;
+		left: -15%;
+		background-color: black;
+}
 body .wrapper .container .parralax__wave-5 {
 		width: 100%;
 		height: 100%;
 }
 body .wrapper .container .parralax__wave-5 .img {
 		position: absolute;
-		left: -15%;
-		width: 130%;
-		bottom: calc( (((-32) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px );
-		height: calc( (((830) * ((100vw - 320px) * 100) / (1600)) / 100) + 250px );
+		left: calc( (((-135) * ((100vw - 320px) * 100) / (1600)) / 100) + -153px );
+		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
+		bottom: calc( (((-42) * ((100vw - 320px) * 100) / (1600)) / 100) + 10px );
+		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
 		background: url("../img/waves/wave-plain.png") center bottom/22% 22% repeat-x;
 		animation-name: wave-5-anim;
 		animation-duration: 4s;
@@ -703,10 +735,10 @@ body .wrapper .container .parralax__wave-6 {
 }
 body .wrapper .container .parralax__wave-6 .img {
 		position: absolute;
-		left: -15%;
-		width: 130%;
+		left: calc( (((-148) * ((100vw - 320px) * 100) / (1600)) / 100) + -140px );
+		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
 		bottom: calc( (((-66) * ((100vw - 320px) * 100) / (1600)) / 100) + -10px );
-		height: calc( (((830) * ((100vw - 320px) * 100) / (1600)) / 100) + 250px );
+		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
 		background: url("../img/waves/wave-paint.png") center bottom/25% 25% repeat-x;
 		animation-name: wave-6-anim;
 		animation-duration: 3s;

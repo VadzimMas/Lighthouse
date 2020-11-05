@@ -10,6 +10,11 @@
 // @prepros -prepend slick-settings.js
 
 
+// let container = document.getElementsByClassName("container")[0];
+// container.classList.add("active");
+// console.log(container);
+
+
 var scene = document.getElementById('scene');
 var parallaxInstance = new Parallax(scene);
 
