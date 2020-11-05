@@ -19,8 +19,7 @@
 
 
 
-2
-3
+
 $(document).ready(function () {
     $(".wrapper").addClass("active");
     $(".parralax__liighthouse .img").addClass("active");

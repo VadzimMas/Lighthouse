@@ -75,7 +75,7 @@ body {
 
                     .light-2 {
                         bottom: -100%;
-                        transition: all 2s ease 1.8s;
+                        transition: all 2s ease 2s;
                         position: absolute;
                         left: 50%;
                         border-radius: 50%;
@@ -141,33 +141,19 @@ body {
                 &__rope-1 {
                     width: 100%;
                     height: 100%;
-
-                    // animation-name: rope-1-anim;
-                    animation-duration: 50s;
-                    animation-iteration-count: infinite;
-                    animation-direction: alternate;
-                    @keyframes rope-1-anim {
-                        0% {
-                            transform: translate(-5%, 0);
-                        }
-                        50% {
-                            transform: translate(5%, 0);
-                        }
-                        100% {
-                            transform: translate(-5%, 0);
-                        }
-                    }
+                    position: relative;
                     .rope {
-                        top: -100%;
+                        transform: translateY(-50%);
                         transition: all 1s ease 1s;
                         position: absolute;
+                        @include adaptiveTop(0, 80);
                         @include adaptiveHeight(1080, 300);
                         @include adaptiveLeft(-327, -45);
                         @include adaptiveWidth(2574, 400);
                         background: url("../img/rope.png") top center / 100% 30% no-repeat;
                     }
                     .rope.active {
-                        @include adaptiveTop(0, 80);
+                        transform: translateY(0);
                     }
                     .birds {
                         position: absolute;
@@ -262,33 +248,18 @@ body {
                 &__rope-2 {
                     width: 100%;
                     height: 100%;
-
-                    // animation-name: rope-2-rope-anim;
-                    animation-duration: 60s;
-                    animation-iteration-count: infinite;
-                    animation-direction: alternate;
-                    @keyframes rope-2-rope-anim {
-                        0% {
-                            transform: translate(5%, 0);
-                        }
-                        50% {
-                            transform: translate(-5%, 0);
-                        }
-                        100% {
-                            transform: translate(5%, 0);
-                        }
-                    }
                     .rope {
-                        top: -100%;
+                        transform: translateY(-50%);
                         transition: all 1s ease 1.3s;
                         position: absolute;
+                        @include adaptiveTop(-86, 40);
                         @include adaptiveHeight(1080, 300);
                         @include adaptiveLeft(-327, -45);
                         @include adaptiveWidth(2574, 400);
                         background: url("../img/rope.png") top center / 100% 30% no-repeat;
                     }
                     .rope.active {
-                        @include adaptiveTop(-86, 40);
+                        transform: translateY(0);
                     }
 
                     .cloud-1 {
@@ -361,34 +332,19 @@ body {
                 &__rope-3 {
                     width: 100%;
                     height: 100%;
-
-                    // animation-name: rope-3-anim;
-                    animation-duration: 40s;
-                    animation-iteration-count: infinite;
-                    animation-direction: alternate;
-                    @keyframes rope-3-anim {
-                        0% {
-                            transform: translate(5%, 0);
-                        }
-                        50% {
-                            transform: translate(-5%, 0);
-                        }
-                        100% {
-                            transform: translate(5%, 0);
-                        }
-                    }
-
                     .rope {
-                        top: -100%;
+                        transform: translateY(-50%);
                         transition: all 1s ease 1.6s;
+
                         position: absolute;
+                        @include adaptiveTop(-162, 0);
                         @include adaptiveHeight(1080, 300);
                         @include adaptiveLeft(-327, -45);
                         @include adaptiveWidth(2574, 400);
                         background: url("../img/rope.png") top center / 100% 30% no-repeat;
                     }
                     .rope.active {
-                        @include adaptiveTop(-162, 0);
+                        transform: translateY(0);
                     }
                     .birds {
                         position: absolute;
@@ -502,13 +458,24 @@ body {
                     }
                 }
 
+                .wave {
+                    .img {
+                        transition: all 1.5s ease 1s;
+                        opacity: 0;
+                    }
+                }
+                .wave {
+                    .img.active {
+                        opacity: 1;
+                    }
+                }
+
                 &__wave-1 {
                     width: 100%;
                     height: 100%;
                     .img {
-                        bottom: -100%;
-                        transition: all 1s ease 0.1s;
                         position: absolute;
+                        @include adaptiveBottom(130, 80);
                         @include adaptiveLeft(-288, -203);
                         @include adaptiveWidth(2496, 800);
                         @include adaptiveHeight(1080, 400);
@@ -535,18 +502,14 @@ body {
                             background-color: black;
                         }
                     }
-                    .img.active {
-                        @include adaptiveBottom(130, 80);
-                    }
                 }
 
                 &__wave-2 {
                     width: 100%;
                     height: 100%;
                     .img {
-                        bottom: -100%;
-                        transition: all 1.1s ease 0.2s;
                         position: absolute;
+                        @include adaptiveBottom(105, 67);
                         @include adaptiveLeft(-288, -194);
                         @include adaptiveWidth(2496, 800);
                         @include adaptiveHeight(1080, 400);
@@ -573,18 +536,14 @@ body {
                             background-color: black;
                         }
                     }
-                    .img.active {
-                        @include adaptiveBottom(105, 67);
-                    }
                 }
 
                 &__wave-3 {
                     width: 100%;
                     height: 100%;
                     .img {
-                        bottom: -100%;
-                        transition: all 1.2s ease 0.3s;
                         position: absolute;
+                        @include adaptiveBottom(65, 50);
                         @include adaptiveLeft(-288, -183);
                         @include adaptiveWidth(2496, 800);
                         @include adaptiveHeight(1080, 400);
@@ -611,19 +570,14 @@ body {
                             background-color: black;
                         }
                     }
-                    .img.active {
-                        @include adaptiveBottom(65, 50);
-                    }
                 }
 
                 &__wave-4 {
                     width: 100%;
                     height: 100%;
                     .img {
-                        bottom: -100%;
-                        transition: all 1.3s ease 0.4s;
-
                         position: absolute;
+                        @include adaptiveBottom(23, 33);
                         @include adaptiveLeft(-288, -169);
                         @include adaptiveWidth(2496, 800);
                         @include adaptiveHeight(1080, 400);
@@ -650,19 +604,14 @@ body {
                             background-color: black;
                         }
                     }
-                    .img.active {
-                        @include adaptiveBottom(23, 33);
-                    }
                 }
 
                 &__wave-5 {
                     width: 100%;
                     height: 100%;
                     .img {
-                        bottom: -100%;
-                        transition: all 1.4s ease 0.5s;
-
                         position: absolute;
+                        @include adaptiveBottom(-32, 10);
                         @include adaptiveLeft(-288, -153);
                         @include adaptiveWidth(2496, 800);
                         @include adaptiveHeight(1080, 400);
@@ -689,20 +638,14 @@ body {
                             background-color: black;
                         }
                     }
-                    .img.active {
-                        @include adaptiveBottom(-32, 10);
-                    }
                 }
 
                 &__wave-6 {
                     width: 100%;
                     height: 100%;
-
                     .img {
-                        bottom: -100%;
-                        transition: all 1.5s ease 0.6s;
-
                         position: absolute;
+                        @include adaptiveBottom(-76, -10);
                         @include adaptiveLeft(-288, -140);
                         @include adaptiveWidth(2496, 800);
                         @include adaptiveHeight(1080, 400);
@@ -722,9 +665,6 @@ body {
                             }
                         }
                     }
-                    .img.active {
-                        @include adaptiveBottom(-76, -10);
-                    }
                 }
 
                 &__liighthouse {
@@ -734,7 +674,7 @@ body {
                     .img {
                         position: absolute;
                         bottom: -100%;
-                        transition: all 1s ease 2s;
+                        transition: all 1s ease 2.5s;
                         @include adaptiveLeft(1500, 220);
                         @include adaptiveWidth(260, 70);
                         @include adaptiveHeight(500, 130);
