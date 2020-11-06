@@ -647,7 +647,7 @@ body {
                         position: absolute;
                         @include adaptiveBottom(-76, -10);
                         @include adaptiveLeft(-288, -140);
-                        @include adaptiveWidth(2496, 800);
+                        @include adaptiveWidth(2496, 320);
                         @include adaptiveHeight(1080, 400);
                         background: url("../img/waves/wave-paint.png") center bottom / 25% 25% repeat-x;
                         animation-name: wave-6-anim;

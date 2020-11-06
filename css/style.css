@@ -697,7 +697,7 @@ body .wrapper .container .parralax__wave-6 .img-w {
 		position: absolute;
 		bottom: calc( (((-66) * ((100vw - 320px) * 100) / (1600)) / 100) + -10px );
 		left: calc( (((-148) * ((100vw - 320px) * 100) / (1600)) / 100) + -140px );
-		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
+		width: calc( (((2176) * ((100vw - 320px) * 100) / (1600)) / 100) + 320px );
 		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
 		background: url("../img/waves/wave-paint.png") center bottom/25% 25% repeat-x;
 		animation-name: wave-6-anim;
