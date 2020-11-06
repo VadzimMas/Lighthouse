@@ -130,7 +130,7 @@ body .wrapper .container .parralax__bg .img {
 		}
 }
 body .wrapper .container .parralax__bg .light-1 {
-		bottom: -100%;
+		bottom: -20%;
 		transition: all 2s ease 2s;
 		position: absolute;
 		left: calc( (((435) * ((100vw - 320px) * 100) / (1600)) / 100) + 15px );
@@ -160,7 +160,7 @@ body .wrapper .container .parralax__bg .light-1.active {
 		bottom: calc( (((40) * ((100vw - 320px) * 100) / (1600)) / 100) + 80px );
 }
 body .wrapper .container .parralax__bg .light-2 {
-		bottom: -100%;
+		bottom: -20%;
 		transition: all 2s ease 2s;
 		position: absolute;
 		left: 50%;
@@ -190,7 +190,7 @@ body .wrapper .container .parralax__bg .light-2.active {
 		bottom: calc( (((40) * ((100vw - 320px) * 100) / (1600)) / 100) + 80px );
 }
 body .wrapper .container .parralax__bg .light-3 {
-		bottom: -100%;
+		bottom: -20%;
 		transition: all 2s ease 2s;
 		position: absolute;
 		left: calc( (((1180) * ((100vw - 320px) * 100) / (1600)) / 100) + 320px );
@@ -222,7 +222,6 @@ body .wrapper .container .parralax__bg .light-3.active {
 body .wrapper .container .parralax__rope-1 {
 		width: 100%;
 		height: 100%;
-		position: relative;
 }
 body .wrapper .container .parralax__rope-1 .rope {
 		transform: translateY(-50%);
@@ -531,11 +530,10 @@ body .wrapper .container .parralax .wave .img.active {
 		opacity: 1;
 }
 body .wrapper .container .parralax__wave-1 {
-		position: relative;
 		width: 100%;
 		height: 100%;
 }
-body .wrapper .container .parralax__wave-1 .img {
+body .wrapper .container .parralax__wave-1 .img-w {
 		position: absolute;
 		bottom: calc( (((50) * ((100vw - 320px) * 100) / (1600)) / 100) + 80px );
 		left: calc( (((-85) * ((100vw - 320px) * 100) / (1600)) / 100) + -203px );
@@ -555,7 +553,7 @@ body .wrapper .container .parralax__wave-1 .img {
 				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
 		}
 }
-body .wrapper .container .parralax__wave-1 .img .black {
+body .wrapper .container .parralax__wave-1 .img-w .black {
 		position: absolute;
 		width: 130%;
 		height: 20%;
@@ -564,11 +562,10 @@ body .wrapper .container .parralax__wave-1 .img .black {
 		background-color: black;
 }
 body .wrapper .container .parralax__wave-2 {
-		position: relative;
 		width: 100%;
 		height: 100%;
 }
-body .wrapper .container .parralax__wave-2 .img {
+body .wrapper .container .parralax__wave-2 .img-w {
 		position: absolute;
 		bottom: calc( (((38) * ((100vw - 320px) * 100) / (1600)) / 100) + 67px );
 		left: calc( (((-94) * ((100vw - 320px) * 100) / (1600)) / 100) + -194px );
@@ -588,7 +585,7 @@ body .wrapper .container .parralax__wave-2 .img {
 				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
 		}
 }
-body .wrapper .container .parralax__wave-2 .img .black {
+body .wrapper .container .parralax__wave-2 .img-w .black {
 		position: absolute;
 		width: 130%;
 		height: 20%;
@@ -597,11 +594,10 @@ body .wrapper .container .parralax__wave-2 .img .black {
 		background-color: black;
 }
 body .wrapper .container .parralax__wave-3 {
-		position: relative;
 		width: 100%;
 		height: 100%;
 }
-body .wrapper .container .parralax__wave-3 .img {
+body .wrapper .container .parralax__wave-3 .img-w {
 		position: absolute;
 		bottom: calc( (((15) * ((100vw - 320px) * 100) / (1600)) / 100) + 50px );
 		left: calc( (((-105) * ((100vw - 320px) * 100) / (1600)) / 100) + -183px );
@@ -621,7 +617,7 @@ body .wrapper .container .parralax__wave-3 .img {
 				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
 		}
 }
-body .wrapper .container .parralax__wave-3 .img .black {
+body .wrapper .container .parralax__wave-3 .img-w .black {
 		position: absolute;
 		width: 130%;
 		height: 20%;
@@ -630,11 +626,10 @@ body .wrapper .container .parralax__wave-3 .img .black {
 		background-color: black;
 }
 body .wrapper .container .parralax__wave-4 {
-		position: relative;
 		width: 100%;
 		height: 100%;
 }
-body .wrapper .container .parralax__wave-4 .img {
+body .wrapper .container .parralax__wave-4 .img-w {
 		position: absolute;
 		bottom: calc( (((-10) * ((100vw - 320px) * 100) / (1600)) / 100) + 33px );
 		left: calc( (((-119) * ((100vw - 320px) * 100) / (1600)) / 100) + -169px );
@@ -654,7 +649,7 @@ body .wrapper .container .parralax__wave-4 .img {
 				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
 		}
 }
-body .wrapper .container .parralax__wave-4 .img .black {
+body .wrapper .container .parralax__wave-4 .img-w .black {
 		position: absolute;
 		width: 130%;
 		height: 20%;
@@ -663,11 +658,10 @@ body .wrapper .container .parralax__wave-4 .img .black {
 		background-color: black;
 }
 body .wrapper .container .parralax__wave-5 {
-		position: relative;
 		width: 100%;
 		height: 100%;
 }
-body .wrapper .container .parralax__wave-5 .img {
+body .wrapper .container .parralax__wave-5 .img-w {
 		position: absolute;
 		bottom: calc( (((-42) * ((100vw - 320px) * 100) / (1600)) / 100) + 10px );
 		left: calc( (((-135) * ((100vw - 320px) * 100) / (1600)) / 100) + -153px );
@@ -687,7 +681,7 @@ body .wrapper .container .parralax__wave-5 .img {
 				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
 		}
 }
-body .wrapper .container .parralax__wave-5 .img .black {
+body .wrapper .container .parralax__wave-5 .img-w .black {
 		position: absolute;
 		width: 130%;
 		height: 100%;
@@ -696,11 +690,10 @@ body .wrapper .container .parralax__wave-5 .img .black {
 		background-color: black;
 }
 body .wrapper .container .parralax__wave-6 {
-		position: relative;
 		width: 100%;
 		height: 100%;
 }
-body .wrapper .container .parralax__wave-6 .img {
+body .wrapper .container .parralax__wave-6 .img-w {
 		position: absolute;
 		bottom: calc( (((-66) * ((100vw - 320px) * 100) / (1600)) / 100) + -10px );
 		left: calc( (((-148) * ((100vw - 320px) * 100) / (1600)) / 100) + -140px );
@@ -724,9 +717,9 @@ body .wrapper .container .parralax__liighthouse {
 		width: 100%;
 		height: 100%;
 }
-body .wrapper .container .parralax__liighthouse .img {
+body .wrapper .container .parralax__liighthouse .img-l {
 		position: absolute;
-		bottom: -100%;
+		bottom: -40%;
 		transition: all 1s ease 2.5s;
 		left: calc( (((1280) * ((100vw - 320px) * 100) / (1600)) / 100) + 220px );
 		width: calc( (((190) * ((100vw - 320px) * 100) / (1600)) / 100) + 70px );
@@ -748,7 +741,7 @@ body .wrapper .container .parralax__liighthouse .img {
 				transform: rotateZ(-10deg) rotateX(0deg) translate3d(-10%, 5%, 0);
 		}
 }
-body .wrapper .container .parralax__liighthouse .img .light {
+body .wrapper .container .parralax__liighthouse .img-l .light {
 		display: inline;
 		position: absolute;
 		top: 25%;
@@ -772,7 +765,7 @@ body .wrapper .container .parralax__liighthouse .img .light {
 				opacity: 0.4;
 		}
 }
-body .wrapper .container .parralax__liighthouse .img.active {
+body .wrapper .container .parralax__liighthouse .img-l.active {
 		bottom: calc( (((0) * ((100vw - 320px) * 100) / (1600)) / 100) + 45px );
 }
 body .wrapper.active {

@@ -47,7 +47,7 @@ body {
                         }
                     }
                     .light-1 {
-                        bottom: -100%;
+                        bottom: -20%;
                         transition: all 2s ease 2s;
 
                         position: absolute;
@@ -81,7 +81,7 @@ body {
                     }
 
                     .light-2 {
-                        bottom: -100%;
+                        bottom: -20%;
                         transition: all 2s ease 2s;
                         position: absolute;
                         left: 50%;
@@ -113,7 +113,7 @@ body {
                     }
 
                     .light-3 {
-                        bottom: -100%;
+                        bottom: -20%;
                         transition: all 2s ease 2s;
                         position: absolute;
                         @include adaptiveLeft(1500, 320);
@@ -148,7 +148,6 @@ body {
                 &__rope-1 {
                     width: 100%;
                     height: 100%;
-                    position: relative;
                     .rope {
                         transform: translateY(-50%);
                         transition: all 1s ease 1s;
@@ -342,7 +341,6 @@ body {
                     .rope {
                         transform: translateY(-50%);
                         transition: all 1s ease 1.6s;
-
                         position: absolute;
                         @include adaptiveTop(-162, 0);
                         @include adaptiveHeight(1080, 300);
@@ -478,17 +476,15 @@ body {
                 }
 
                 &__wave-1 {
-                    position: relative;
                     width: 100%;
                     height: 100%;
-                    .img {
+                    .img-w {
                         position: absolute;
                         @include adaptiveBottom(130, 80);
                         @include adaptiveLeft(-288, -203);
                         @include adaptiveWidth(2496, 800);
                         @include adaptiveHeight(1080, 400);
                         background: url("../img/waves/wave-plain.png") center bottom / 10% 10% repeat-x;
-
                         animation-name: wave-1-anim;
                         animation-duration: 8s;
                         animation-iteration-count: infinite;
@@ -513,17 +509,15 @@ body {
                 }
 
                 &__wave-2 {
-                    position: relative;
                     width: 100%;
                     height: 100%;
-                    .img {
+                    .img-w {
                         position: absolute;
                         @include adaptiveBottom(105, 67);
                         @include adaptiveLeft(-288, -194);
                         @include adaptiveWidth(2496, 800);
                         @include adaptiveHeight(1080, 400);
                         background: url("../img/waves/wave-paint.png") center bottom / 12% 12% repeat-x;
-
                         animation-name: wave-2-anim;
                         animation-duration: 7s;
                         animation-iteration-count: infinite;
@@ -548,17 +542,15 @@ body {
                 }
 
                 &__wave-3 {
-                    position: relative;
                     width: 100%;
                     height: 100%;
-                    .img {
+                    .img-w {
                         position: absolute;
                         @include adaptiveBottom(65, 50);
                         @include adaptiveLeft(-288, -183);
                         @include adaptiveWidth(2496, 800);
                         @include adaptiveHeight(1080, 400);
                         background: url("../img/waves/wave-plain.png") center bottom / 15% 15% repeat-x;
-
                         animation-name: wave-3-anim;
                         animation-duration: 6s;
                         animation-iteration-count: infinite;
@@ -583,17 +575,15 @@ body {
                 }
 
                 &__wave-4 {
-                    position: relative;
                     width: 100%;
                     height: 100%;
-                    .img {
+                    .img-w {
                         position: absolute;
                         @include adaptiveBottom(23, 33);
                         @include adaptiveLeft(-288, -169);
                         @include adaptiveWidth(2496, 800);
                         @include adaptiveHeight(1080, 400);
                         background: url("../img/waves/wave-paint.png") center bottom / 18% 18% repeat-x;
-
                         animation-name: wave-4-anim;
                         animation-duration: 5s;
                         animation-iteration-count: infinite;
@@ -618,10 +608,9 @@ body {
                 }
 
                 &__wave-5 {
-                    position: relative;
                     width: 100%;
                     height: 100%;
-                    .img {
+                    .img-w {
                         position: absolute;
                         @include adaptiveBottom(-32, 10);
                         @include adaptiveLeft(-288, -153);
@@ -652,17 +641,15 @@ body {
                 }
 
                 &__wave-6 {
-                    position: relative;
                     width: 100%;
                     height: 100%;
-                    .img {
+                    .img-w {
                         position: absolute;
                         @include adaptiveBottom(-76, -10);
                         @include adaptiveLeft(-288, -140);
                         @include adaptiveWidth(2496, 800);
                         @include adaptiveHeight(1080, 400);
                         background: url("../img/waves/wave-paint.png") center bottom / 25% 25% repeat-x;
-
                         animation-name: wave-6-anim;
                         animation-duration: 4s;
                         animation-iteration-count: infinite;
@@ -681,10 +668,9 @@ body {
                 &__liighthouse {
                     width: 100%;
                     height: 100%;
-
-                    .img {
+                    .img-l {
                         position: absolute;
-                        bottom: -100%;
+                        bottom: -40%;
                         transition: all 1s ease 2.5s;
                         @include adaptiveLeft(1500, 220);
                         @include adaptiveWidth(260, 70);
@@ -731,7 +717,7 @@ body {
                             }
                         }
                     }
-                    .img.active {
+                    .img-l.active {
                         @include adaptiveBottom(45, 45);
                     }
                 }

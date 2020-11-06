@@ -18,7 +18,7 @@
 
 $(document).ready(function () {
     $(".wrapper").addClass("active");
-    $(".parralax__liighthouse .img").addClass("active");
+    $(".parralax__liighthouse .img-l").addClass("active");
     $(".wave .img").addClass("active");
     $(".rope").addClass("active");
     $(".light-1").addClass("active");
@@ -26,7 +26,7 @@ $(document).ready(function () {
     $(".light-3").addClass("active");
 
     setTimeout(() => {
-        let lighthouse = document.getElementsByClassName("parralax__liighthouse")[0].getElementsByClassName("img")[0];
+        let lighthouse = document.getElementsByClassName("parralax__liighthouse")[0].getElementsByClassName("img-l")[0];
         let wave = document.getElementsByClassName("wave");
         let rope = document.getElementsByClassName("rope");
         let light1 = document.getElementsByClassName("light-1")[0];
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
         lighthouse.style.transition = "none";
         for (let i = 0; i < wave.length; i++) {
-            let w = wave[i].getElementsByClassName("img")[0];
+            let w = wave[i].getElementsByClassName("img-w")[0];
             w.style.transition = "none";
         }
         for (let i = 0; i < rope.length; i++) {
@@ -48,7 +48,7 @@ $(document).ready(function () {
     }, 4500);
 
 
-    var scene = document.getElementById('scene');
-    var parallaxInstance = new Parallax(scene);
+    // var scene = document.getElementById('scene');
+    // var parallaxInstance = new Parallax(scene);
 });
 
