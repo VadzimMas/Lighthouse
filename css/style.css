@@ -92,10 +92,6 @@ body .wrapper {
 		opacity: 0;
 		transition: all 1s ease 0.5s;
 }
-body .wrapper .container {
-		width: 100vw;
-		height: 100vh;
-}
 body .wrapper .container .parralax {
 		position: relative;
 		width: 100vw;
@@ -104,8 +100,8 @@ body .wrapper .container .parralax {
 		background-color: black;
 }
 body .wrapper .container .parralax__bg {
-		width: 100%;
-		height: 100%;
+		width: 100vw;
+		height: 100vh;
 }
 body .wrapper .container .parralax__bg .img {
 		position: absolute;
@@ -713,13 +709,6 @@ body .wrapper .container .parralax__rope-3 .rope3-wrapper .cloud-3 {
 body .wrapper .container .parralax__rope-3 .rope3-wrapper.active {
 		transform: translateY(0);
 }
-body .wrapper .container .parralax .wave .img {
-		transition: all 1.5s ease 1s;
-		opacity: 0;
-}
-body .wrapper .container .parralax .wave .img.active {
-		opacity: 1;
-}
 body .wrapper .container .parralax__wave-1 {
 		width: 100%;
 		height: 100%;
@@ -894,9 +883,14 @@ body .wrapper .container .parralax__wave-6 {
 		width: 100%;
 		height: 100%;
 }
-body .wrapper .container .parralax__wave-6 .img-wrapper {
-		width: 100%;
-		height: 100%;
+body .wrapper .container .parralax__wave-6 .img-w {
+		position: absolute;
+		bottom: -6%;
+		left: -25%;
+		width: 150%;
+		height: 25%;
+		background: url("../img/waves/wave-paint.png") center bottom/100% 100% repeat-x;
+		background-size: contain;
 		animation-name: wave-6-anim;
 		animation-duration: 4s;
 		animation-iteration-count: infinite;
@@ -909,15 +903,6 @@ body .wrapper .container .parralax__wave-6 .img-wrapper {
 		100% {
 				transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
 		}
-}
-body .wrapper .container .parralax__wave-6 .img-wrapper .img-w {
-		position: absolute;
-		bottom: -6%;
-		left: -25%;
-		width: 150%;
-		height: 25%;
-		background: url("../img/waves/wave-paint.png") center bottom/100% 100% repeat-x;
-		background-size: contain;
 }
 body .wrapper .container .parralax__liighthouse {
 		width: 100%;

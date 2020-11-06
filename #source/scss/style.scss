@@ -4,6 +4,7 @@
 body {
     width: 100vw;
     height: 100vh;
+
     overflow: hidden;
     background-color: black;
     .wrapper {
@@ -12,8 +13,6 @@ body {
         opacity: 0;
         transition: all 1s ease 0.5s;
         .container {
-            width: 100vw;
-            height: 100vh;
             .parralax {
                 position: relative;
                 width: 100vw;
@@ -21,8 +20,8 @@ body {
                 overflow: hidden;
                 background-color: black;
                 &__bg {
-                    width: 100%;
-                    height: 100%;
+                    width: 100vw;
+                    height: 100vh;
                     .img {
                         position: absolute;
                         width: 105%;
@@ -659,17 +658,17 @@ body {
                     }
                 }
 
-                .wave {
-                    .img {
-                        transition: all 1.5s ease 1s;
-                        opacity: 0;
-                    }
-                }
-                .wave {
-                    .img.active {
-                        opacity: 1;
-                    }
-                }
+                // .wave {
+                //     .img {
+                //         transition: all 1.5s ease 1s;
+                //         opacity: 0;
+                //     }
+                // }
+                // .wave {
+                //     .img.active {
+                //         opacity: 1;
+                //     }
+                // }
 
                 &__wave-1 {
                     width: 100%;
@@ -862,9 +861,15 @@ body {
                 &__wave-6 {
                     width: 100%;
                     height: 100%;
-                    .img-wrapper {
-                        width: 100%;
-                        height: 100%;
+                    .img-w {
+                        position: absolute;
+                        bottom: -6%;
+                        left: -25%;
+                        width: 150%;
+                        height: 25%;
+                        background: url("../img/waves/wave-paint.png") center bottom / 100% 100% repeat-x;
+                        background-size: contain;
+
                         animation-name: wave-6-anim;
                         animation-duration: 4s;
                         animation-iteration-count: infinite;
@@ -877,16 +882,6 @@ body {
                             100% {
                                 transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
                             }
-                        }
-                        .img-w {
-                            // display: none;
-                            position: absolute;
-                            bottom: -6%;
-                            left: -25%;
-                            width: 150%;
-                            height: 25%;
-                            background: url("../img/waves/wave-paint.png") center bottom / 100% 100% repeat-x;
-                            background-size: contain;
                         }
                     }
                 }
