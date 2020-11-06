@@ -2,11 +2,18 @@
 @import "mixins.scss";
 
 body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     background-color: black;
     .wrapper {
+        width: 100vw;
+        height: 100vh;
         opacity: 0;
         transition: all 1s ease 0s;
         .container {
+            width: 100vw;
+            height: 100vh;
             .parralax {
                 position: relative;
                 width: 100vw;
@@ -649,8 +656,6 @@ body {
                     width: 100%;
                     height: 100%;
                     .img {
-                        border: 1px solid red;
-
                         position: absolute;
                         @include adaptiveBottom(-76, -10);
                         @include adaptiveLeft(-288, -140);
@@ -658,16 +663,16 @@ body {
                         @include adaptiveHeight(1080, 400);
                         background: url("../img/waves/wave-paint.png") center bottom / 25% 25% repeat-x;
 
-                        animation-name: wave-6-anim;
+                        // animation-name: wave-6-anim;
                         animation-duration: 4s;
                         animation-iteration-count: infinite;
                         animation-timing-function: linear;
                         @keyframes wave-6-anim {
                             0% {
-                                transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
+                                transform: rotateZ(0) translate3d(0, 2%, 0) rotateZ(0);
                             }
                             100% {
-                                transform: rotateZ(-360deg) translate3d(0, 1%, 0) rotateZ(360deg);
+                                transform: rotateZ(-360deg) translate3d(0, 2%, 0) rotateZ(360deg);
                             }
                         }
                     }
