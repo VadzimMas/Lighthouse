@@ -663,7 +663,7 @@ body {
                         @include adaptiveHeight(1080, 400);
                         background: url("../img/waves/wave-paint.png") center bottom / 25% 25% repeat-x;
 
-                        // animation-name: wave-6-anim;
+                        animation-name: wave-6-anim;
                         animation-duration: 4s;
                         animation-iteration-count: infinite;
                         animation-timing-function: linear;
