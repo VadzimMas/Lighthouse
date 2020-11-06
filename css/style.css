@@ -706,10 +706,10 @@ body .wrapper .container .parralax__wave-6 .img {
 }
 @keyframes wave-6-anim {
 		0% {
-				transform: rotateZ(0) translate3d(0, 2%, 0) rotateZ(0);
+				transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
 		}
 		100% {
-				transform: rotateZ(-360deg) translate3d(0, 2%, 0) rotateZ(360deg);
+				transform: rotateZ(-360deg) translate3d(0, 1%, 0) rotateZ(360deg);
 		}
 }
 body .wrapper .container .parralax__liighthouse {
