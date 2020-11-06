@@ -223,27 +223,25 @@ body .wrapper .container .parralax__rope-1 {
 		width: 100%;
 		height: 100%;
 }
-body .wrapper .container .parralax__rope-1 .rope {
-		transform: translateY(-50%);
+body .wrapper .container .parralax__rope-1 .rope1-wrapper {
+		display: none;
+}
+body .wrapper .container .parralax__rope-1 .rope1-wrapper .rope {
 		transition: all 1s ease 1s;
 		position: absolute;
-		top: calc( (((-80) * ((100vw - 320px) * 100) / (1600)) / 100) + 80px );
-		height: calc( (((780) * ((100vw - 320px) * 100) / (1600)) / 100) + 300px );
-		left: calc( (((-282) * ((100vw - 320px) * 100) / (1600)) / 100) + -45px );
-		width: calc( (((2174) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
-		background: url("../img/rope.png") top center/100% 30% no-repeat;
+		top: -5%;
+		left: -15%;
+		width: 130%;
 }
-body .wrapper .container .parralax__rope-1 .rope.active {
+body .wrapper .container .parralax__rope-1 .rope1-wrapper .rope.active {
 		transform: translateY(0);
 }
-body .wrapper .container .parralax__rope-1 .birds {
+body .wrapper .container .parralax__rope-1 .rope1-wrapper .birds {
 		position: absolute;
-		top: 15.8%;
-		left: 70%;
-		width: 12%;
-		height: 18%;
-		background: url("../img/clouds/board-birds.png") 0 0/100% 100% no-repeat;
-		animation-name: rope-1-birds-anim;
+		top: calc( (((184) * ((100vw - 320px) * 100) / (1600)) / 100) + -100px );
+		transform: scale(1);
+		left: 80%;
+		width: 20%;
 		animation-duration: 4s;
 		transform-origin: top center;
 		animation-iteration-count: infinite;
@@ -257,14 +255,13 @@ body .wrapper .container .parralax__rope-1 .birds {
 				transform: rotateZ(10deg);
 		}
 }
-body .wrapper .container .parralax__rope-1 .cloud-1 {
+body .wrapper .container .parralax__rope-1 .rope1-wrapper .cloud-1 {
+		border: 1px solid red;
 		position: absolute;
-		top: 19.6%;
-		left: 32%;
-		width: 10%;
-		height: 14%;
-		background: url("../img/clouds/board-cloud-1.png") 0 0/100% 100% no-repeat;
-		animation-name: rope-1-cloud-1-anim;
+		top: calc( (((180) * ((100vw - 320px) * 100) / (1600)) / 100) + 35px );
+		left: 50%;
+		transform: scale(1);
+		width: 20%;
 		animation-duration: 6s;
 		transform-origin: top center;
 		animation-iteration-count: infinite;
@@ -278,14 +275,13 @@ body .wrapper .container .parralax__rope-1 .cloud-1 {
 				transform: rotateZ(10deg);
 		}
 }
-body .wrapper .container .parralax__rope-1 .cloud-2 {
+body .wrapper .container .parralax__rope-1 .rope1-wrapper .cloud-2 {
+		border: 1px solid red;
 		position: absolute;
-		top: 14%;
-		left: 15%;
-		width: 10%;
-		height: 14%;
-		background: url("../img/clouds/board-cloud-2.png") 0 0/100% 100% no-repeat;
-		animation-name: rope-1-cloud-2-anim;
+		top: calc( (((180) * ((100vw - 320px) * 100) / (1600)) / 100) + 35px );
+		left: 50%;
+		transform: scale(1);
+		width: 20%;
 		animation-duration: 5s;
 		transform-origin: top center;
 		animation-iteration-count: infinite;
@@ -299,14 +295,13 @@ body .wrapper .container .parralax__rope-1 .cloud-2 {
 				transform: rotateZ(-10deg);
 		}
 }
-body .wrapper .container .parralax__rope-1 .cloud-3 {
+body .wrapper .container .parralax__rope-1 .rope1-wrapper .cloud-3 {
+		border: 1px solid red;
 		position: absolute;
-		top: 19.5%;
-		left: 58%;
-		width: 10%;
-		height: 14%;
-		background: url("../img/clouds/board-cloud-2.png") 0 0/100% 100% no-repeat;
-		animation-name: rope-1-cloud-2-anim;
+		top: calc( (((180) * ((100vw - 320px) * 100) / (1600)) / 100) + 35px );
+		left: 50%;
+		transform: scale(1);
+		width: 20%;
 		animation-duration: 4s;
 		transform-origin: top center;
 		animation-iteration-count: infinite;
@@ -324,27 +319,35 @@ body .wrapper .container .parralax__rope-2 {
 		width: 100%;
 		height: 100%;
 }
-body .wrapper .container .parralax__rope-2 .rope {
-		transform: translateY(-50%);
+body .wrapper .container .parralax__rope-2 .rope2-wrapper {
+		display: none;
+		position: absolute;
+		top: 0%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+}
+@media only screen and (orientation: portrait) {
+		body .wrapper .container .parralax__rope-2 .rope2-wrapper {
+				top: 18%;
+		}
+}
+body .wrapper .container .parralax__rope-2 .rope2-wrapper .rope {
 		transition: all 1s ease 1.3s;
 		position: absolute;
-		top: calc( (((-126) * ((100vw - 320px) * 100) / (1600)) / 100) + 40px );
-		height: calc( (((780) * ((100vw - 320px) * 100) / (1600)) / 100) + 300px );
-		left: calc( (((-282) * ((100vw - 320px) * 100) / (1600)) / 100) + -45px );
-		width: calc( (((2174) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
-		background: url("../img/rope.png") top center/100% 30% no-repeat;
+		left: -15%;
+		width: 130%;
 }
-body .wrapper .container .parralax__rope-2 .rope.active {
+body .wrapper .container .parralax__rope-2 .rope2-wrapper .rope.active {
 		transform: translateY(0);
 }
-body .wrapper .container .parralax__rope-2 .cloud-1 {
+body .wrapper .container .parralax__rope-2 .rope2-wrapper .cloud-1 {
+		border: 1px solid red;
 		position: absolute;
-		top: 20.3%;
-		left: 50%;
-		width: 10%;
-		height: 16%;
-		background: url("../img/clouds/board-cloud-4.png") 0 0/100% 100% no-repeat;
-		animation-name: rope-2-cloud-1-anim;
+		top: calc( (((180) * ((100vw - 320px) * 100) / (1600)) / 100) + 35px );
+		left: 80%;
+		transform: scale(0.8);
+		width: 20%;
 		animation-duration: 8s;
 		transform-origin: top center;
 		animation-iteration-count: infinite;
@@ -358,14 +361,13 @@ body .wrapper .container .parralax__rope-2 .cloud-1 {
 				transform: rotateZ(-10deg);
 		}
 }
-body .wrapper .container .parralax__rope-2 .cloud-2 {
+body .wrapper .container .parralax__rope-2 .rope2-wrapper .cloud-2 {
+		border: 1px solid red;
 		position: absolute;
-		top: 5%;
-		left: -2%;
-		width: 12%;
-		height: 16%;
-		background: url("../img/clouds/board-cloud-2.png") 0 0/100% 100% no-repeat;
-		animation-name: rope-2-cloud-2-anim;
+		top: calc( (((180) * ((100vw - 320px) * 100) / (1600)) / 100) + 35px );
+		left: 80%;
+		transform: scale(0.8);
+		width: 20%;
 		animation-duration: 7s;
 		transform-origin: top center;
 		animation-iteration-count: infinite;
@@ -379,14 +381,13 @@ body .wrapper .container .parralax__rope-2 .cloud-2 {
 				transform: rotateZ(10deg);
 		}
 }
-body .wrapper .container .parralax__rope-2 .cloud-3 {
+body .wrapper .container .parralax__rope-2 .rope2-wrapper .cloud-3 {
+		border: 1px solid red;
 		position: absolute;
-		top: 12%;
-		left: 78%;
-		width: 12%;
-		height: 16%;
-		background: url("../img/clouds/board-cloud-3.png") 0 0/100% 100% no-repeat;
-		animation-name: rope-2-cloud-2-anim;
+		top: calc( (((180) * ((100vw - 320px) * 100) / (1600)) / 100) + 35px );
+		left: 80%;
+		transform: scale(0.8);
+		width: 20%;
 		animation-duration: 7s;
 		transform-origin: top center;
 		animation-iteration-count: infinite;
@@ -404,123 +405,187 @@ body .wrapper .container .parralax__rope-3 {
 		width: 100%;
 		height: 100%;
 }
-body .wrapper .container .parralax__rope-3 .rope {
-		transform: translateY(-50%);
+body .wrapper .container .parralax__rope-3 .rope3-wrapper {
+		position: absolute;
+		top: 6%;
+		left: 0;
+		width: 100%;
+		height: 100%;
 		transition: all 1s ease 1.6s;
-		position: absolute;
-		top: calc( (((-162) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px );
-		height: calc( (((780) * ((100vw - 320px) * 100) / (1600)) / 100) + 300px );
-		left: calc( (((-282) * ((100vw - 320px) * 100) / (1600)) / 100) + -45px );
-		width: calc( (((2174) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
-		background: url("../img/rope.png") top center/100% 30% no-repeat;
+		transform: translateY(-50%);
 }
-body .wrapper .container .parralax__rope-3 .rope.active {
-		transform: translateY(0);
+@media only screen and (orientation: portrait) {
+		body .wrapper .container .parralax__rope-3 .rope3-wrapper {
+				top: 25%;
+		}
 }
-body .wrapper .container .parralax__rope-3 .birds {
+body .wrapper .container .parralax__rope-3 .rope3-wrapper .rope {
 		position: absolute;
-		top: 16.3%;
-		left: 18%;
-		width: 16%;
-		height: 24%;
-		background: url("../img/clouds/board-birds.png") 0 0/100% 100% no-repeat;
+		left: -15%;
+		width: 130%;
+}
+body .wrapper .container .parralax__rope-3 .rope3-wrapper .birds {
+		position: absolute;
+		top: calc( (((100) * ((100vw - 320px) * 100) / (1600)) / 100) + 20px );
+		transform: scale(0.6);
+		left: -5%;
+		width: 20%;
 		animation-name: rope-3-birds-anim;
 		animation-duration: 4s;
 		transform-origin: top center;
 		animation-iteration-count: infinite;
 		animation-direction: alternate;
 }
-@keyframes rope-3-birds-anim {
-		0% {
-				transform: rotateZ(-10deg);
-		}
-		100% {
-				transform: rotateZ(10deg);
+@media only screen and (orientation: landscape) {
+		@keyframes rope-3-birds-anim {
+				0% {
+						transform: scale(0.6) rotateZ(-10deg);
+				}
+				100% {
+						transform: scale(0.6) rotateZ(10deg);
+				}
 		}
 }
-body .wrapper .container .parralax__rope-3 .cloud-1 {
+@media only screen and (orientation: portrait) {
+		@keyframes rope-3-birds-anim {
+				0% {
+						transform: scale(1) rotateZ(-10deg);
+				}
+				100% {
+						transform: scale(1) rotateZ(10deg);
+				}
+		}
+}
+body .wrapper .container .parralax__rope-3 .rope3-wrapper .cloud-1 {
 		position: absolute;
-		top: 4.6%;
-		left: 90%;
-		width: 10%;
-		height: 18%;
-		background: url("../img/clouds/board-cloud-1.png") 0 0/100% 100% no-repeat;
+		top: calc( (((146) * ((100vw - 320px) * 100) / (1600)) / 100) + 29px );
+		transform: scale(0.6);
+		left: 10%;
+		width: 20%;
 		animation-name: rope-3-cloud-1-anim;
 		animation-duration: 6s;
 		transform-origin: top center;
 		animation-iteration-count: infinite;
 		animation-direction: alternate;
 }
-@keyframes rope-3-cloud-1-anim {
-		0% {
-				transform: rotateZ(-10deg);
-		}
-		100% {
-				transform: rotateZ(10deg);
+@media only screen and (orientation: landscape) {
+		@keyframes rope-3-cloud-1-anim {
+				0% {
+						transform: scale(0.6) rotateZ(-10deg);
+				}
+				100% {
+						transform: scale(0.6) rotateZ(10deg);
+				}
 		}
 }
-body .wrapper .container .parralax__rope-3 .cloud-2 {
+@media only screen and (orientation: portrait) {
+		@keyframes rope-3-cloud-1-anim {
+				0% {
+						transform: scale(1) rotateZ(-10deg);
+				}
+				100% {
+						transform: scale(1) rotateZ(10deg);
+				}
+		}
+}
+body .wrapper .container .parralax__rope-3 .rope3-wrapper .cloud-2 {
 		position: absolute;
-		top: 17%;
-		left: 65%;
-		width: 14%;
-		height: 22%;
-		background: url("../img/clouds/board-cloud-2.png") 0 0/100% 100% no-repeat;
+		top: calc( (((177) * ((100vw - 320px) * 100) / (1600)) / 100) + 35px );
+		transform: scale(0.6);
+		left: 30%;
+		width: 20%;
 		animation-name: rope-3-cloud-2-anim;
 		animation-duration: 6s;
 		transform-origin: top center;
 		animation-iteration-count: infinite;
 		animation-direction: alternate;
 }
-@keyframes rope-3-cloud-2-anim {
-		0% {
-				transform: rotateZ(10deg);
-		}
-		100% {
-				transform: rotateZ(-10deg);
+@media only screen and (orientation: landscape) {
+		@keyframes rope-3-cloud-2-anim {
+				0% {
+						transform: scale(0.6) rotateZ(10deg);
+				}
+				100% {
+						transform: scale(0.6) rotateZ(-10deg);
+				}
 		}
 }
-body .wrapper .container .parralax__rope-3 .cloud-3 {
+@media only screen and (orientation: portrait) {
+		@keyframes rope-3-cloud-2-anim {
+				0% {
+						transform: scale(1) rotateZ(10deg);
+				}
+				100% {
+						transform: scale(1) rotateZ(-10deg);
+				}
+		}
+}
+body .wrapper .container .parralax__rope-3 .rope3-wrapper .cloud-3 {
 		position: absolute;
-		top: 10.8%;
-		left: 5%;
-		width: 18%;
-		height: 28%;
-		background: url("../img/clouds/board-cloud-3.png") 0 0/100% 100% no-repeat;
+		top: calc( (((167) * ((100vw - 320px) * 100) / (1600)) / 100) + 33px );
+		transform: scale(0.6);
+		left: 60%;
+		width: 20%;
 		animation-name: rope-3-cloud-3-anim;
 		animation-duration: 5s;
 		transform-origin: top center;
 		animation-iteration-count: infinite;
 		animation-direction: alternate;
 }
-@keyframes rope-3-cloud-3-anim {
-		0% {
-				transform: rotateZ(10deg);
-		}
-		100% {
-				transform: rotateZ(-10deg);
+@media only screen and (orientation: landscape) {
+		@keyframes rope-3-cloud-3-anim {
+				0% {
+						transform: scale(0.6) rotateZ(10deg);
+				}
+				100% {
+						transform: scale(0.6) rotateZ(-10deg);
+				}
 		}
 }
-body .wrapper .container .parralax__rope-3 .cloud-4 {
+@media only screen and (orientation: portrait) {
+		@keyframes rope-3-cloud-3-anim {
+				0% {
+						transform: scale(1) rotateZ(10deg);
+				}
+				100% {
+						transform: scale(1) rotateZ(-10deg);
+				}
+		}
+}
+body .wrapper .container .parralax__rope-3 .rope3-wrapper .cloud-4 {
 		position: absolute;
-		top: 20.5%;
-		left: 37%;
-		width: 18%;
-		height: 28%;
-		background: url("../img/clouds/board-cloud-3.png") 0 0/100% 100% no-repeat;
+		top: calc( (((101) * ((100vw - 320px) * 100) / (1600)) / 100) + 20px );
+		transform: scale(0.6);
+		left: 85%;
+		width: 20%;
 		animation-name: rope-3-cloud-4-anim;
 		animation-duration: 5s;
 		transform-origin: top center;
 		animation-iteration-count: infinite;
 		animation-direction: alternate;
 }
-@keyframes rope-3-cloud-4-anim {
-		0% {
-				transform: rotateZ(10deg);
+@media only screen and (orientation: landscape) {
+		@keyframes rope-3-cloud-4-anim {
+				0% {
+						transform: scale(0.6) rotateZ(-10deg);
+				}
+				100% {
+						transform: scale(0.6) rotateZ(10deg);
+				}
 		}
-		100% {
-				transform: rotateZ(-10deg);
+}
+@media only screen and (orientation: portrait) {
+		@keyframes rope-3-cloud-4-anim {
+				0% {
+						transform: scale(1) rotateZ(-10deg);
+				}
+				100% {
+						transform: scale(1) rotateZ(10deg);
+				}
 		}
+}
+body .wrapper .container .parralax__rope-3 .rope3-wrapper.active {
+		transform: translateY(0);
 }
 body .wrapper .container .parralax .wave .img {
 		transition: all 1.5s ease 1s;
@@ -535,11 +600,13 @@ body .wrapper .container .parralax__wave-1 {
 }
 body .wrapper .container .parralax__wave-1 .img-w {
 		position: absolute;
-		bottom: calc( (((50) * ((100vw - 320px) * 100) / (1600)) / 100) + 80px );
-		left: calc( (((-85) * ((100vw - 320px) * 100) / (1600)) / 100) + -203px );
-		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
-		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
-		background: url("../img/waves/wave-plain.png") center bottom/10% 10% repeat-x;
+		bottom: 9%;
+		left: -70%;
+		width: 240%;
+		transform: scale(0.5);
+		height: 25%;
+		background: url("../img/waves/wave-plain.png") center bottom/100% 100% repeat-x;
+		background-size: contain;
 		animation-name: wave-1-anim;
 		animation-duration: 8s;
 		animation-iteration-count: infinite;
@@ -547,10 +614,10 @@ body .wrapper .container .parralax__wave-1 .img-w {
 }
 @keyframes wave-1-anim {
 		0% {
-				transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
+				transform: scale(0.5) rotateZ(0) translate3d(0, 5%, 0) rotateZ(0);
 		}
 		100% {
-				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+				transform: scale(0.5) rotateZ(360deg) translate3d(0, 5%, 0) rotateZ(-360deg);
 		}
 }
 body .wrapper .container .parralax__wave-1 .img-w .black {
@@ -567,11 +634,13 @@ body .wrapper .container .parralax__wave-2 {
 }
 body .wrapper .container .parralax__wave-2 .img-w {
 		position: absolute;
-		bottom: calc( (((38) * ((100vw - 320px) * 100) / (1600)) / 100) + 67px );
-		left: calc( (((-94) * ((100vw - 320px) * 100) / (1600)) / 100) + -194px );
-		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
-		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
-		background: url("../img/waves/wave-paint.png") center bottom/12% 12% repeat-x;
+		bottom: 6%;
+		left: -55%;
+		width: 210%;
+		transform: scale(0.6);
+		height: 25%;
+		background: url("../img/waves/wave-paint.png") center bottom/100% 100% repeat-x;
+		background-size: contain;
 		animation-name: wave-2-anim;
 		animation-duration: 7s;
 		animation-iteration-count: infinite;
@@ -579,10 +648,10 @@ body .wrapper .container .parralax__wave-2 .img-w {
 }
 @keyframes wave-2-anim {
 		0% {
-				transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
+				transform: scale(0.6) rotateZ(0) translate3d(0, 6%, 0) rotateZ(0);
 		}
 		100% {
-				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+				transform: scale(0.6) rotateZ(360deg) translate3d(0, 6%, 0) rotateZ(-360deg);
 		}
 }
 body .wrapper .container .parralax__wave-2 .img-w .black {
@@ -599,11 +668,13 @@ body .wrapper .container .parralax__wave-3 {
 }
 body .wrapper .container .parralax__wave-3 .img-w {
 		position: absolute;
-		bottom: calc( (((15) * ((100vw - 320px) * 100) / (1600)) / 100) + 50px );
-		left: calc( (((-105) * ((100vw - 320px) * 100) / (1600)) / 100) + -183px );
-		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
-		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
-		background: url("../img/waves/wave-plain.png") center bottom/15% 15% repeat-x;
+		bottom: 3%;
+		left: -40%;
+		width: 180%;
+		transform: scale(0.7);
+		height: 25%;
+		background: url("../img/waves/wave-plain.png") center bottom/100% 100% repeat-x;
+		background-size: contain;
 		animation-name: wave-3-anim;
 		animation-duration: 6s;
 		animation-iteration-count: infinite;
@@ -611,10 +682,10 @@ body .wrapper .container .parralax__wave-3 .img-w {
 }
 @keyframes wave-3-anim {
 		0% {
-				transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
+				transform: scale(0.7) rotateZ(0) translate3d(0, 7%, 0) rotateZ(0);
 		}
 		100% {
-				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+				transform: scale(0.7) rotateZ(360deg) translate3d(0, 7%, 0) rotateZ(-360deg);
 		}
 }
 body .wrapper .container .parralax__wave-3 .img-w .black {
@@ -631,11 +702,13 @@ body .wrapper .container .parralax__wave-4 {
 }
 body .wrapper .container .parralax__wave-4 .img-w {
 		position: absolute;
-		bottom: calc( (((-10) * ((100vw - 320px) * 100) / (1600)) / 100) + 33px );
-		left: calc( (((-119) * ((100vw - 320px) * 100) / (1600)) / 100) + -169px );
-		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
-		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
-		background: url("../img/waves/wave-paint.png") center bottom/18% 18% repeat-x;
+		bottom: 0%;
+		left: -35%;
+		width: 170%;
+		transform: scale(0.8);
+		height: 25%;
+		background: url("../img/waves/wave-paint.png") center bottom/100% 100% repeat-x;
+		background-size: contain;
 		animation-name: wave-4-anim;
 		animation-duration: 5s;
 		animation-iteration-count: infinite;
@@ -643,10 +716,10 @@ body .wrapper .container .parralax__wave-4 .img-w {
 }
 @keyframes wave-4-anim {
 		0% {
-				transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
+				transform: scale(0.8) rotateZ(0) translate3d(0, 8%, 0) rotateZ(0);
 		}
 		100% {
-				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+				transform: scale(0.8) rotateZ(360deg) translate3d(0, 8%, 0) rotateZ(-360deg);
 		}
 }
 body .wrapper .container .parralax__wave-4 .img-w .black {
@@ -663,11 +736,13 @@ body .wrapper .container .parralax__wave-5 {
 }
 body .wrapper .container .parralax__wave-5 .img-w {
 		position: absolute;
-		bottom: calc( (((-42) * ((100vw - 320px) * 100) / (1600)) / 100) + 10px );
-		left: calc( (((-135) * ((100vw - 320px) * 100) / (1600)) / 100) + -153px );
-		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
-		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
-		background: url("../img/waves/wave-plain.png") center bottom/22% 22% repeat-x;
+		bottom: -3%;
+		left: -30%;
+		width: 160%;
+		transform: scale(0.9);
+		height: 25%;
+		background: url("../img/waves/wave-plain.png") center bottom/100% 100% repeat-x;
+		background-size: contain;
 		animation-name: wave-5-anim;
 		animation-duration: 4s;
 		animation-iteration-count: infinite;
@@ -675,10 +750,10 @@ body .wrapper .container .parralax__wave-5 .img-w {
 }
 @keyframes wave-5-anim {
 		0% {
-				transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
+				transform: scale(0.9) rotateZ(0) translate3d(0, 9%, 0) rotateZ(0);
 		}
 		100% {
-				transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+				transform: scale(0.9) rotateZ(360deg) translate3d(0, 9%, 0) rotateZ(-360deg);
 		}
 }
 body .wrapper .container .parralax__wave-5 .img-w .black {
@@ -695,11 +770,12 @@ body .wrapper .container .parralax__wave-6 {
 }
 body .wrapper .container .parralax__wave-6 .img-w {
 		position: absolute;
-		bottom: calc( (((-66) * ((100vw - 320px) * 100) / (1600)) / 100) + -10px );
-		left: calc( (((-148) * ((100vw - 320px) * 100) / (1600)) / 100) + -140px );
-		width: calc( (((1696) * ((100vw - 320px) * 100) / (1600)) / 100) + 800px );
-		height: calc( (((680) * ((100vw - 320px) * 100) / (1600)) / 100) + 400px );
-		background: url("../img/waves/wave-paint.png") center bottom/25% 25% repeat-x;
+		bottom: -6%;
+		left: -25%;
+		width: 150%;
+		height: 25%;
+		background: url("../img/waves/wave-paint.png") center bottom/100% 100% repeat-x;
+		background-size: contain;
 		-webkit-animation-name: wave-6-anim;
 		-webkit-animation-duration: 4s;
 		-webkit-animation-iteration-count: infinite;
@@ -707,10 +783,10 @@ body .wrapper .container .parralax__wave-6 .img-w {
 }
 @keyframes wave-6-anim {
 		0% {
-				-webkit-transform: rotateZ(0) translate3d(0, 2%, 0) rotateZ(0);
+				-webkit-transform: rotateZ(0) translate3d(0, 10%, 0) rotateZ(0);
 		}
 		100% {
-				-webkit-transform: rotateZ(-360deg) translate3d(0, 2%, 0) rotateZ(360deg);
+				-webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
 		}
 }
 body .wrapper .container .parralax__liighthouse {
@@ -719,12 +795,13 @@ body .wrapper .container .parralax__liighthouse {
 }
 body .wrapper .container .parralax__liighthouse .img-l {
 		position: absolute;
-		bottom: -40%;
 		transition: all 1s ease 2.5s;
-		left: calc( (((1280) * ((100vw - 320px) * 100) / (1600)) / 100) + 220px );
-		width: calc( (((190) * ((100vw - 320px) * 100) / (1600)) / 100) + 70px );
-		height: calc( (((370) * ((100vw - 320px) * 100) / (1600)) / 100) + 130px );
+		bottom: -40%;
+		left: 65%;
+		width: 25%;
+		height: 40%;
 		background: url("../img/lighthouse.png") center bottom/100% 100% no-repeat;
+		background-size: contain;
 		animation-name: liighthouse-anim;
 		animation-duration: 8s;
 		animation-iteration-count: infinite;
@@ -766,7 +843,7 @@ body .wrapper .container .parralax__liighthouse .img-l .light {
 		}
 }
 body .wrapper .container .parralax__liighthouse .img-l.active {
-		bottom: calc( (((0) * ((100vw - 320px) * 100) / (1600)) / 100) + 45px );
+		bottom: 7%;
 }
 body .wrapper.active {
 		opacity: 1;

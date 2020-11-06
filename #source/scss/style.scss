@@ -148,318 +148,391 @@ body {
                 &__rope-1 {
                     width: 100%;
                     height: 100%;
-                    .rope {
-                        transform: translateY(-50%);
-                        transition: all 1s ease 1s;
-                        position: absolute;
-                        @include adaptiveTop(0, 80);
-                        @include adaptiveHeight(1080, 300);
-                        @include adaptiveLeft(-327, -45);
-                        @include adaptiveWidth(2574, 400);
-                        background: url("../img/rope.png") top center / 100% 30% no-repeat;
-                    }
-                    .rope.active {
-                        transform: translateY(0);
-                    }
-                    .birds {
-                        position: absolute;
-                        top: 15.8%;
-                        left: 70%;
-                        width: 12%;
-                        height: 18%;
-                        background: url("../img/clouds/board-birds.png") 0 0 / 100% 100% no-repeat;
 
-                        animation-name: rope-1-birds-anim;
-                        animation-duration: 4s;
-                        transform-origin: top center;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate;
-                        @keyframes rope-1-birds-anim {
-                            0% {
-                                transform: rotateZ(-10deg);
-                            }
-                            100% {
-                                transform: rotateZ(10deg);
+                    .rope1-wrapper {
+                        display: none;
+                        .rope {
+                            // transform: translateY(-50%);
+                            transition: all 1s ease 1s;
+                            position: absolute;
+                            top: -5%;
+                            left: -15%;
+                            width: 130%;
+                        }
+                        .rope.active {
+                            transform: translateY(0);
+                        }
+                        .birds {
+                            position: absolute;
+                            @include adaptiveTop(84, -100);
+                            transform: scale(1);
+                            left: 80%;
+                            width: 20%;
+
+                            // animation-name: rope-1-birds-anim;
+                            animation-duration: 4s;
+                            transform-origin: top center;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            @keyframes rope-1-birds-anim {
+                                0% {
+                                    transform: rotateZ(-10deg);
+                                }
+                                100% {
+                                    transform: rotateZ(10deg);
+                                }
                             }
                         }
-                    }
-                    .cloud-1 {
-                        position: absolute;
-                        top: 19.6%;
-                        left: 32%;
-                        width: 10%;
-                        height: 14%;
-                        background: url("../img/clouds/board-cloud-1.png") 0 0 / 100% 100% no-repeat;
+                        .cloud-1 {
+                            border: 1px solid red;
+                            position: absolute;
+                            @include adaptiveTop(215, 35);
+                            left: 50%;
+                            transform: scale(1);
+                            width: 20%;
 
-                        animation-name: rope-1-cloud-1-anim;
-                        animation-duration: 6s;
-                        transform-origin: top center;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate;
-                        @keyframes rope-1-cloud-1-anim {
-                            0% {
-                                transform: rotateZ(-10deg);
-                            }
-                            100% {
-                                transform: rotateZ(10deg);
+                            // animation-name: rope-1-cloud-1-anim;
+                            animation-duration: 6s;
+                            transform-origin: top center;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            @keyframes rope-1-cloud-1-anim {
+                                0% {
+                                    transform: rotateZ(-10deg);
+                                }
+                                100% {
+                                    transform: rotateZ(10deg);
+                                }
                             }
                         }
-                    }
-                    .cloud-2 {
-                        position: absolute;
-                        top: 14%;
-                        left: 15%;
-                        width: 10%;
-                        height: 14%;
-                        background: url("../img/clouds/board-cloud-2.png") 0 0 / 100% 100% no-repeat;
+                        .cloud-2 {
+                            border: 1px solid red;
+                            position: absolute;
+                            @include adaptiveTop(215, 35);
+                            left: 50%;
+                            transform: scale(1);
+                            width: 20%;
 
-                        animation-name: rope-1-cloud-2-anim;
-                        animation-duration: 5s;
-                        transform-origin: top center;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate;
-                        @keyframes rope-1-cloud-2-anim {
-                            0% {
-                                transform: rotateZ(10deg);
-                            }
-                            100% {
-                                transform: rotateZ(-10deg);
+                            // animation-name: rope-1-cloud-2-anim;
+                            animation-duration: 5s;
+                            transform-origin: top center;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            @keyframes rope-1-cloud-2-anim {
+                                0% {
+                                    transform: rotateZ(10deg);
+                                }
+                                100% {
+                                    transform: rotateZ(-10deg);
+                                }
                             }
                         }
-                    }
 
-                    .cloud-3 {
-                        position: absolute;
-                        top: 19.5%;
-                        left: 58%;
-                        width: 10%;
-                        height: 14%;
-                        background: url("../img/clouds/board-cloud-2.png") 0 0 / 100% 100% no-repeat;
+                        .cloud-3 {
+                            border: 1px solid red;
+                            position: absolute;
+                            @include adaptiveTop(215, 35);
+                            left: 50%;
+                            transform: scale(1);
+                            width: 20%;
 
-                        animation-name: rope-1-cloud-2-anim;
-                        animation-duration: 4s;
-                        transform-origin: top center;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate;
-                        @keyframes rope-1-cloud-2-anim {
-                            0% {
-                                transform: rotateZ(10deg);
-                            }
-                            100% {
-                                transform: rotateZ(-10deg);
+                            // animation-name: rope-1-cloud-2-anim;
+                            animation-duration: 4s;
+                            transform-origin: top center;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            @keyframes rope-1-cloud-2-anim {
+                                0% {
+                                    transform: rotateZ(10deg);
+                                }
+                                100% {
+                                    transform: rotateZ(-10deg);
+                                }
                             }
                         }
                     }
                 }
+
                 &__rope-2 {
                     width: 100%;
                     height: 100%;
-                    .rope {
-                        transform: translateY(-50%);
-                        transition: all 1s ease 1.3s;
+                    .rope2-wrapper {
+                        display: none;
                         position: absolute;
-                        @include adaptiveTop(-86, 40);
-                        @include adaptiveHeight(1080, 300);
-                        @include adaptiveLeft(-327, -45);
-                        @include adaptiveWidth(2574, 400);
-                        background: url("../img/rope.png") top center / 100% 30% no-repeat;
-                    }
-                    .rope.active {
-                        transform: translateY(0);
-                    }
+                        top: 0%;
+                        @media only screen and (orientation: portrait) {
+                            top: 18%;
+                        }
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        .rope {
+                            // transform: translateY(-50%);
+                            transition: all 1s ease 1.3s;
+                            position: absolute;
+                            left: -15%;
+                            width: 130%;
+                        }
+                        .rope.active {
+                            transform: translateY(0);
+                        }
 
-                    .cloud-1 {
-                        position: absolute;
-                        top: 20.3%;
-                        left: 50%;
-                        width: 10%;
-                        height: 16%;
-                        background: url("../img/clouds/board-cloud-4.png") 0 0 / 100% 100% no-repeat;
-
-                        animation-name: rope-2-cloud-1-anim;
-                        animation-duration: 8s;
-                        transform-origin: top center;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate;
-                        @keyframes rope-2-cloud-1-anim {
-                            0% {
-                                transform: rotateZ(10deg);
-                            }
-                            100% {
-                                transform: rotateZ(-10deg);
+                        .cloud-1 {
+                            border: 1px solid red;
+                            position: absolute;
+                            @include adaptiveTop(215, 35);
+                            left: 80%;
+                            transform: scale(0.8);
+                            width: 20%;
+                            // animation-name: rope-2-cloud-1-anim;
+                            animation-duration: 8s;
+                            transform-origin: top center;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            @keyframes rope-2-cloud-1-anim {
+                                0% {
+                                    transform: rotateZ(10deg);
+                                }
+                                100% {
+                                    transform: rotateZ(-10deg);
+                                }
                             }
                         }
-                    }
-                    .cloud-2 {
-                        position: absolute;
-                        top: 5%;
-                        left: -2%;
-                        width: 12%;
-                        height: 16%;
-                        background: url("../img/clouds/board-cloud-2.png") 0 0 / 100% 100% no-repeat;
-
-                        animation-name: rope-2-cloud-2-anim;
-                        animation-duration: 7s;
-                        transform-origin: top center;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate;
-                        @keyframes rope-2-cloud-2-anim {
-                            0% {
-                                transform: rotateZ(-10deg);
-                            }
-                            100% {
-                                transform: rotateZ(10deg);
+                        .cloud-2 {
+                            border: 1px solid red;
+                            position: absolute;
+                            @include adaptiveTop(215, 35);
+                            left: 80%;
+                            transform: scale(0.8);
+                            width: 20%;
+                            // animation-name: rope-2-cloud-2-anim;
+                            animation-duration: 7s;
+                            transform-origin: top center;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            @keyframes rope-2-cloud-2-anim {
+                                0% {
+                                    transform: rotateZ(-10deg);
+                                }
+                                100% {
+                                    transform: rotateZ(10deg);
+                                }
                             }
                         }
-                    }
-                    .cloud-3 {
-                        position: absolute;
-                        top: 12%;
-                        left: 78%;
-                        width: 12%;
-                        height: 16%;
-                        background: url("../img/clouds/board-cloud-3.png") 0 0 / 100% 100% no-repeat;
-
-                        animation-name: rope-2-cloud-2-anim;
-                        animation-duration: 7s;
-                        transform-origin: top center;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate;
-                        @keyframes rope-2-cloud-2-anim {
-                            0% {
-                                transform: rotateZ(-10deg);
-                            }
-                            100% {
-                                transform: rotateZ(10deg);
+                        .cloud-3 {
+                            border: 1px solid red;
+                            position: absolute;
+                            @include adaptiveTop(215, 35);
+                            left: 80%;
+                            transform: scale(0.8);
+                            width: 20%;
+                            // animation-name: rope-2-cloud-2-anim;
+                            animation-duration: 7s;
+                            transform-origin: top center;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            @keyframes rope-2-cloud-2-anim {
+                                0% {
+                                    transform: rotateZ(-10deg);
+                                }
+                                100% {
+                                    transform: rotateZ(10deg);
+                                }
                             }
                         }
                     }
                 }
+
                 &__rope-3 {
                     width: 100%;
                     height: 100%;
-                    .rope {
-                        transform: translateY(-50%);
+                    .rope3-wrapper {
+                        position: absolute;
+                        top: 6%;
+                        @media only screen and (orientation: portrait) {
+                            top: 25%;
+                        }
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+
                         transition: all 1s ease 1.6s;
-                        position: absolute;
-                        @include adaptiveTop(-162, 0);
-                        @include adaptiveHeight(1080, 300);
-                        @include adaptiveLeft(-327, -45);
-                        @include adaptiveWidth(2574, 400);
-                        background: url("../img/rope.png") top center / 100% 30% no-repeat;
+                        transform: translateY(-50%);
+
+                        .rope {
+                            position: absolute;
+                            left: -15%;
+                            width: 130%;
+                        }
+                        .birds {
+                            position: absolute;
+                            @include adaptiveTop(120, 20);
+                            transform: scale(0.6);
+                            left: -5%;
+                            width: 20%;
+
+                            animation-name: rope-3-birds-anim;
+                            animation-duration: 4s;
+                            transform-origin: top center;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            @media only screen and (orientation: landscape) {
+                                @keyframes rope-3-birds-anim {
+                                    0% {
+                                        transform: scale(0.6) rotateZ(-10deg);
+                                    }
+                                    100% {
+                                        transform: scale(0.6) rotateZ(10deg);
+                                    }
+                                }
+                            }
+                            @media only screen and (orientation: portrait) {
+                                @keyframes rope-3-birds-anim {
+                                    0% {
+                                        transform: scale(1) rotateZ(-10deg);
+                                    }
+                                    100% {
+                                        transform: scale(1) rotateZ(10deg);
+                                    }
+                                }
+                            }
+                        }
+                        .cloud-1 {
+                            position: absolute;
+                            @include adaptiveTop(175, 29);
+                            transform: scale(0.6);
+                            left: 10%;
+                            width: 20%;
+
+                            animation-name: rope-3-cloud-1-anim;
+                            animation-duration: 6s;
+                            transform-origin: top center;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            @media only screen and (orientation: landscape) {
+                                @keyframes rope-3-cloud-1-anim {
+                                    0% {
+                                        transform: scale(0.6) rotateZ(-10deg);
+                                    }
+                                    100% {
+                                        transform: scale(0.6) rotateZ(10deg);
+                                    }
+                                }
+                            }
+                            @media only screen and (orientation: portrait) {
+                                @keyframes rope-3-cloud-1-anim {
+                                    0% {
+                                        transform: scale(1) rotateZ(-10deg);
+                                    }
+                                    100% {
+                                        transform: scale(1) rotateZ(10deg);
+                                    }
+                                }
+                            }
+                        }
+                        .cloud-2 {
+                            position: absolute;
+                            @include adaptiveTop(212, 35);
+                            transform: scale(0.6);
+                            left: 30%;
+                            width: 20%;
+
+                            animation-name: rope-3-cloud-2-anim;
+                            animation-duration: 6s;
+                            transform-origin: top center;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            @media only screen and (orientation: landscape) {
+                                @keyframes rope-3-cloud-2-anim {
+                                    0% {
+                                        transform: scale(0.6) rotateZ(10deg);
+                                    }
+                                    100% {
+                                        transform: scale(0.6) rotateZ(-10deg);
+                                    }
+                                }
+                            }
+                            @media only screen and (orientation: portrait) {
+                                @keyframes rope-3-cloud-2-anim {
+                                    0% {
+                                        transform: scale(1) rotateZ(10deg);
+                                    }
+                                    100% {
+                                        transform: scale(1) rotateZ(-10deg);
+                                    }
+                                }
+                            }
+                        }
+                        .cloud-3 {
+                            position: absolute;
+                            @include adaptiveTop(200, 33);
+                            transform: scale(0.6);
+                            left: 60%;
+                            width: 20%;
+
+                            animation-name: rope-3-cloud-3-anim;
+                            animation-duration: 5s;
+                            transform-origin: top center;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+                            @media only screen and (orientation: landscape) {
+                                @keyframes rope-3-cloud-3-anim {
+                                    0% {
+                                        transform: scale(0.6) rotateZ(10deg);
+                                    }
+                                    100% {
+                                        transform: scale(0.6) rotateZ(-10deg);
+                                    }
+                                }
+                            }
+                            @media only screen and (orientation: portrait) {
+                                @keyframes rope-3-cloud-3-anim {
+                                    0% {
+                                        transform: scale(1) rotateZ(10deg);
+                                    }
+                                    100% {
+                                        transform: scale(1) rotateZ(-10deg);
+                                    }
+                                }
+                            }
+                        }
+                        .cloud-4 {
+                            position: absolute;
+                            @include adaptiveTop(121, 20);
+                            transform: scale(0.6);
+                            left: 85%;
+                            width: 20%;
+
+                            animation-name: rope-3-cloud-4-anim;
+                            animation-duration: 5s;
+                            transform-origin: top center;
+                            animation-iteration-count: infinite;
+                            animation-direction: alternate;
+
+                            @media only screen and (orientation: landscape) {
+                                @keyframes rope-3-cloud-4-anim {
+                                    0% {
+                                        transform: scale(0.6) rotateZ(-10deg);
+                                    }
+                                    100% {
+                                        transform: scale(0.6) rotateZ(10deg);
+                                    }
+                                }
+                            }
+                            @media only screen and (orientation: portrait) {
+                                @keyframes rope-3-cloud-4-anim {
+                                    0% {
+                                        transform: scale(1) rotateZ(-10deg);
+                                    }
+                                    100% {
+                                        transform: scale(1) rotateZ(10deg);
+                                    }
+                                }
+                            }
+                        }
                     }
-                    .rope.active {
+                    .rope3-wrapper.active {
                         transform: translateY(0);
-                    }
-                    .birds {
-                        position: absolute;
-                        top: 16.3%;
-                        left: 18%;
-                        width: 16%;
-                        height: 24%;
-                        background: url("../img/clouds/board-birds.png") 0 0 / 100% 100% no-repeat;
-
-                        animation-name: rope-3-birds-anim;
-                        animation-duration: 4s;
-                        transform-origin: top center;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate;
-                        @keyframes rope-3-birds-anim {
-                            0% {
-                                transform: rotateZ(-10deg);
-                            }
-                            100% {
-                                transform: rotateZ(10deg);
-                            }
-                        }
-                    }
-                    .cloud-1 {
-                        position: absolute;
-                        top: 4.6%;
-                        left: 90%;
-                        width: 10%;
-                        height: 18%;
-                        background: url("../img/clouds/board-cloud-1.png") 0 0 / 100% 100% no-repeat;
-
-                        animation-name: rope-3-cloud-1-anim;
-                        animation-duration: 6s;
-                        transform-origin: top center;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate;
-                        @keyframes rope-3-cloud-1-anim {
-                            0% {
-                                transform: rotateZ(-10deg);
-                            }
-                            100% {
-                                transform: rotateZ(10deg);
-                            }
-                        }
-                    }
-                    .cloud-2 {
-                        position: absolute;
-                        top: 17%;
-                        left: 65%;
-                        width: 14%;
-                        height: 22%;
-                        background: url("../img/clouds/board-cloud-2.png") 0 0 / 100% 100% no-repeat;
-
-                        animation-name: rope-3-cloud-2-anim;
-                        animation-duration: 6s;
-                        transform-origin: top center;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate;
-                        @keyframes rope-3-cloud-2-anim {
-                            0% {
-                                transform: rotateZ(10deg);
-                            }
-                            100% {
-                                transform: rotateZ(-10deg);
-                            }
-                        }
-                    }
-                    .cloud-3 {
-                        position: absolute;
-                        top: 10.8%;
-                        left: 5%;
-                        width: 18%;
-                        height: 28%;
-                        background: url("../img/clouds/board-cloud-3.png") 0 0 / 100% 100% no-repeat;
-
-                        animation-name: rope-3-cloud-3-anim;
-                        animation-duration: 5s;
-                        transform-origin: top center;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate;
-                        @keyframes rope-3-cloud-3-anim {
-                            0% {
-                                transform: rotateZ(10deg);
-                            }
-                            100% {
-                                transform: rotateZ(-10deg);
-                            }
-                        }
-                    }
-                    .cloud-4 {
-                        position: absolute;
-                        top: 20.5%;
-                        left: 37%;
-                        width: 18%;
-                        height: 28%;
-                        background: url("../img/clouds/board-cloud-3.png") 0 0 / 100% 100% no-repeat;
-
-                        animation-name: rope-3-cloud-4-anim;
-                        animation-duration: 5s;
-                        transform-origin: top center;
-                        animation-iteration-count: infinite;
-                        animation-direction: alternate;
-                        @keyframes rope-3-cloud-4-anim {
-                            0% {
-                                transform: rotateZ(10deg);
-                            }
-                            100% {
-                                transform: rotateZ(-10deg);
-                            }
-                        }
                     }
                 }
 
@@ -480,23 +553,28 @@ body {
                     height: 100%;
                     .img-w {
                         position: absolute;
-                        @include adaptiveBottom(130, 80);
-                        @include adaptiveLeft(-288, -203);
-                        @include adaptiveWidth(2496, 800);
-                        @include adaptiveHeight(1080, 400);
-                        background: url("../img/waves/wave-plain.png") center bottom / 10% 10% repeat-x;
+                        // display: none;
+                        bottom: 9%;
+                        left: -70%;
+                        width: 240%;
+                        transform: scale(0.5);
+                        height: 25%;
+                        background: url("../img/waves/wave-plain.png") center bottom / 100% 100% repeat-x;
+                        background-size: contain;
+
                         animation-name: wave-1-anim;
                         animation-duration: 8s;
                         animation-iteration-count: infinite;
                         animation-timing-function: linear;
                         @keyframes wave-1-anim {
                             0% {
-                                transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
+                                transform: scale(0.5) rotateZ(0) translate3d(0, 5%, 0) rotateZ(0);
                             }
                             100% {
-                                transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+                                transform: scale(0.5) rotateZ(360deg) translate3d(0, 5%, 0) rotateZ(-360deg);
                             }
                         }
+
                         .black {
                             position: absolute;
                             width: 130%;
@@ -512,22 +590,26 @@ body {
                     width: 100%;
                     height: 100%;
                     .img-w {
+                        // display: none;
+
                         position: absolute;
-                        @include adaptiveBottom(105, 67);
-                        @include adaptiveLeft(-288, -194);
-                        @include adaptiveWidth(2496, 800);
-                        @include adaptiveHeight(1080, 400);
-                        background: url("../img/waves/wave-paint.png") center bottom / 12% 12% repeat-x;
+                        bottom: 6%;
+                        left: -55%;
+                        width: 210%;
+                        transform: scale(0.6);
+                        height: 25%;
+                        background: url("../img/waves/wave-paint.png") center bottom / 100% 100% repeat-x;
+                        background-size: contain;
                         animation-name: wave-2-anim;
                         animation-duration: 7s;
                         animation-iteration-count: infinite;
                         animation-timing-function: linear;
                         @keyframes wave-2-anim {
                             0% {
-                                transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
+                                transform: scale(0.6) rotateZ(0) translate3d(0, 6%, 0) rotateZ(0);
                             }
                             100% {
-                                transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+                                transform: scale(0.6) rotateZ(360deg) translate3d(0, 6%, 0) rotateZ(-360deg);
                             }
                         }
                         .black {
@@ -545,22 +627,26 @@ body {
                     width: 100%;
                     height: 100%;
                     .img-w {
+                        // display: none;
+
                         position: absolute;
-                        @include adaptiveBottom(65, 50);
-                        @include adaptiveLeft(-288, -183);
-                        @include adaptiveWidth(2496, 800);
-                        @include adaptiveHeight(1080, 400);
-                        background: url("../img/waves/wave-plain.png") center bottom / 15% 15% repeat-x;
+                        bottom: 3%;
+                        left: -40%;
+                        width: 180%;
+                        transform: scale(0.7);
+                        height: 25%;
+                        background: url("../img/waves/wave-plain.png") center bottom / 100% 100% repeat-x;
+                        background-size: contain;
                         animation-name: wave-3-anim;
                         animation-duration: 6s;
                         animation-iteration-count: infinite;
                         animation-timing-function: linear;
                         @keyframes wave-3-anim {
                             0% {
-                                transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
+                                transform: scale(0.7) rotateZ(0) translate3d(0, 7%, 0) rotateZ(0);
                             }
                             100% {
-                                transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+                                transform: scale(0.7) rotateZ(360deg) translate3d(0, 7%, 0) rotateZ(-360deg);
                             }
                         }
                         .black {
@@ -578,22 +664,27 @@ body {
                     width: 100%;
                     height: 100%;
                     .img-w {
+                        // display: none;
+
                         position: absolute;
-                        @include adaptiveBottom(23, 33);
-                        @include adaptiveLeft(-288, -169);
-                        @include adaptiveWidth(2496, 800);
-                        @include adaptiveHeight(1080, 400);
-                        background: url("../img/waves/wave-paint.png") center bottom / 18% 18% repeat-x;
+                        bottom: 0%;
+                        left: -35%;
+                        width: 170%;
+                        transform: scale(0.8);
+                        height: 25%;
+                        background: url("../img/waves/wave-paint.png") center bottom / 100% 100% repeat-x;
+                        background-size: contain;
+
                         animation-name: wave-4-anim;
                         animation-duration: 5s;
                         animation-iteration-count: infinite;
                         animation-timing-function: linear;
                         @keyframes wave-4-anim {
                             0% {
-                                transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
+                                transform: scale(0.8) rotateZ(0) translate3d(0, 8%, 0) rotateZ(0);
                             }
                             100% {
-                                transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+                                transform: scale(0.8) rotateZ(360deg) translate3d(0, 8%, 0) rotateZ(-360deg);
                             }
                         }
                         .black {
@@ -611,22 +702,27 @@ body {
                     width: 100%;
                     height: 100%;
                     .img-w {
+                        // display: none;
+
                         position: absolute;
-                        @include adaptiveBottom(-32, 10);
-                        @include adaptiveLeft(-288, -153);
-                        @include adaptiveWidth(2496, 800);
-                        @include adaptiveHeight(1080, 400);
-                        background: url("../img/waves/wave-plain.png") center bottom / 22% 22% repeat-x;
+                        bottom: -3%;
+                        left: -30%;
+                        width: 160%;
+                        transform: scale(0.9);
+                        height: 25%;
+                        background: url("../img/waves/wave-plain.png") center bottom / 100% 100% repeat-x;
+                        background-size: contain;
+
                         animation-name: wave-5-anim;
                         animation-duration: 4s;
                         animation-iteration-count: infinite;
                         animation-timing-function: linear;
                         @keyframes wave-5-anim {
                             0% {
-                                transform: rotateZ(0) translate3d(0, 1%, 0) rotateZ(0);
+                                transform: scale(0.9) rotateZ(0) translate3d(0, 9%, 0) rotateZ(0);
                             }
                             100% {
-                                transform: rotateZ(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+                                transform: scale(0.9) rotateZ(360deg) translate3d(0, 9%, 0) rotateZ(-360deg);
                             }
                         }
                         .black {
@@ -644,12 +740,14 @@ body {
                     width: 100%;
                     height: 100%;
                     .img-w {
+                        // display: none;
                         position: absolute;
-                        @include adaptiveBottom(-76, -10);
-                        @include adaptiveLeft(-288, -140);
-                        @include adaptiveWidth(2496, 800);
-                        @include adaptiveHeight(1080, 400);
-                        background: url("../img/waves/wave-paint.png") center bottom / 25% 25% repeat-x;
+                        bottom: -6%;
+                        left: -25%;
+                        width: 150%;
+                        height: 25%;
+                        background: url("../img/waves/wave-paint.png") center bottom / 100% 100% repeat-x;
+                        background-size: contain;
 
                         -webkit-animation-name: wave-6-anim;
                         -webkit-animation-duration: 4s;
@@ -657,10 +755,10 @@ body {
                         -webkit-animation-timing-function: linear;
                         @keyframes wave-6-anim {
                             0% {
-                                -webkit-transform: rotateZ(0) translate3d(0, 2%, 0) rotateZ(0);
+                                -webkit-transform: rotateZ(0) translate3d(0, 10%, 0) rotateZ(0);
                             }
                             100% {
-                                -webkit-transform: rotateZ(-360deg) translate3d(0, 2%, 0) rotateZ(360deg);
+                                -webkit-transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
                             }
                         }
                     }
@@ -671,12 +769,14 @@ body {
                     height: 100%;
                     .img-l {
                         position: absolute;
-                        bottom: -40%;
                         transition: all 1s ease 2.5s;
-                        @include adaptiveLeft(1500, 220);
-                        @include adaptiveWidth(260, 70);
-                        @include adaptiveHeight(500, 130);
+                        bottom: -40%;
+                        left: 65%;
+                        width: 25%;
+                        height: 40%;
                         background: url("../img/lighthouse.png") center bottom / 100% 100% no-repeat;
+                        background-size: contain;
+
                         animation-name: liighthouse-anim;
                         animation-duration: 8s;
                         animation-iteration-count: infinite;
@@ -719,7 +819,7 @@ body {
                         }
                     }
                     .img-l.active {
-                        @include adaptiveBottom(45, 45);
+                        bottom: 7%;
                     }
                 }
             }
