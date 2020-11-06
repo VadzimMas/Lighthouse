@@ -45,102 +45,148 @@ body {
                             }
                         }
                     }
-                    .light-1 {
-                        bottom: -20%;
-                        transition: all 2s ease 2s;
 
+                    .light-1-wrapper {
                         position: absolute;
-                        @include adaptiveLeft(450, 15);
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
 
-                        border-radius: 50%;
-                        width: 1px;
-                        height: 1px;
-                        @include adaptiveBoxShadow(0, 0, 150, 100, 0, 0, 50, 40, rgb(255, 0, 221));
-
-                        animation-name: light-1-anim;
-                        animation-duration: 6s;
-                        animation-iteration-count: infinite;
-                        @keyframes light-1-anim {
+                        transform: translateY(50%);
+                        animation: light-popup 0.5s linear 2.5s 1 forwards;
+                        @keyframes light-popup {
                             0% {
-                                transform: scale(1);
-                                opacity: 1;
-                            }
-                            50% {
-                                transform: scale(0.8);
-                                opacity: 0.8;
+                                transform: translateY(50%);
                             }
                             100% {
-                                transform: scale(1);
-                                opacity: 1;
+                                transform: translateY(0%);
+                            }
+                        }
+                        .light-1 {
+                            bottom: 16%;
+                            position: absolute;
+                            @include adaptiveLeft(450, 15);
+                            border-radius: 50%;
+                            width: 1px;
+                            height: 1px;
+                            @include adaptiveBoxShadow(0, 0, 150, 100, 0, 0, 50, 40, rgb(255, 0, 221));
+
+                            animation-name: light-1-anim;
+                            animation-duration: 6s;
+                            animation-iteration-count: infinite;
+                            animation-delay: 3;
+
+                            @keyframes light-1-anim {
+                                0% {
+                                    transform: scale(1);
+                                    opacity: 1;
+                                }
+                                50% {
+                                    transform: scale(0.8);
+                                    opacity: 0.8;
+                                }
+                                100% {
+                                    transform: scale(1);
+                                    opacity: 1;
+                                }
                             }
                         }
                     }
-                    .light-1.active {
-                        @include adaptiveBottom(120, 80);
-                    }
 
-                    .light-2 {
-                        bottom: -20%;
-                        transition: all 2s ease 2s;
+                    .light-2-wrapper {
                         position: absolute;
-                        left: 50%;
-                        border-radius: 50%;
-                        width: 1px;
-                        height: 1px;
-                        @include adaptiveBoxShadow(0, 0, 150, 100, 0, 0, 50, 40, rgb(89, 0, 255));
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
 
-                        animation-name: light-2-anim;
-                        animation-duration: 8s;
-                        animation-iteration-count: infinite;
-                        @keyframes light-2-anim {
+                        transform: translateY(50%);
+                        animation: light-popup 0.5s linear 2.3s 1 forwards;
+                        @keyframes light-popup {
                             0% {
-                                transform: scale(1);
-                                opacity: 1;
-                            }
-                            50% {
-                                transform: scale(0.8);
-                                opacity: 0.8;
+                                transform: translateY(50%);
                             }
                             100% {
-                                transform: scale(1);
-                                opacity: 1;
+                                transform: translateY(0%);
+                            }
+                        }
+                        .light-2 {
+                            bottom: 16%;
+                            position: absolute;
+                            left: 50%;
+                            border-radius: 50%;
+                            width: 1px;
+                            height: 1px;
+                            @include adaptiveBoxShadow(0, 0, 150, 100, 0, 0, 50, 40, rgb(89, 0, 255));
+
+                            animation-name: light-2-anim;
+                            animation-duration: 8s;
+                            animation-iteration-count: infinite;
+                            animation-delay: 3;
+
+                            @keyframes light-2-anim {
+                                0% {
+                                    transform: scale(1);
+                                    opacity: 1;
+                                }
+                                50% {
+                                    transform: scale(0.8);
+                                    opacity: 0.8;
+                                }
+                                100% {
+                                    transform: scale(1);
+                                    opacity: 1;
+                                }
                             }
                         }
                     }
-                    .light-2.active {
-                        @include adaptiveBottom(120, 80);
-                    }
 
-                    .light-3 {
-                        bottom: -20%;
-                        transition: all 2s ease 2s;
+                    .light-3-wrapper {
                         position: absolute;
-                        @include adaptiveLeft(1500, 320);
-                        border-radius: 50%;
-                        width: 1px;
-                        height: 1px;
-                        @include adaptiveBoxShadow(0, 0, 150, 100, 0, 0, 50, 40, rgb(255, 187, 0));
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
 
-                        animation-name: light-3-anim;
-                        animation-duration: 7s;
-                        animation-iteration-count: infinite;
-                        @keyframes light-3-anim {
+                        transform: translateY(50%);
+                        animation: light-popup 0.5s linear 2.8s 1 forwards;
+                        @keyframes light-popup {
                             0% {
-                                transform: scale(1);
-                                opacity: 1;
-                            }
-                            50% {
-                                transform: scale(0.8);
-                                opacity: 0.8;
+                                transform: translateY(50%);
                             }
                             100% {
-                                transform: scale(1);
-                                opacity: 1;
+                                transform: translateY(0%);
                             }
                         }
-                    }
-                    .light-3.active {
-                        @include adaptiveBottom(120, 80);
+                        .light-3 {
+                            bottom: 16%;
+                            position: absolute;
+                            @include adaptiveLeft(1500, 320);
+                            border-radius: 50%;
+                            width: 1px;
+                            height: 1px;
+                            @include adaptiveBoxShadow(0, 0, 150, 100, 0, 0, 50, 40, rgb(255, 187, 0));
+
+                            animation-name: light-3-anim;
+                            animation-duration: 7s;
+                            animation-iteration-count: infinite;
+                            animation-delay: 3;
+                            @keyframes light-3-anim {
+                                0% {
+                                    transform: scale(1);
+                                    opacity: 1;
+                                }
+                                50% {
+                                    transform: scale(0.8);
+                                    opacity: 0.8;
+                                }
+                                100% {
+                                    transform: scale(1);
+                                    opacity: 1;
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -148,6 +194,7 @@ body {
                     width: 100%;
                     height: 100%;
                     .rope1-wrapper {
+                        // display: none;
                         position: absolute;
                         top: 6%;
                         @media only screen and (orientation: portrait) {
@@ -156,8 +203,16 @@ body {
                         left: 0;
                         width: 100%;
                         height: 100%;
-                        transition: all 1s ease 1s;
                         transform: translateY(-50%);
+                        animation: rope-popup 0.5s linear 1s 1 forwards;
+                        @keyframes rope-popup {
+                            0% {
+                                transform: translateY(-50%);
+                            }
+                            100% {
+                                transform: translateY(0%);
+                            }
+                        }
 
                         .rope {
                             position: absolute;
@@ -364,15 +419,13 @@ body {
                             }
                         }
                     }
-                    .rope1-wrapper.active {
-                        transform: translateY(0);
-                    }
                 }
 
                 &__rope-2 {
                     width: 100%;
                     height: 100%;
                     .rope2-wrapper {
+                        // display: none;
                         position: absolute;
                         top: -2%;
                         @media only screen and (orientation: portrait) {
@@ -382,8 +435,15 @@ body {
                         width: 100%;
                         height: 100%;
                         transform: translateY(-50%);
-                        transition: all 1s ease 1.5s;
-
+                        animation: rope-popup 0.5s linear 1.5s 1 forwards;
+                        @keyframes rope-popup {
+                            0% {
+                                transform: translateY(-50%);
+                            }
+                            100% {
+                                transform: translateY(0%);
+                            }
+                        }
                         .rope {
                             position: absolute;
                             left: -15%;
@@ -491,9 +551,6 @@ body {
                             }
                         }
                     }
-                    .rope2-wrapper.active {
-                        transform: translateY(0);
-                    }
                 }
 
                 &__rope-3 {
@@ -501,6 +558,7 @@ body {
                     height: 100%;
 
                     .rope3-wrapper {
+                        // display: none;
                         position: absolute;
                         top: -10%;
                         @media only screen and (orientation: portrait) {
@@ -510,8 +568,15 @@ body {
                         width: 100%;
                         height: 100%;
                         transform: translateY(-50%);
-                        transition: all 1s ease 2s;
-
+                        animation: rope-popup 0.5s linear 2s 1 forwards;
+                        @keyframes rope-popup {
+                            0% {
+                                transform: translateY(-50%);
+                            }
+                            100% {
+                                transform: translateY(0%);
+                            }
+                        }
                         .rope {
                             position: absolute;
                             left: -15%;
@@ -523,7 +588,6 @@ body {
                             left: 80%;
                             transform: scale(0.8);
                             width: 20%;
-
                             animation-name: rope-1-birds-anim;
                             animation-duration: 4s;
                             transform-origin: top center;
@@ -653,29 +717,14 @@ body {
                             }
                         }
                     }
-                    .rope3-wrapper.active {
-                        transform: translateY(0);
-                    }
                 }
-
-                // .wave {
-                //     .img {
-                //         transition: all 1.5s ease 1s;
-                //         opacity: 0;
-                //     }
-                // }
-                // .wave {
-                //     .img.active {
-                //         opacity: 1;
-                //     }
-                // }
 
                 &__wave-1 {
                     width: 100%;
                     height: 100%;
                     .img-w {
+                        display: none;
                         position: absolute;
-                        // display: none;
                         bottom: 9%;
                         left: -70%;
                         width: 240%;
@@ -712,7 +761,7 @@ body {
                     width: 100%;
                     height: 100%;
                     .img-w {
-                        // display: none;
+                        display: none;
 
                         position: absolute;
                         bottom: 6%;
@@ -749,7 +798,7 @@ body {
                     width: 100%;
                     height: 100%;
                     .img-w {
-                        // display: none;
+                        display: none;
 
                         position: absolute;
                         bottom: 3%;
@@ -786,7 +835,7 @@ body {
                     width: 100%;
                     height: 100%;
                     .img-w {
-                        // display: none;
+                        display: none;
 
                         position: absolute;
                         bottom: 0%;
@@ -824,7 +873,7 @@ body {
                     width: 100%;
                     height: 100%;
                     .img-w {
-                        // display: none;
+                        display: none;
 
                         position: absolute;
                         bottom: -3%;
@@ -862,6 +911,7 @@ body {
                     width: 100%;
                     height: 100%;
                     .img-w {
+                        // display: none;
                         position: absolute;
                         bottom: -6%;
                         left: -25%;
@@ -870,21 +920,17 @@ body {
                         background: url("../img/waves/wave-paint.png") center bottom / 100% 100% repeat-x;
                         background-size: contain;
 
-                        animation-name: wave-6-anim;
-                        animation-duration: 4s;
-                        animation-iteration-count: infinite;
-                        animation-timing-function: linear;
-                        // animation-direction: alternate-reverse;
+                        -webkit-animation-name: wave-6-anim;
+                        -webkit-animation-duration: 4s;
+                        -webkit-animation-iteration-count: infinite;
+                        -webkit-animation-timing-function: linear;
 
                         @keyframes wave-6-anim {
                             0% {
-                                transform: rotateZ(0deg) translateY(10%) rotateZ(0deg);
-                                // transform: rotateZ(0) translate3d(0, 10%, 0) rotateZ(0);
+                                -webkit-transform: rotateZ(0deg) translateY(10%) rotateZ(0deg);
                             }
                             100% {
-                                transform: rotateZ(-360deg) translateY(10%) rotateZ(360deg);
-
-                                // transform: rotateZ(-360deg) translate3d(0, 10%, 0) rotateZ(360deg);
+                                -webkit-transform: rotateZ(-360deg) translateY(10%) rotateZ(360deg);
                             }
                         }
                     }
@@ -893,60 +939,74 @@ body {
                 &__liighthouse {
                     width: 100%;
                     height: 100%;
-                    .img-l {
+                    .lighthouse-wrapper {
                         position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        transform: translateY(50%);
+                        animation: liighthouse-popup 0.5s linear 3.5s 1 forwards;
 
-                        transition: all 1s ease 2.5s;
-                        bottom: -40%;
-                        left: 65%;
-                        width: 25%;
-                        height: 40%;
-                        background: url("../img/lighthouse.png") center bottom / 100% 100% no-repeat;
-                        background-size: contain;
-
-                        animation-name: liighthouse-anim;
-                        animation-duration: 8s;
-                        animation-iteration-count: infinite;
-                        animation-timing-function: linear;
-                        @keyframes liighthouse-anim {
+                        @keyframes liighthouse-popup {
                             0% {
-                                transform: rotateZ(-10deg) rotateX(0deg) translate3d(-10%, 5%, 0);
-                            }
-                            50% {
-                                transform: rotateZ(10deg) rotateX(0deg) translate3d(10%, -10%, 0);
+                                transform: translateY(50%);
                             }
                             100% {
-                                transform: rotateZ(-10deg) rotateX(0deg) translate3d(-10%, 5%, 0);
+                                transform: translateY(0%);
                             }
                         }
-
-                        .light {
-                            display: inline;
+                        .lighthouse {
                             position: absolute;
-                            top: 25%;
-                            left: 50%;
-                            @include adaptiveBoxShadow(0, 0, 150, 100, 0, 0, 150, 60, rgba(255, 0, 221, 0.637));
-                            animation-name: light-anim;
-                            animation-duration: 6s;
-                            animation-iteration-count: infinite;
-                            @keyframes light-anim {
+                            bottom: 7%;
+                            left: 65%;
+                            width: 25%;
+                            height: 40%;
+                            background: url("../img/lighthouse.png") center bottom / 100% 100% no-repeat;
+                            background-size: contain;
+
+                            animation: liighthouse-anim 8s linear 0s infinite;
+                            @keyframes liighthouse-anim {
                                 0% {
-                                    transform: scale(1);
-                                    opacity: 0.4;
+                                    transform: rotateZ(-10deg) rotateX(0deg) translate3d(-10%, 5%, 0);
                                 }
                                 50% {
-                                    transform: scale(0.1);
-                                    opacity: 0.1;
+                                    transform: rotateZ(10deg) rotateX(0deg) translate3d(10%, -10%, 0);
                                 }
                                 100% {
-                                    transform: scale(1);
-                                    opacity: 0.4;
+                                    transform: rotateZ(-10deg) rotateX(0deg) translate3d(-10%, 5%, 0);
+                                }
+                            }
+
+                            .light {
+                                display: inline;
+                                position: absolute;
+                                width: 1px;
+                                height: 1px;
+                                top: 25%;
+                                left: 50%;
+
+                                @include adaptiveBoxShadow(0, 0, 150, 100, 0, 0, 150, 60, rgba(255, 0, 221, 0.767));
+
+                                animation-name: light-anim;
+                                animation-duration: 6s;
+                                animation-iteration-count: infinite;
+                                @keyframes light-anim {
+                                    0% {
+                                        transform: scale(1);
+                                        opacity: 0.4;
+                                    }
+                                    50% {
+                                        transform: scale(0.1);
+                                        opacity: 0.1;
+                                    }
+                                    100% {
+                                        transform: scale(1);
+                                        opacity: 0.4;
+                                    }
                                 }
                             }
                         }
-                    }
-                    .img-l.active {
-                        bottom: 7%;
                     }
                 }
             }
