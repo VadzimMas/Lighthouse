@@ -754,28 +754,7 @@ body {
                             height: 25%;
                             background: url("../img/waves/wave-plain.png") center bottom / 100% 100% repeat-x;
                             background-size: contain;
-
-                            animation-name: wave-1-anim;
-                            animation-duration: 8s;
-                            animation-iteration-count: infinite;
-                            animation-timing-function: linear;
-                            @keyframes wave-1-anim {
-                                0% {
-                                    transform: scale(0.5) rotateZ(0) translate3d(0, 5%, 0) rotateZ(0);
-                                }
-                                100% {
-                                    transform: scale(0.5) rotateZ(360deg) translate3d(0, 5%, 0) rotateZ(-360deg);
-                                }
-                            }
-
-                            .black {
-                                position: absolute;
-                                width: 130%;
-                                height: 20%;
-                                bottom: -20%;
-                                left: -15%;
-                                background-color: black;
-                            }
+                            animation: wave-anim-left 4s linear infinite;
                         }
                     }
                 }
@@ -808,26 +787,7 @@ body {
                             height: 25%;
                             background: url("../img/waves/wave-paint.png") center bottom / 100% 100% repeat-x;
                             background-size: contain;
-                            animation-name: wave-2-anim;
-                            animation-duration: 7s;
-                            animation-iteration-count: infinite;
-                            animation-timing-function: linear;
-                            @keyframes wave-2-anim {
-                                0% {
-                                    transform: scale(0.6) rotateZ(0) translate3d(0, 6%, 0) rotateZ(0);
-                                }
-                                100% {
-                                    transform: scale(0.6) rotateZ(360deg) translate3d(0, 6%, 0) rotateZ(-360deg);
-                                }
-                            }
-                            .black {
-                                position: absolute;
-                                width: 130%;
-                                height: 20%;
-                                bottom: -20%;
-                                left: -15%;
-                                background-color: black;
-                            }
+                            animation: wave-anim-right 3s linear infinite;
                         }
                     }
                 }
@@ -860,26 +820,7 @@ body {
                             height: 25%;
                             background: url("../img/waves/wave-plain.png") center bottom / 100% 100% repeat-x;
                             background-size: contain;
-                            animation-name: wave-3-anim;
-                            animation-duration: 6s;
-                            animation-iteration-count: infinite;
-                            animation-timing-function: linear;
-                            @keyframes wave-3-anim {
-                                0% {
-                                    transform: scale(0.7) rotateZ(0) translate3d(0, 7%, 0) rotateZ(0);
-                                }
-                                100% {
-                                    transform: scale(0.7) rotateZ(360deg) translate3d(0, 7%, 0) rotateZ(-360deg);
-                                }
-                            }
-                            .black {
-                                position: absolute;
-                                width: 130%;
-                                height: 20%;
-                                bottom: -20%;
-                                left: -15%;
-                                background-color: black;
-                            }
+                            animation: wave-anim-left 3s linear infinite;
                         }
                     }
                 }
@@ -912,27 +853,7 @@ body {
                             height: 25%;
                             background: url("../img/waves/wave-paint.png") center bottom / 100% 100% repeat-x;
                             background-size: contain;
-
-                            animation-name: wave-4-anim;
-                            animation-duration: 5s;
-                            animation-iteration-count: infinite;
-                            animation-timing-function: linear;
-                            @keyframes wave-4-anim {
-                                0% {
-                                    transform: scale(0.8) rotateZ(0) translate3d(0, 8%, 0) rotateZ(0);
-                                }
-                                100% {
-                                    transform: scale(0.8) rotateZ(360deg) translate3d(0, 8%, 0) rotateZ(-360deg);
-                                }
-                            }
-                            .black {
-                                position: absolute;
-                                width: 130%;
-                                height: 20%;
-                                bottom: -20%;
-                                left: -15%;
-                                background-color: black;
-                            }
+                            animation: wave-anim-right 4s linear infinite;
                         }
                     }
                 }
@@ -966,26 +887,15 @@ body {
                             background: url("../img/waves/wave-plain.png") center bottom / 100% 100% repeat-x;
                             background-size: contain;
 
-                            animation-name: wave-5-anim;
-                            animation-duration: 4s;
-                            animation-iteration-count: infinite;
-                            animation-timing-function: linear;
-                            @keyframes wave-5-anim {
-                                0% {
-                                    transform: scale(0.9) rotateZ(0) translate3d(0, 9%, 0) rotateZ(0);
-                                }
-                                100% {
-                                    transform: scale(0.9) rotateZ(360deg) translate3d(0, 9%, 0) rotateZ(-360deg);
-                                }
-                            }
-                            .black {
-                                position: absolute;
-                                width: 130%;
-                                height: 100%;
-                                bottom: -100%;
-                                left: -15%;
-                                background-color: black;
-                            }
+                            animation: wave-anim-left 4s linear infinite;
+                        }
+                        .black {
+                            position: absolute;
+                            width: 130%;
+                            height: 100%;
+                            bottom: -100%;
+                            left: -15%;
+                            background-color: black;
                         }
                     }
                 }
@@ -994,23 +904,21 @@ body {
                     width: 100%;
                     height: 100%;
                     .wave-wrapper {
-                        // background-color: #fff;
-
                         position: absolute;
                         top: 0;
                         left: 0;
                         width: 100%;
                         height: 100%;
-                        // transform: translateY(50%);
-                        // animation: liighthouse-popup 0.5s linear 0.5s 1 forwards;
-                        // @keyframes liighthouse-popup {
-                        //     0% {
-                        //         transform: translateY(50%);
-                        //     }
-                        //     100% {
-                        //         transform: translateY(0%);
-                        //     }
-                        // }
+                        transform: translateY(50%);
+                        animation: liighthouse-popup 0.5s linear 0.5s 1 forwards;
+                        @keyframes liighthouse-popup {
+                            0% {
+                                transform: translateY(50%);
+                            }
+                            100% {
+                                transform: translateY(0%);
+                            }
+                        }
                         .wave-img {
                             position: absolute;
                             bottom: -6%;
@@ -1019,39 +927,116 @@ body {
                             height: 25%;
                             background: url("../img/waves/wave-paint.png") center bottom / 100% 100% repeat-x;
                             background-size: contain;
-
-                            animation: wave-6-anim 5s linear infinite;
-
-                            @keyframes wave-6-anim {
-                                0% {
-                                    transform: translate(0, 0);
-                                }
-                                12.5% {
-                                    transform: translate(10px, -15px);
-                                }
-                                25% {
-                                    transform: translate(20px, -20px);
-                                }
-                                37.5% {
-                                    transform: translate(30px, -15px);
-                                }
-                                50% {
-                                    transform: translate(40px, 0);
-                                }
-                                62.5% {
-                                    transform: translate(30px, 15px);
-                                }
-                                75% {
-                                    transform: translate(20px, 20px);
-                                }
-                                87.5% {
-                                    transform: translate(10px, 15px);
-                                }
-                                100% {
-                                    transform: translate(0, 0);
-                                }
-                            }
+                            animation: wave-anim-right 3s linear infinite;
                         }
+                    }
+                }
+
+                @keyframes wave-anim-right {
+                    0% {
+                        transform: translate(-20px, 0);
+                    }
+                    6.25% {
+                        transform: translate(-18.5px, -8px);
+                    }
+                    12.5% {
+                        transform: translate(-14.5px, -14.5px);
+                    }
+                    18.75% {
+                        transform: translate(-8px, -18.5px);
+                    }
+                    25% {
+                        transform: translate(0, -20px);
+                    }
+                    31.25% {
+                        transform: translate(8, -18.5px);
+                    }
+                    37.5% {
+                        transform: translate(14.5px, -14.5px);
+                    }
+                    43.75% {
+                        transform: translate(18.5px, -8px);
+                    }
+                    50% {
+                        transform: translate(20px, 0);
+                    }
+                    56.25% {
+                        transform: translate(18.5px, 8);
+                    }
+                    62.5% {
+                        transform: translate(14.5px, 14.5px);
+                    }
+                    68.75% {
+                        transform: translate(8px, 18.5px);
+                    }
+                    75% {
+                        transform: translate(0, 20px);
+                    }
+                    81.25% {
+                        transform: translate(-8px, 18.5px);
+                    }
+                    87.5% {
+                        transform: translate(-14.5px, 14.5px);
+                    }
+                    93.75% {
+                        transform: translate(-18.5px, 8px);
+                    }
+                    100% {
+                        transform: translate(-20px, 0);
+                    }
+                }
+
+                @keyframes wave-anim-left {
+                    0% {
+                        transform: translate(20px, 0);
+                    }
+                    6.25% {
+                        transform: translate(18.5px, -8px);
+                    }
+                    12.5% {
+                        transform: translate(14.5px, -14.5px);
+                    }
+                    18.75% {
+                        transform: translate(8px, -18.5px);
+                    }
+                    25% {
+                        transform: translate(0, -20px);
+                    }
+                    31.25% {
+                        transform: translate(-8, -18px);
+                    }
+                    37.5% {
+                        transform: translate(-14.5px, -14.5px);
+                    }
+                    43.75% {
+                        transform: translate(-18.5px, -8px);
+                    }
+                    50% {
+                        transform: translate(-20px, 0);
+                    }
+                    56.25% {
+                        transform: translate(-18.5px, 8);
+                    }
+                    62.5% {
+                        transform: translate(-14.5px, 14.5px);
+                    }
+                    68.75% {
+                        transform: translate(-8px, 18.5px);
+                    }
+                    75% {
+                        transform: translate(0, 20px);
+                    }
+                    81.25% {
+                        transform: translate(8px, 18.5px);
+                    }
+                    87.5% {
+                        transform: translate(14.5px, 14.5px);
+                    }
+                    93.75% {
+                        transform: translate(18.5px, 8px);
+                    }
+                    100% {
+                        transform: translate(20px, 0);
                     }
                 }
 
