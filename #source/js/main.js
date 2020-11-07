@@ -9,3 +9,13 @@
 
 var scene = document.getElementById('scene');
 var parallaxInstance = new Parallax(scene);
+
+window.onorientationchange = function () {
+    var orientation = window.orientation;
+    switch (orientation) {
+        case 0:
+        case 90: window.location.reload();
+        case -90: window.location.reload();
+            break;
+    }
+};

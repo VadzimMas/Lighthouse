@@ -1510,62 +1510,65 @@ body {
                             background: url("../img/waves/wave-paint.png") center bottom / 100% 100% repeat-x;
                             background-size: contain;
 
-                            animation: wave6-anim-right 3s linear infinite;
-                            @keyframes wave6-anim-right {
-                                0% {
-                                    transform: translate(-1%, 0);
-                                }
-                                6.25% {
-                                    transform: translate(-0.9%, -4%);
-                                }
-                                12.5% {
-                                    transform: translate(-0.7%, -7%);
-                                }
-                                18.75% {
-                                    transform: translate(-0.4, -9%);
-                                }
-                                25% {
-                                    transform: translate(0, -10%);
-                                }
-                                31.25% {
-                                    transform: translate(0.4%, -9%);
-                                }
-                                37.5% {
-                                    transform: translate(0.7%, -7%);
-                                }
-                                43.75% {
-                                    transform: translate(0.9%, -4%);
-                                }
-                                50% {
-                                    transform: translate(1%, 0);
-                                }
-                                56.25% {
-                                    transform: translate(0.9%, 4%);
-                                }
-                                62.5% {
-                                    transform: translate(0.7%, 7%);
-                                }
-                                68.75% {
-                                    transform: translate(0.4%, 9%);
-                                }
-                                75% {
-                                    transform: translate(0, 10%);
-                                }
-                                81.25% {
-                                    transform: translate(-0.4%, 9%);
-                                }
-                                87.5% {
-                                    transform: translate(-0.7%, 7%);
-                                }
-                                93.75% {
-                                    transform: translate(-0.9%, 4%);
-                                }
-                                100% {
-                                    transform: translate(-1%, 0);
+                            @media only screen and (orientation: landscape) {
+                                animation: wave6-anim-right 3s linear infinite;
+                                @keyframes wave6-anim-right {
+                                    0% {
+                                        transform: translate(-1%, 0);
+                                    }
+                                    6.25% {
+                                        transform: translate(-0.9%, -4%);
+                                    }
+                                    12.5% {
+                                        transform: translate(-0.7%, -7%);
+                                    }
+                                    18.75% {
+                                        transform: translate(-0.4, -9%);
+                                    }
+                                    25% {
+                                        transform: translate(0, -10%);
+                                    }
+                                    31.25% {
+                                        transform: translate(0.4%, -9%);
+                                    }
+                                    37.5% {
+                                        transform: translate(0.7%, -7%);
+                                    }
+                                    43.75% {
+                                        transform: translate(0.9%, -4%);
+                                    }
+                                    50% {
+                                        transform: translate(1%, 0);
+                                    }
+                                    56.25% {
+                                        transform: translate(0.9%, 4%);
+                                    }
+                                    62.5% {
+                                        transform: translate(0.7%, 7%);
+                                    }
+                                    68.75% {
+                                        transform: translate(0.4%, 9%);
+                                    }
+                                    75% {
+                                        transform: translate(0, 10%);
+                                    }
+                                    81.25% {
+                                        transform: translate(-0.4%, 9%);
+                                    }
+                                    87.5% {
+                                        transform: translate(-0.7%, 7%);
+                                    }
+                                    93.75% {
+                                        transform: translate(-0.9%, 4%);
+                                    }
+                                    100% {
+                                        transform: translate(-1%, 0);
+                                    }
                                 }
                             }
 
                             @media only screen and (orientation: portrait) {
+                                animation: wave6-anim-right 3s linear infinite;
                                 @keyframes wave6-anim-right {
                                     0% {
                                         transform: translate(-4%, 0);
@@ -1628,6 +1631,7 @@ body {
                     width: 100%;
                     height: 100%;
                     .lighthouse-wrapper {
+                        background-color: #fff;
                         position: absolute;
                         top: 0;
                         left: 0;
