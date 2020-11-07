@@ -1,6 +1,6 @@
 
 // @prepros -prepend lazysizes.min.js
-// @prepros -prepend jquery-3.5.1.min.js
+// @prepros-prepend jquery-3.5.1.min.js
 // @prepros-prepend parallax.js
 // @prepros -prepend slick.js
 // @prepros -prepend slick-settings.js
@@ -12,6 +12,6 @@ var parallaxInstance = new Parallax(scene);
 
 
 
-// $(window).resize(function () {
-//     window.location.reload();
-// });
+$(window).resize(function () {
+    window.location.reload();
+});
