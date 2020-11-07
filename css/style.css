@@ -800,11 +800,63 @@ body .wrapper .container .parralax__wave-1 .wave-wrapper .wave-img {
 		bottom: 9%;
 		left: -70%;
 		width: 240%;
-		transform: scale(0.5);
 		height: 25%;
 		background: url("../img/waves/wave-plain.png") center bottom/100% 100% repeat-x;
 		background-size: contain;
-		animation: wave-anim-left 4s linear infinite;
+		animation: wave1-anim-left 4s linear infinite;
+}
+@keyframes wave1-anim-left {
+		0% {
+				transform: scale(0.5) translate(20px, 0);
+		}
+		6.25% {
+				transform: scale(0.5) translate(18.5px, -8px);
+		}
+		12.5% {
+				transform: scale(0.5) translate(14.5px, -14.5px);
+		}
+		18.75% {
+				transform: scale(0.5) translate(8px, -18.5px);
+		}
+		25% {
+				transform: scale(0.5) translate(0, -20px);
+		}
+		31.25% {
+				transform: scale(0.5) translate(-8, -18px);
+		}
+		37.5% {
+				transform: scale(0.5) translate(-14.5px, -14.5px);
+		}
+		43.75% {
+				transform: scale(0.5) translate(-18.5px, -8px);
+		}
+		50% {
+				transform: scale(0.5) translate(-20px, 0);
+		}
+		56.25% {
+				transform: scale(0.5) translate(-18.5px, 8);
+		}
+		62.5% {
+				transform: scale(0.5) translate(-14.5px, 14.5px);
+		}
+		68.75% {
+				transform: scale(0.5) translate(-8px, 18.5px);
+		}
+		75% {
+				transform: scale(0.5) translate(0, 20px);
+		}
+		81.25% {
+				transform: scale(0.5) translate(8px, 18.5px);
+		}
+		87.5% {
+				transform: scale(0.5) translate(14.5px, 14.5px);
+		}
+		93.75% {
+				transform: scale(0.5) translate(18.5px, 8px);
+		}
+		100% {
+				transform: scale(0.5) translate(20px, 0);
+		}
 }
 body .wrapper .container .parralax__wave-2 {
 		width: 100%;
@@ -832,11 +884,63 @@ body .wrapper .container .parralax__wave-2 .wave-wrapper .wave-img {
 		bottom: 6%;
 		left: -55%;
 		width: 210%;
-		transform: scale(0.6);
 		height: 25%;
 		background: url("../img/waves/wave-paint.png") center bottom/100% 100% repeat-x;
 		background-size: contain;
-		animation: wave-anim-right 3s linear infinite;
+		animation: wave2-anim-right 3s linear infinite;
+}
+@keyframes wave2-anim-right {
+		0% {
+				transform: scale(0.6) translate(-20px, 0);
+		}
+		6.25% {
+				transform: scale(0.6) translate(-18.5px, -8px);
+		}
+		12.5% {
+				transform: scale(0.6) translate(-14.5px, -14.5px);
+		}
+		18.75% {
+				transform: scale(0.6) translate(-8px, -18.5px);
+		}
+		25% {
+				transform: scale(0.6) translate(0, -20px);
+		}
+		31.25% {
+				transform: scale(0.6) translate(8, -18.5px);
+		}
+		37.5% {
+				transform: scale(0.6) translate(14.5px, -14.5px);
+		}
+		43.75% {
+				transform: scale(0.6) translate(18.5px, -8px);
+		}
+		50% {
+				transform: scale(0.6) translate(20px, 0);
+		}
+		56.25% {
+				transform: scale(0.6) translate(18.5px, 8);
+		}
+		62.5% {
+				transform: scale(0.6) translate(14.5px, 14.5px);
+		}
+		68.75% {
+				transform: scale(0.6) translate(8px, 18.5px);
+		}
+		75% {
+				transform: scale(0.6) translate(0, 20px);
+		}
+		81.25% {
+				transform: scale(0.6) translate(-8px, 18.5px);
+		}
+		87.5% {
+				transform: scale(0.6) translate(-14.5px, 14.5px);
+		}
+		93.75% {
+				transform: scale(0.6) translate(-18.5px, 8px);
+		}
+		100% {
+				transform: scale(0.6) translate(-20px, 0);
+		}
 }
 body .wrapper .container .parralax__wave-3 {
 		width: 100%;
@@ -864,11 +968,63 @@ body .wrapper .container .parralax__wave-3 .wave-wrapper .wave-img {
 		bottom: 3%;
 		left: -40%;
 		width: 180%;
-		transform: scale(0.7);
 		height: 25%;
 		background: url("../img/waves/wave-plain.png") center bottom/100% 100% repeat-x;
 		background-size: contain;
-		animation: wave-anim-left 3s linear infinite;
+		animation: wave3-anim-left 3s linear infinite;
+}
+@keyframes wave3-anim-left {
+		0% {
+				transform: scale(0.7) translate(20px, 0);
+		}
+		6.25% {
+				transform: scale(0.7) translate(18.5px, -8px);
+		}
+		12.5% {
+				transform: scale(0.7) translate(14.5px, -14.5px);
+		}
+		18.75% {
+				transform: scale(0.7) translate(8px, -18.5px);
+		}
+		25% {
+				transform: scale(0.7) translate(0, -20px);
+		}
+		31.25% {
+				transform: scale(0.7) translate(-8, -18px);
+		}
+		37.5% {
+				transform: scale(0.7) translate(-14.5px, -14.5px);
+		}
+		43.75% {
+				transform: scale(0.7) translate(-18.5px, -8px);
+		}
+		50% {
+				transform: scale(0.7) translate(-20px, 0);
+		}
+		56.25% {
+				transform: scale(0.7) translate(-18.5px, 8);
+		}
+		62.5% {
+				transform: scale(0.7) translate(-14.5px, 14.5px);
+		}
+		68.75% {
+				transform: scale(0.7) translate(-8px, 18.5px);
+		}
+		75% {
+				transform: scale(0.7) translate(0, 20px);
+		}
+		81.25% {
+				transform: scale(0.7) translate(8px, 18.5px);
+		}
+		87.5% {
+				transform: scale(0.7) translate(14.5px, 14.5px);
+		}
+		93.75% {
+				transform: scale(0.7) translate(18.5px, 8px);
+		}
+		100% {
+				transform: scale(0.7) translate(20px, 0);
+		}
 }
 body .wrapper .container .parralax__wave-4 {
 		width: 100%;
@@ -896,11 +1052,63 @@ body .wrapper .container .parralax__wave-4 .wave-wrapper .wave-img {
 		bottom: 0%;
 		left: -35%;
 		width: 170%;
-		transform: scale(0.8);
 		height: 25%;
 		background: url("../img/waves/wave-paint.png") center bottom/100% 100% repeat-x;
 		background-size: contain;
-		animation: wave-anim-right 4s linear infinite;
+		animation: wave4-anim-right 4s linear infinite;
+}
+@keyframes wave4-anim-right {
+		0% {
+				transform: scale(0.8) translate(-20px, 0);
+		}
+		6.25% {
+				transform: scale(0.8) translate(-18.5px, -8px);
+		}
+		12.5% {
+				transform: scale(0.8) translate(-14.5px, -14.5px);
+		}
+		18.75% {
+				transform: scale(0.8) translate(-8px, -18.5px);
+		}
+		25% {
+				transform: scale(0.8) translate(0, -20px);
+		}
+		31.25% {
+				transform: scale(0.8) translate(8, -18.5px);
+		}
+		37.5% {
+				transform: scale(0.8) translate(14.5px, -14.5px);
+		}
+		43.75% {
+				transform: scale(0.8) translate(18.5px, -8px);
+		}
+		50% {
+				transform: scale(0.8) translate(20px, 0);
+		}
+		56.25% {
+				transform: scale(0.8) translate(18.5px, 8);
+		}
+		62.5% {
+				transform: scale(0.8) translate(14.5px, 14.5px);
+		}
+		68.75% {
+				transform: scale(0.8) translate(8px, 18.5px);
+		}
+		75% {
+				transform: scale(0.8) translate(0, 20px);
+		}
+		81.25% {
+				transform: scale(0.8) translate(-8px, 18.5px);
+		}
+		87.5% {
+				transform: scale(0.8) translate(-14.5px, 14.5px);
+		}
+		93.75% {
+				transform: scale(0.8) translate(-18.5px, 8px);
+		}
+		100% {
+				transform: scale(0.8) translate(-20px, 0);
+		}
 }
 body .wrapper .container .parralax__wave-5 {
 		width: 100%;
@@ -928,11 +1136,63 @@ body .wrapper .container .parralax__wave-5 .wave-wrapper .wave-img {
 		bottom: -3%;
 		left: -30%;
 		width: 160%;
-		transform: scale(0.9);
 		height: 25%;
 		background: url("../img/waves/wave-plain.png") center bottom/100% 100% repeat-x;
 		background-size: contain;
-		animation: wave-anim-left 4s linear infinite;
+		animation: wave5-anim-left 4s linear infinite;
+}
+@keyframes wave5-anim-left {
+		0% {
+				transform: scale(0.9) translate(20px, 0);
+		}
+		6.25% {
+				transform: scale(0.9) translate(18.5px, -8px);
+		}
+		12.5% {
+				transform: scale(0.9) translate(14.5px, -14.5px);
+		}
+		18.75% {
+				transform: scale(0.9) translate(8px, -18.5px);
+		}
+		25% {
+				transform: scale(0.9) translate(0, -20px);
+		}
+		31.25% {
+				transform: scale(0.9) translate(-8, -18px);
+		}
+		37.5% {
+				transform: scale(0.9) translate(-14.5px, -14.5px);
+		}
+		43.75% {
+				transform: scale(0.9) translate(-18.5px, -8px);
+		}
+		50% {
+				transform: scale(0.9) translate(-20px, 0);
+		}
+		56.25% {
+				transform: scale(0.9) translate(-18.5px, 8);
+		}
+		62.5% {
+				transform: scale(0.9) translate(-14.5px, 14.5px);
+		}
+		68.75% {
+				transform: scale(0.9) translate(-8px, 18.5px);
+		}
+		75% {
+				transform: scale(0.9) translate(0, 20px);
+		}
+		81.25% {
+				transform: scale(0.9) translate(8px, 18.5px);
+		}
+		87.5% {
+				transform: scale(0.9) translate(14.5px, 14.5px);
+		}
+		93.75% {
+				transform: scale(0.9) translate(18.5px, 8px);
+		}
+		100% {
+				transform: scale(0.9) translate(20px, 0);
+		}
 }
 body .wrapper .container .parralax__wave-5 .wave-wrapper .black {
 		position: absolute;
@@ -971,9 +1231,9 @@ body .wrapper .container .parralax__wave-6 .wave-wrapper .wave-img {
 		height: 25%;
 		background: url("../img/waves/wave-paint.png") center bottom/100% 100% repeat-x;
 		background-size: contain;
-		animation: wave-anim-right 3s linear infinite;
+		animation: wave6-anim-right 3s linear infinite;
 }
-@keyframes wave-anim-right {
+@keyframes wave6-anim-right {
 		0% {
 				transform: translate(-20px, 0);
 		}
@@ -1026,59 +1286,6 @@ body .wrapper .container .parralax__wave-6 .wave-wrapper .wave-img {
 				transform: translate(-20px, 0);
 		}
 }
-@keyframes wave-anim-left {
-		0% {
-				transform: translate(20px, 0);
-		}
-		6.25% {
-				transform: translate(18.5px, -8px);
-		}
-		12.5% {
-				transform: translate(14.5px, -14.5px);
-		}
-		18.75% {
-				transform: translate(8px, -18.5px);
-		}
-		25% {
-				transform: translate(0, -20px);
-		}
-		31.25% {
-				transform: translate(-8, -18px);
-		}
-		37.5% {
-				transform: translate(-14.5px, -14.5px);
-		}
-		43.75% {
-				transform: translate(-18.5px, -8px);
-		}
-		50% {
-				transform: translate(-20px, 0);
-		}
-		56.25% {
-				transform: translate(-18.5px, 8);
-		}
-		62.5% {
-				transform: translate(-14.5px, 14.5px);
-		}
-		68.75% {
-				transform: translate(-8px, 18.5px);
-		}
-		75% {
-				transform: translate(0, 20px);
-		}
-		81.25% {
-				transform: translate(8px, 18.5px);
-		}
-		87.5% {
-				transform: translate(14.5px, 14.5px);
-		}
-		93.75% {
-				transform: translate(18.5px, 8px);
-		}
-		100% {
-				transform: translate(20px, 0);
-		}
-}
 body .wrapper .container .parralax__liighthouse {
 		width: 100%;
 		height: 100%;
@@ -1104,11 +1311,16 @@ body .wrapper .container .parralax__liighthouse .lighthouse-wrapper .lighthouse 
 		position: absolute;
 		bottom: 7%;
 		left: 65%;
-		width: 25%;
+		width: 15%;
 		height: 40%;
 		background: url("../img/lighthouse.png") center bottom/100% 100% no-repeat;
 		background-size: contain;
 		animation: liighthouse-anim 8s linear 0s infinite;
+}
+@media only screen and (orientation: portrait) {
+		body .wrapper .container .parralax__liighthouse .lighthouse-wrapper .lighthouse {
+				width: 30%;
+		}
 }
 @keyframes liighthouse-anim {
 		0% {
@@ -1122,16 +1334,20 @@ body .wrapper .container .parralax__liighthouse .lighthouse-wrapper .lighthouse 
 		}
 }
 body .wrapper .container .parralax__liighthouse .lighthouse-wrapper .lighthouse .light {
-		display: inline;
 		position: absolute;
 		width: 1px;
 		height: 1px;
-		top: 25%;
-		left: 50%;
+		right: 50%;
+		bottom: 73%;
 		box-shadow: calc((((0) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px) calc((((0) * ((100vw - 320px) * 100) / (1600)) / 100) + 0px) calc((((0) * ((100vw - 320px) * 100) / (1600)) / 100) + 150px) calc((((40) * ((100vw - 320px) * 100) / (1600)) / 100) + 60px) rgba(255, 0, 221, 0.767);
 		animation-name: light-anim;
 		animation-duration: 6s;
 		animation-iteration-count: infinite;
+}
+@media only screen and (orientation: portrait) {
+		body .wrapper .container .parralax__liighthouse .lighthouse-wrapper .lighthouse .light {
+				bottom: 52%;
+		}
 }
 @keyframes light-anim {
 		0% {
