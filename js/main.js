@@ -1,1 +1,1031 @@
-!function(t){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=t();else if("function"==typeof define&&define.amd)define([],t);else{("undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this).Parallax=t()}}((function(){return function t(e,i,n){function o(r,a){if(!i[r]){if(!e[r]){var l="function"==typeof require&&require;if(!a&&l)return l(r,!0);if(s)return s(r,!0);var h=new Error("Cannot find module '"+r+"'");throw h.code="MODULE_NOT_FOUND",h}var u=i[r]={exports:{}};e[r][0].call(u.exports,(function(t){var i=e[r][1][t];return o(i||t)}),u,u.exports,t,e,i,n)}return i[r].exports}for(var s="function"==typeof require&&require,r=0;r<n.length;r++)o(n[r]);return o}({1:[function(t,e,i){"use strict";var n=Object.getOwnPropertySymbols,o=Object.prototype.hasOwnProperty,s=Object.prototype.propertyIsEnumerable;function r(t){if(null==t)throw new TypeError("Object.assign cannot be called with null or undefined");return Object(t)}e.exports=function(){try{if(!Object.assign)return!1;var t=new String("abc");if(t[5]="de","5"===Object.getOwnPropertyNames(t)[0])return!1;for(var e={},i=0;i<10;i++)e["_"+String.fromCharCode(i)]=i;if("0123456789"!==Object.getOwnPropertyNames(e).map((function(t){return e[t]})).join(""))return!1;var n={};return"abcdefghijklmnopqrst".split("").forEach((function(t){n[t]=t})),"abcdefghijklmnopqrst"===Object.keys(Object.assign({},n)).join("")}catch(t){return!1}}()?Object.assign:function(t,e){for(var i,a,l=r(t),h=1;h<arguments.length;h++){for(var u in i=Object(arguments[h]))o.call(i,u)&&(l[u]=i[u]);if(n){a=n(i);for(var c=0;c<a.length;c++)s.call(i,a[c])&&(l[a[c]]=i[a[c]])}}return l}},{}],2:[function(t,e,i){(function(t){(function(){var i,n,o,s,r,a;"undefined"!=typeof performance&&null!==performance&&performance.now?e.exports=function(){return performance.now()}:null!=t&&t.hrtime?(e.exports=function(){return(i()-r)/1e6},n=t.hrtime,s=(i=function(){var t;return 1e9*(t=n())[0]+t[1]})(),a=1e9*t.uptime(),r=s-a):Date.now?(e.exports=function(){return Date.now()-o},o=Date.now()):(e.exports=function(){return(new Date).getTime()-o},o=(new Date).getTime())}).call(this)}).call(this,t("_process"))},{_process:3}],3:[function(t,e,i){var n,o,s=e.exports={};function r(){throw new Error("setTimeout has not been defined")}function a(){throw new Error("clearTimeout has not been defined")}function l(t){if(n===setTimeout)return setTimeout(t,0);if((n===r||!n)&&setTimeout)return n=setTimeout,setTimeout(t,0);try{return n(t,0)}catch(e){try{return n.call(null,t,0)}catch(e){return n.call(this,t,0)}}}!function(){try{n="function"==typeof setTimeout?setTimeout:r}catch(t){n=r}try{o="function"==typeof clearTimeout?clearTimeout:a}catch(t){o=a}}();var h,u=[],c=!1,d=-1;function m(){c&&h&&(c=!1,h.length?u=h.concat(u):d=-1,u.length&&p())}function p(){if(!c){var t=l(m);c=!0;for(var e=u.length;e;){for(h=u,u=[];++d<e;)h&&h[d].run();d=-1,e=u.length}h=null,c=!1,function(t){if(o===clearTimeout)return clearTimeout(t);if((o===a||!o)&&clearTimeout)return o=clearTimeout,clearTimeout(t);try{o(t)}catch(e){try{return o.call(null,t)}catch(e){return o.call(this,t)}}}(t)}}function f(t,e){this.fun=t,this.array=e}function v(){}s.nextTick=function(t){var e=new Array(arguments.length-1);if(arguments.length>1)for(var i=1;i<arguments.length;i++)e[i-1]=arguments[i];u.push(new f(t,e)),1!==u.length||c||l(p)},f.prototype.run=function(){this.fun.apply(null,this.array)},s.title="browser",s.browser=!0,s.env={},s.argv=[],s.version="",s.versions={},s.on=v,s.addListener=v,s.once=v,s.off=v,s.removeListener=v,s.removeAllListeners=v,s.emit=v,s.prependListener=v,s.prependOnceListener=v,s.listeners=function(t){return[]},s.binding=function(t){throw new Error("process.binding is not supported")},s.cwd=function(){return"/"},s.chdir=function(t){throw new Error("process.chdir is not supported")},s.umask=function(){return 0}},{}],4:[function(t,e,i){(function(i){for(var n=t("performance-now"),o="undefined"==typeof window?i:window,s=["moz","webkit"],r="AnimationFrame",a=o["request"+r],l=o["cancel"+r]||o["cancelRequest"+r],h=0;!a&&h<s.length;h++)a=o[s[h]+"Request"+r],l=o[s[h]+"Cancel"+r]||o[s[h]+"CancelRequest"+r];if(!a||!l){var u=0,c=0,d=[];a=function(t){if(0===d.length){var e=n(),i=Math.max(0,16.666666666666668-(e-u));u=i+e,setTimeout((function(){var t=d.slice(0);d.length=0;for(var e=0;e<t.length;e++)if(!t[e].cancelled)try{t[e].callback(u)}catch(t){setTimeout((function(){throw t}),0)}}),Math.round(i))}return d.push({handle:++c,callback:t,cancelled:!1}),c},l=function(t){for(var e=0;e<d.length;e++)d[e].handle===t&&(d[e].cancelled=!0)}}e.exports=function(t){return a.call(o,t)},e.exports.cancel=function(){l.apply(o,arguments)},e.exports.polyfill=function(){o.requestAnimationFrame=a,o.cancelAnimationFrame=l}}).call(this,"undefined"!=typeof global?global:"undefined"!=typeof self?self:"undefined"!=typeof window?window:{})},{"performance-now":2}],5:[function(t,e,i){"use strict";var n=function(){function t(t,e){for(var i=0;i<e.length;i++){var n=e[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}return function(e,i,n){return i&&t(e.prototype,i),n&&t(e,n),e}}();var o=t("raf"),s=t("object-assign"),r={propertyCache:{},vendors:[null,["-webkit-","webkit"],["-moz-","Moz"],["-o-","O"],["-ms-","ms"]],clamp:function(t,e,i){return e<i?t<e?e:t>i?i:t:t<i?i:t>e?e:t},data:function(t,e){return r.deserialize(t.getAttribute("data-"+e))},deserialize:function(t){return"true"===t||"false"!==t&&("null"===t?null:!isNaN(parseFloat(t))&&isFinite(t)?parseFloat(t):t)},camelCase:function(t){return t.replace(/-+(.)?/g,(function(t,e){return e?e.toUpperCase():""}))},accelerate:function(t){r.css(t,"transform","translate3d(0,0,0) rotate(0.0001deg)"),r.css(t,"transform-style","preserve-3d"),r.css(t,"backface-visibility","hidden")},transformSupport:function(t){for(var e=document.createElement("div"),i=!1,n=null,o=!1,s=null,a=null,l=0,h=r.vendors.length;l<h;l++)if(null!==r.vendors[l]?(s=r.vendors[l][0]+"transform",a=r.vendors[l][1]+"Transform"):(s="transform",a="transform"),void 0!==e.style[a]){i=!0;break}switch(t){case"2D":o=i;break;case"3D":if(i){var u=document.body||document.createElement("body"),c=document.documentElement,d=c.style.overflow,m=!1;document.body||(m=!0,c.style.overflow="hidden",c.appendChild(u),u.style.overflow="hidden",u.style.background=""),u.appendChild(e),e.style[a]="translate3d(1px,1px,1px)",o=void 0!==(n=window.getComputedStyle(e).getPropertyValue(s))&&n.length>0&&"none"!==n,c.style.overflow=d,u.removeChild(e),m&&(u.removeAttribute("style"),u.parentNode.removeChild(u))}}return o},css:function(t,e,i){var n=r.propertyCache[e];if(!n)for(var o=0,s=r.vendors.length;o<s;o++)if(n=null!==r.vendors[o]?r.camelCase(r.vendors[o][1]+"-"+e):e,void 0!==t.style[n]){r.propertyCache[e]=n;break}t.style[n]=i}},a={relativeInput:!1,clipRelativeInput:!1,inputElement:null,hoverOnly:!1,calibrationThreshold:100,calibrationDelay:500,supportDelay:500,calibrateX:!1,calibrateY:!0,invertX:!0,invertY:!0,limitX:!1,limitY:!1,scalarX:10,scalarY:10,frictionX:.1,frictionY:.1,originX:.5,originY:.5,pointerEvents:!1,precision:1,onReady:null,selector:null},l=function(){function t(e,i){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),this.element=e;var n={calibrateX:r.data(this.element,"calibrate-x"),calibrateY:r.data(this.element,"calibrate-y"),invertX:r.data(this.element,"invert-x"),invertY:r.data(this.element,"invert-y"),limitX:r.data(this.element,"limit-x"),limitY:r.data(this.element,"limit-y"),scalarX:r.data(this.element,"scalar-x"),scalarY:r.data(this.element,"scalar-y"),frictionX:r.data(this.element,"friction-x"),frictionY:r.data(this.element,"friction-y"),originX:r.data(this.element,"origin-x"),originY:r.data(this.element,"origin-y"),pointerEvents:r.data(this.element,"pointer-events"),precision:r.data(this.element,"precision"),relativeInput:r.data(this.element,"relative-input"),clipRelativeInput:r.data(this.element,"clip-relative-input"),hoverOnly:r.data(this.element,"hover-only"),inputElement:document.querySelector(r.data(this.element,"input-element")),selector:r.data(this.element,"selector")};for(var o in n)null===n[o]&&delete n[o];s(this,a,n,i),this.inputElement||(this.inputElement=this.element),this.calibrationTimer=null,this.calibrationFlag=!0,this.enabled=!1,this.depthsX=[],this.depthsY=[],this.raf=null,this.bounds=null,this.elementPositionX=0,this.elementPositionY=0,this.elementWidth=0,this.elementHeight=0,this.elementCenterX=0,this.elementCenterY=0,this.elementRangeX=0,this.elementRangeY=0,this.calibrationX=0,this.calibrationY=0,this.inputX=0,this.inputY=0,this.motionX=0,this.motionY=0,this.velocityX=0,this.velocityY=0,this.onMouseMove=this.onMouseMove.bind(this),this.onDeviceOrientation=this.onDeviceOrientation.bind(this),this.onDeviceMotion=this.onDeviceMotion.bind(this),this.onOrientationTimer=this.onOrientationTimer.bind(this),this.onMotionTimer=this.onMotionTimer.bind(this),this.onCalibrationTimer=this.onCalibrationTimer.bind(this),this.onAnimationFrame=this.onAnimationFrame.bind(this),this.onWindowResize=this.onWindowResize.bind(this),this.windowWidth=null,this.windowHeight=null,this.windowCenterX=null,this.windowCenterY=null,this.windowRadiusX=null,this.windowRadiusY=null,this.portrait=!1,this.desktop=!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i),this.motionSupport=!!window.DeviceMotionEvent&&!this.desktop,this.orientationSupport=!!window.DeviceOrientationEvent&&!this.desktop,this.orientationStatus=0,this.motionStatus=0,this.initialise()}return n(t,[{key:"initialise",value:function(){void 0===this.transform2DSupport&&(this.transform2DSupport=r.transformSupport("2D"),this.transform3DSupport=r.transformSupport("3D")),this.transform3DSupport&&r.accelerate(this.element),"static"===window.getComputedStyle(this.element).getPropertyValue("position")&&(this.element.style.position="relative"),this.pointerEvents||(this.element.style.pointerEvents="none"),this.updateLayers(),this.updateDimensions(),this.enable(),this.queueCalibration(this.calibrationDelay)}},{key:"doReadyCallback",value:function(){this.onReady&&this.onReady()}},{key:"updateLayers",value:function(){this.selector?this.layers=this.element.querySelectorAll(this.selector):this.layers=this.element.children,this.layers.length||console.warn("ParallaxJS: Your scene does not have any layers."),this.depthsX=[],this.depthsY=[];for(var t=0;t<this.layers.length;t++){var e=this.layers[t];this.transform3DSupport&&r.accelerate(e),e.style.position=t?"absolute":"relative",e.style.display="block",e.style.left=0,e.style.top=0;var i=r.data(e,"depth")||0;this.depthsX.push(r.data(e,"depth-x")||i),this.depthsY.push(r.data(e,"depth-y")||i)}}},{key:"updateDimensions",value:function(){this.windowWidth=window.innerWidth,this.windowHeight=window.innerHeight,this.windowCenterX=this.windowWidth*this.originX,this.windowCenterY=this.windowHeight*this.originY,this.windowRadiusX=Math.max(this.windowCenterX,this.windowWidth-this.windowCenterX),this.windowRadiusY=Math.max(this.windowCenterY,this.windowHeight-this.windowCenterY)}},{key:"updateBounds",value:function(){this.bounds=this.inputElement.getBoundingClientRect(),this.elementPositionX=this.bounds.left,this.elementPositionY=this.bounds.top,this.elementWidth=this.bounds.width,this.elementHeight=this.bounds.height,this.elementCenterX=this.elementWidth*this.originX,this.elementCenterY=this.elementHeight*this.originY,this.elementRangeX=Math.max(this.elementCenterX,this.elementWidth-this.elementCenterX),this.elementRangeY=Math.max(this.elementCenterY,this.elementHeight-this.elementCenterY)}},{key:"queueCalibration",value:function(t){clearTimeout(this.calibrationTimer),this.calibrationTimer=setTimeout(this.onCalibrationTimer,t)}},{key:"enable",value:function(){this.enabled||(this.enabled=!0,this.orientationSupport?(this.portrait=!1,window.addEventListener("deviceorientation",this.onDeviceOrientation),this.detectionTimer=setTimeout(this.onOrientationTimer,this.supportDelay)):this.motionSupport?(this.portrait=!1,window.addEventListener("devicemotion",this.onDeviceMotion),this.detectionTimer=setTimeout(this.onMotionTimer,this.supportDelay)):(this.calibrationX=0,this.calibrationY=0,this.portrait=!1,window.addEventListener("mousemove",this.onMouseMove),this.doReadyCallback()),window.addEventListener("resize",this.onWindowResize),this.raf=o(this.onAnimationFrame))}},{key:"disable",value:function(){this.enabled&&(this.enabled=!1,this.orientationSupport?window.removeEventListener("deviceorientation",this.onDeviceOrientation):this.motionSupport?window.removeEventListener("devicemotion",this.onDeviceMotion):window.removeEventListener("mousemove",this.onMouseMove),window.removeEventListener("resize",this.onWindowResize),o.cancel(this.raf))}},{key:"calibrate",value:function(t,e){this.calibrateX=void 0===t?this.calibrateX:t,this.calibrateY=void 0===e?this.calibrateY:e}},{key:"invert",value:function(t,e){this.invertX=void 0===t?this.invertX:t,this.invertY=void 0===e?this.invertY:e}},{key:"friction",value:function(t,e){this.frictionX=void 0===t?this.frictionX:t,this.frictionY=void 0===e?this.frictionY:e}},{key:"scalar",value:function(t,e){this.scalarX=void 0===t?this.scalarX:t,this.scalarY=void 0===e?this.scalarY:e}},{key:"limit",value:function(t,e){this.limitX=void 0===t?this.limitX:t,this.limitY=void 0===e?this.limitY:e}},{key:"origin",value:function(t,e){this.originX=void 0===t?this.originX:t,this.originY=void 0===e?this.originY:e}},{key:"setInputElement",value:function(t){this.inputElement=t,this.updateDimensions()}},{key:"setPosition",value:function(t,e,i){e=e.toFixed(this.precision)+"px",i=i.toFixed(this.precision)+"px",this.transform3DSupport?r.css(t,"transform","translate3d("+e+","+i+",0)"):this.transform2DSupport?r.css(t,"transform","translate("+e+","+i+")"):(t.style.left=e,t.style.top=i)}},{key:"onOrientationTimer",value:function(){this.orientationSupport&&0===this.orientationStatus?(this.disable(),this.orientationSupport=!1,this.enable()):this.doReadyCallback()}},{key:"onMotionTimer",value:function(){this.motionSupport&&0===this.motionStatus?(this.disable(),this.motionSupport=!1,this.enable()):this.doReadyCallback()}},{key:"onCalibrationTimer",value:function(){this.calibrationFlag=!0}},{key:"onWindowResize",value:function(){this.updateDimensions()}},{key:"onAnimationFrame",value:function(){this.updateBounds();var t=this.inputX-this.calibrationX,e=this.inputY-this.calibrationY;(Math.abs(t)>this.calibrationThreshold||Math.abs(e)>this.calibrationThreshold)&&this.queueCalibration(0),this.portrait?(this.motionX=this.calibrateX?e:this.inputY,this.motionY=this.calibrateY?t:this.inputX):(this.motionX=this.calibrateX?t:this.inputX,this.motionY=this.calibrateY?e:this.inputY),this.motionX*=this.elementWidth*(this.scalarX/100),this.motionY*=this.elementHeight*(this.scalarY/100),isNaN(parseFloat(this.limitX))||(this.motionX=r.clamp(this.motionX,-this.limitX,this.limitX)),isNaN(parseFloat(this.limitY))||(this.motionY=r.clamp(this.motionY,-this.limitY,this.limitY)),this.velocityX+=(this.motionX-this.velocityX)*this.frictionX,this.velocityY+=(this.motionY-this.velocityY)*this.frictionY;for(var i=0;i<this.layers.length;i++){var n=this.layers[i],s=this.depthsX[i],a=this.depthsY[i],l=this.velocityX*(s*(this.invertX?-1:1)),h=this.velocityY*(a*(this.invertY?-1:1));this.setPosition(n,l,h)}this.raf=o(this.onAnimationFrame)}},{key:"rotate",value:function(t,e){var i=(t||0)/30,n=(e||0)/30,o=this.windowHeight>this.windowWidth;this.portrait!==o&&(this.portrait=o,this.calibrationFlag=!0),this.calibrationFlag&&(this.calibrationFlag=!1,this.calibrationX=i,this.calibrationY=n),this.inputX=i,this.inputY=n}},{key:"onDeviceOrientation",value:function(t){var e=t.beta,i=t.gamma;null!==e&&null!==i&&(this.orientationStatus=1,this.rotate(e,i))}},{key:"onDeviceMotion",value:function(t){var e=t.rotationRate.beta,i=t.rotationRate.gamma;null!==e&&null!==i&&(this.motionStatus=1,this.rotate(e,i))}},{key:"onMouseMove",value:function(t){var e=t.clientX,i=t.clientY;if(this.hoverOnly&&(e<this.elementPositionX||e>this.elementPositionX+this.elementWidth||i<this.elementPositionY||i>this.elementPositionY+this.elementHeight))return this.inputX=0,void(this.inputY=0);this.relativeInput?(this.clipRelativeInput&&(e=Math.max(e,this.elementPositionX),e=Math.min(e,this.elementPositionX+this.elementWidth),i=Math.max(i,this.elementPositionY),i=Math.min(i,this.elementPositionY+this.elementHeight)),this.elementRangeX&&this.elementRangeY&&(this.inputX=(e-this.elementPositionX-this.elementCenterX)/this.elementRangeX,this.inputY=(i-this.elementPositionY-this.elementCenterY)/this.elementRangeY)):this.windowRadiusX&&this.windowRadiusY&&(this.inputX=(e-this.windowCenterX)/this.windowRadiusX,this.inputY=(i-this.windowCenterY)/this.windowRadiusY)}},{key:"destroy",value:function(){this.disable(),clearTimeout(this.calibrationTimer),clearTimeout(this.detectionTimer),this.element.removeAttribute("style");for(var t=0;t<this.layers.length;t++)this.layers[t].removeAttribute("style");delete this.element,delete this.layers}},{key:"version",value:function(){return"3.1.0"}}]),t}();e.exports=l},{"object-assign":1,raf:4}]},{},[5])(5)}));let wrapper=document.getElementsByClassName("wrapper")[0],wave=document.getElementsByClassName("wave");wrapper.classList.add("active"),setTimeout(()=>{for(let t=0;t<wave.length;t++){wave[t].getElementsByClassName("img-w")[0].style.transition="none"}},1e4);
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.Parallax = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+'use strict';
+/* eslint-disable no-unused-vars */
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+function toObject(val) {
+	if (val === null || val === undefined) {
+		throw new TypeError('Object.assign cannot be called with null or undefined');
+	}
+
+	return Object(val);
+}
+
+function shouldUseNative() {
+	try {
+		if (!Object.assign) {
+			return false;
+		}
+
+		// Detect buggy property enumeration order in older V8 versions.
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		test1[5] = 'de';
+		if (Object.getOwnPropertyNames(test1)[0] === '5') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test2 = {};
+		for (var i = 0; i < 10; i++) {
+			test2['_' + String.fromCharCode(i)] = i;
+		}
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			return test2[n];
+		});
+		if (order2.join('') !== '0123456789') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test3 = {};
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+			test3[letter] = letter;
+		});
+		if (Object.keys(Object.assign({}, test3)).join('') !==
+				'abcdefghijklmnopqrst') {
+			return false;
+		}
+
+		return true;
+	} catch (err) {
+		// We don't expect any of the above to throw, but better to be safe.
+		return false;
+	}
+}
+
+module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+	var from;
+	var to = toObject(target);
+	var symbols;
+
+	for (var s = 1; s < arguments.length; s++) {
+		from = Object(arguments[s]);
+
+		for (var key in from) {
+			if (hasOwnProperty.call(from, key)) {
+				to[key] = from[key];
+			}
+		}
+
+		if (getOwnPropertySymbols) {
+			symbols = getOwnPropertySymbols(from);
+			for (var i = 0; i < symbols.length; i++) {
+				if (propIsEnumerable.call(from, symbols[i])) {
+					to[symbols[i]] = from[symbols[i]];
+				}
+			}
+		}
+	}
+
+	return to;
+};
+
+},{}],2:[function(require,module,exports){
+(function (process){
+// Generated by CoffeeScript 1.12.2
+(function() {
+  var getNanoSeconds, hrtime, loadTime, moduleLoadTime, nodeLoadTime, upTime;
+
+  if ((typeof performance !== "undefined" && performance !== null) && performance.now) {
+    module.exports = function() {
+      return performance.now();
+    };
+  } else if ((typeof process !== "undefined" && process !== null) && process.hrtime) {
+    module.exports = function() {
+      return (getNanoSeconds() - nodeLoadTime) / 1e6;
+    };
+    hrtime = process.hrtime;
+    getNanoSeconds = function() {
+      var hr;
+      hr = hrtime();
+      return hr[0] * 1e9 + hr[1];
+    };
+    moduleLoadTime = getNanoSeconds();
+    upTime = process.uptime() * 1e9;
+    nodeLoadTime = moduleLoadTime - upTime;
+  } else if (Date.now) {
+    module.exports = function() {
+      return Date.now() - loadTime;
+    };
+    loadTime = Date.now();
+  } else {
+    module.exports = function() {
+      return new Date().getTime() - loadTime;
+    };
+    loadTime = new Date().getTime();
+  }
+
+}).call(this);
+
+
+
+}).call(this,require('_process'))
+
+},{"_process":3}],3:[function(require,module,exports){
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+},{}],4:[function(require,module,exports){
+(function (global){
+var now = require('performance-now')
+  , root = typeof window === 'undefined' ? global : window
+  , vendors = ['moz', 'webkit']
+  , suffix = 'AnimationFrame'
+  , raf = root['request' + suffix]
+  , caf = root['cancel' + suffix] || root['cancelRequest' + suffix]
+
+for(var i = 0; !raf && i < vendors.length; i++) {
+  raf = root[vendors[i] + 'Request' + suffix]
+  caf = root[vendors[i] + 'Cancel' + suffix]
+      || root[vendors[i] + 'CancelRequest' + suffix]
+}
+
+// Some versions of FF have rAF but not cAF
+if(!raf || !caf) {
+  var last = 0
+    , id = 0
+    , queue = []
+    , frameDuration = 1000 / 60
+
+  raf = function(callback) {
+    if(queue.length === 0) {
+      var _now = now()
+        , next = Math.max(0, frameDuration - (_now - last))
+      last = next + _now
+      setTimeout(function() {
+        var cp = queue.slice(0)
+        // Clear queue here to prevent
+        // callbacks from appending listeners
+        // to the current frame's queue
+        queue.length = 0
+        for(var i = 0; i < cp.length; i++) {
+          if(!cp[i].cancelled) {
+            try{
+              cp[i].callback(last)
+            } catch(e) {
+              setTimeout(function() { throw e }, 0)
+            }
+          }
+        }
+      }, Math.round(next))
+    }
+    queue.push({
+      handle: ++id,
+      callback: callback,
+      cancelled: false
+    })
+    return id
+  }
+
+  caf = function(handle) {
+    for(var i = 0; i < queue.length; i++) {
+      if(queue[i].handle === handle) {
+        queue[i].cancelled = true
+      }
+    }
+  }
+}
+
+module.exports = function(fn) {
+  // Wrap in a new function to prevent
+  // `cancel` potentially being assigned
+  // to the native rAF function
+  return raf.call(root, fn)
+}
+module.exports.cancel = function() {
+  caf.apply(root, arguments)
+}
+module.exports.polyfill = function() {
+  root.requestAnimationFrame = raf
+  root.cancelAnimationFrame = caf
+}
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
+},{"performance-now":2}],5:[function(require,module,exports){
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/**
+* Parallax.js
+* @author Matthew Wagerfield - @wagerfield, René Roth - mail@reneroth.org
+* @description Creates a parallax effect between an array of layers,
+*              driving the motion from the gyroscope output of a smartdevice.
+*              If no gyroscope is available, the cursor position is used.
+*/
+
+var rqAnFr = require('raf');
+var objectAssign = require('object-assign');
+
+var helpers = {
+  propertyCache: {},
+  vendors: [null, ['-webkit-', 'webkit'], ['-moz-', 'Moz'], ['-o-', 'O'], ['-ms-', 'ms']],
+
+  clamp: function clamp(value, min, max) {
+    return min < max ? value < min ? min : value > max ? max : value : value < max ? max : value > min ? min : value;
+  },
+  data: function data(element, name) {
+    return helpers.deserialize(element.getAttribute('data-' + name));
+  },
+  deserialize: function deserialize(value) {
+    if (value === 'true') {
+      return true;
+    } else if (value === 'false') {
+      return false;
+    } else if (value === 'null') {
+      return null;
+    } else if (!isNaN(parseFloat(value)) && isFinite(value)) {
+      return parseFloat(value);
+    } else {
+      return value;
+    }
+  },
+  camelCase: function camelCase(value) {
+    return value.replace(/-+(.)?/g, function (match, character) {
+      return character ? character.toUpperCase() : '';
+    });
+  },
+  accelerate: function accelerate(element) {
+    helpers.css(element, 'transform', 'translate3d(0,0,0) rotate(0.0001deg)');
+    helpers.css(element, 'transform-style', 'preserve-3d');
+    helpers.css(element, 'backface-visibility', 'hidden');
+  },
+  transformSupport: function transformSupport(value) {
+    var element = document.createElement('div'),
+        propertySupport = false,
+        propertyValue = null,
+        featureSupport = false,
+        cssProperty = null,
+        jsProperty = null;
+    for (var i = 0, l = helpers.vendors.length; i < l; i++) {
+      if (helpers.vendors[i] !== null) {
+        cssProperty = helpers.vendors[i][0] + 'transform';
+        jsProperty = helpers.vendors[i][1] + 'Transform';
+      } else {
+        cssProperty = 'transform';
+        jsProperty = 'transform';
+      }
+      if (element.style[jsProperty] !== undefined) {
+        propertySupport = true;
+        break;
+      }
+    }
+    switch (value) {
+      case '2D':
+        featureSupport = propertySupport;
+        break;
+      case '3D':
+        if (propertySupport) {
+          var body = document.body || document.createElement('body'),
+              documentElement = document.documentElement,
+              documentOverflow = documentElement.style.overflow,
+              isCreatedBody = false;
+
+          if (!document.body) {
+            isCreatedBody = true;
+            documentElement.style.overflow = 'hidden';
+            documentElement.appendChild(body);
+            body.style.overflow = 'hidden';
+            body.style.background = '';
+          }
+
+          body.appendChild(element);
+          element.style[jsProperty] = 'translate3d(1px,1px,1px)';
+          propertyValue = window.getComputedStyle(element).getPropertyValue(cssProperty);
+          featureSupport = propertyValue !== undefined && propertyValue.length > 0 && propertyValue !== 'none';
+          documentElement.style.overflow = documentOverflow;
+          body.removeChild(element);
+
+          if (isCreatedBody) {
+            body.removeAttribute('style');
+            body.parentNode.removeChild(body);
+          }
+        }
+        break;
+    }
+    return featureSupport;
+  },
+  css: function css(element, property, value) {
+    var jsProperty = helpers.propertyCache[property];
+    if (!jsProperty) {
+      for (var i = 0, l = helpers.vendors.length; i < l; i++) {
+        if (helpers.vendors[i] !== null) {
+          jsProperty = helpers.camelCase(helpers.vendors[i][1] + '-' + property);
+        } else {
+          jsProperty = property;
+        }
+        if (element.style[jsProperty] !== undefined) {
+          helpers.propertyCache[property] = jsProperty;
+          break;
+        }
+      }
+    }
+    element.style[jsProperty] = value;
+  }
+};
+
+var MAGIC_NUMBER = 30,
+    DEFAULTS = {
+  relativeInput: false,
+  clipRelativeInput: false,
+  inputElement: null,
+  hoverOnly: false,
+  calibrationThreshold: 100,
+  calibrationDelay: 500,
+  supportDelay: 500,
+  calibrateX: false,
+  calibrateY: true,
+  invertX: true,
+  invertY: true,
+  limitX: false,
+  limitY: false,
+  scalarX: 10.0,
+  scalarY: 10.0,
+  frictionX: 0.1,
+  frictionY: 0.1,
+  originX: 0.5,
+  originY: 0.5,
+  pointerEvents: false,
+  precision: 1,
+  onReady: null,
+  selector: null
+};
+
+var Parallax = function () {
+  function Parallax(element, options) {
+    _classCallCheck(this, Parallax);
+
+    this.element = element;
+
+    var data = {
+      calibrateX: helpers.data(this.element, 'calibrate-x'),
+      calibrateY: helpers.data(this.element, 'calibrate-y'),
+      invertX: helpers.data(this.element, 'invert-x'),
+      invertY: helpers.data(this.element, 'invert-y'),
+      limitX: helpers.data(this.element, 'limit-x'),
+      limitY: helpers.data(this.element, 'limit-y'),
+      scalarX: helpers.data(this.element, 'scalar-x'),
+      scalarY: helpers.data(this.element, 'scalar-y'),
+      frictionX: helpers.data(this.element, 'friction-x'),
+      frictionY: helpers.data(this.element, 'friction-y'),
+      originX: helpers.data(this.element, 'origin-x'),
+      originY: helpers.data(this.element, 'origin-y'),
+      pointerEvents: helpers.data(this.element, 'pointer-events'),
+      precision: helpers.data(this.element, 'precision'),
+      relativeInput: helpers.data(this.element, 'relative-input'),
+      clipRelativeInput: helpers.data(this.element, 'clip-relative-input'),
+      hoverOnly: helpers.data(this.element, 'hover-only'),
+      inputElement: document.querySelector(helpers.data(this.element, 'input-element')),
+      selector: helpers.data(this.element, 'selector')
+    };
+
+    for (var key in data) {
+      if (data[key] === null) {
+        delete data[key];
+      }
+    }
+
+    objectAssign(this, DEFAULTS, data, options);
+
+    if (!this.inputElement) {
+      this.inputElement = this.element;
+    }
+
+    this.calibrationTimer = null;
+    this.calibrationFlag = true;
+    this.enabled = false;
+    this.depthsX = [];
+    this.depthsY = [];
+    this.raf = null;
+
+    this.bounds = null;
+    this.elementPositionX = 0;
+    this.elementPositionY = 0;
+    this.elementWidth = 0;
+    this.elementHeight = 0;
+
+    this.elementCenterX = 0;
+    this.elementCenterY = 0;
+
+    this.elementRangeX = 0;
+    this.elementRangeY = 0;
+
+    this.calibrationX = 0;
+    this.calibrationY = 0;
+
+    this.inputX = 0;
+    this.inputY = 0;
+
+    this.motionX = 0;
+    this.motionY = 0;
+
+    this.velocityX = 0;
+    this.velocityY = 0;
+
+    this.onMouseMove = this.onMouseMove.bind(this);
+    this.onDeviceOrientation = this.onDeviceOrientation.bind(this);
+    this.onDeviceMotion = this.onDeviceMotion.bind(this);
+    this.onOrientationTimer = this.onOrientationTimer.bind(this);
+    this.onMotionTimer = this.onMotionTimer.bind(this);
+    this.onCalibrationTimer = this.onCalibrationTimer.bind(this);
+    this.onAnimationFrame = this.onAnimationFrame.bind(this);
+    this.onWindowResize = this.onWindowResize.bind(this);
+
+    this.windowWidth = null;
+    this.windowHeight = null;
+    this.windowCenterX = null;
+    this.windowCenterY = null;
+    this.windowRadiusX = null;
+    this.windowRadiusY = null;
+    this.portrait = false;
+    this.desktop = !navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i);
+    this.motionSupport = !!window.DeviceMotionEvent && !this.desktop;
+    this.orientationSupport = !!window.DeviceOrientationEvent && !this.desktop;
+    this.orientationStatus = 0;
+    this.motionStatus = 0;
+
+    this.initialise();
+  }
+
+  _createClass(Parallax, [{
+    key: 'initialise',
+    value: function initialise() {
+      if (this.transform2DSupport === undefined) {
+        this.transform2DSupport = helpers.transformSupport('2D');
+        this.transform3DSupport = helpers.transformSupport('3D');
+      }
+
+      // Configure Context Styles
+      if (this.transform3DSupport) {
+        helpers.accelerate(this.element);
+      }
+
+      var style = window.getComputedStyle(this.element);
+      if (style.getPropertyValue('position') === 'static') {
+        this.element.style.position = 'relative';
+      }
+
+      // Pointer events
+      if (!this.pointerEvents) {
+        this.element.style.pointerEvents = 'none';
+      }
+
+      // Setup
+      this.updateLayers();
+      this.updateDimensions();
+      this.enable();
+      this.queueCalibration(this.calibrationDelay);
+    }
+  }, {
+    key: 'doReadyCallback',
+    value: function doReadyCallback() {
+      if (this.onReady) {
+        this.onReady();
+      }
+    }
+  }, {
+    key: 'updateLayers',
+    value: function updateLayers() {
+      if (this.selector) {
+        this.layers = this.element.querySelectorAll(this.selector);
+      } else {
+        this.layers = this.element.children;
+      }
+
+      if (!this.layers.length) {
+        console.warn('ParallaxJS: Your scene does not have any layers.');
+      }
+
+      this.depthsX = [];
+      this.depthsY = [];
+
+      for (var index = 0; index < this.layers.length; index++) {
+        var layer = this.layers[index];
+
+        if (this.transform3DSupport) {
+          helpers.accelerate(layer);
+        }
+
+        layer.style.position = index ? 'absolute' : 'relative';
+        layer.style.display = 'block';
+        layer.style.left = 0;
+        layer.style.top = 0;
+
+        var depth = helpers.data(layer, 'depth') || 0;
+        this.depthsX.push(helpers.data(layer, 'depth-x') || depth);
+        this.depthsY.push(helpers.data(layer, 'depth-y') || depth);
+      }
+    }
+  }, {
+    key: 'updateDimensions',
+    value: function updateDimensions() {
+      this.windowWidth = window.innerWidth;
+      this.windowHeight = window.innerHeight;
+      this.windowCenterX = this.windowWidth * this.originX;
+      this.windowCenterY = this.windowHeight * this.originY;
+      this.windowRadiusX = Math.max(this.windowCenterX, this.windowWidth - this.windowCenterX);
+      this.windowRadiusY = Math.max(this.windowCenterY, this.windowHeight - this.windowCenterY);
+    }
+  }, {
+    key: 'updateBounds',
+    value: function updateBounds() {
+      this.bounds = this.inputElement.getBoundingClientRect();
+      this.elementPositionX = this.bounds.left;
+      this.elementPositionY = this.bounds.top;
+      this.elementWidth = this.bounds.width;
+      this.elementHeight = this.bounds.height;
+      this.elementCenterX = this.elementWidth * this.originX;
+      this.elementCenterY = this.elementHeight * this.originY;
+      this.elementRangeX = Math.max(this.elementCenterX, this.elementWidth - this.elementCenterX);
+      this.elementRangeY = Math.max(this.elementCenterY, this.elementHeight - this.elementCenterY);
+    }
+  }, {
+    key: 'queueCalibration',
+    value: function queueCalibration(delay) {
+      clearTimeout(this.calibrationTimer);
+      this.calibrationTimer = setTimeout(this.onCalibrationTimer, delay);
+    }
+  }, {
+    key: 'enable',
+    value: function enable() {
+      if (this.enabled) {
+        return;
+      }
+      this.enabled = true;
+
+      if (this.orientationSupport) {
+        this.portrait = false;
+        window.addEventListener('deviceorientation', this.onDeviceOrientation);
+        this.detectionTimer = setTimeout(this.onOrientationTimer, this.supportDelay);
+      } else if (this.motionSupport) {
+        this.portrait = false;
+        window.addEventListener('devicemotion', this.onDeviceMotion);
+        this.detectionTimer = setTimeout(this.onMotionTimer, this.supportDelay);
+      } else {
+        this.calibrationX = 0;
+        this.calibrationY = 0;
+        this.portrait = false;
+        window.addEventListener('mousemove', this.onMouseMove);
+        this.doReadyCallback();
+      }
+
+      window.addEventListener('resize', this.onWindowResize);
+      this.raf = rqAnFr(this.onAnimationFrame);
+    }
+  }, {
+    key: 'disable',
+    value: function disable() {
+      if (!this.enabled) {
+        return;
+      }
+      this.enabled = false;
+
+      if (this.orientationSupport) {
+        window.removeEventListener('deviceorientation', this.onDeviceOrientation);
+      } else if (this.motionSupport) {
+        window.removeEventListener('devicemotion', this.onDeviceMotion);
+      } else {
+        window.removeEventListener('mousemove', this.onMouseMove);
+      }
+
+      window.removeEventListener('resize', this.onWindowResize);
+      rqAnFr.cancel(this.raf);
+    }
+  }, {
+    key: 'calibrate',
+    value: function calibrate(x, y) {
+      this.calibrateX = x === undefined ? this.calibrateX : x;
+      this.calibrateY = y === undefined ? this.calibrateY : y;
+    }
+  }, {
+    key: 'invert',
+    value: function invert(x, y) {
+      this.invertX = x === undefined ? this.invertX : x;
+      this.invertY = y === undefined ? this.invertY : y;
+    }
+  }, {
+    key: 'friction',
+    value: function friction(x, y) {
+      this.frictionX = x === undefined ? this.frictionX : x;
+      this.frictionY = y === undefined ? this.frictionY : y;
+    }
+  }, {
+    key: 'scalar',
+    value: function scalar(x, y) {
+      this.scalarX = x === undefined ? this.scalarX : x;
+      this.scalarY = y === undefined ? this.scalarY : y;
+    }
+  }, {
+    key: 'limit',
+    value: function limit(x, y) {
+      this.limitX = x === undefined ? this.limitX : x;
+      this.limitY = y === undefined ? this.limitY : y;
+    }
+  }, {
+    key: 'origin',
+    value: function origin(x, y) {
+      this.originX = x === undefined ? this.originX : x;
+      this.originY = y === undefined ? this.originY : y;
+    }
+  }, {
+    key: 'setInputElement',
+    value: function setInputElement(element) {
+      this.inputElement = element;
+      this.updateDimensions();
+    }
+  }, {
+    key: 'setPosition',
+    value: function setPosition(element, x, y) {
+      x = x.toFixed(this.precision) + 'px';
+      y = y.toFixed(this.precision) + 'px';
+      if (this.transform3DSupport) {
+        helpers.css(element, 'transform', 'translate3d(' + x + ',' + y + ',0)');
+      } else if (this.transform2DSupport) {
+        helpers.css(element, 'transform', 'translate(' + x + ',' + y + ')');
+      } else {
+        element.style.left = x;
+        element.style.top = y;
+      }
+    }
+  }, {
+    key: 'onOrientationTimer',
+    value: function onOrientationTimer() {
+      if (this.orientationSupport && this.orientationStatus === 0) {
+        this.disable();
+        this.orientationSupport = false;
+        this.enable();
+      } else {
+        this.doReadyCallback();
+      }
+    }
+  }, {
+    key: 'onMotionTimer',
+    value: function onMotionTimer() {
+      if (this.motionSupport && this.motionStatus === 0) {
+        this.disable();
+        this.motionSupport = false;
+        this.enable();
+      } else {
+        this.doReadyCallback();
+      }
+    }
+  }, {
+    key: 'onCalibrationTimer',
+    value: function onCalibrationTimer() {
+      this.calibrationFlag = true;
+    }
+  }, {
+    key: 'onWindowResize',
+    value: function onWindowResize() {
+      this.updateDimensions();
+    }
+  }, {
+    key: 'onAnimationFrame',
+    value: function onAnimationFrame() {
+      this.updateBounds();
+      var calibratedInputX = this.inputX - this.calibrationX,
+          calibratedInputY = this.inputY - this.calibrationY;
+      if (Math.abs(calibratedInputX) > this.calibrationThreshold || Math.abs(calibratedInputY) > this.calibrationThreshold) {
+        this.queueCalibration(0);
+      }
+      if (this.portrait) {
+        this.motionX = this.calibrateX ? calibratedInputY : this.inputY;
+        this.motionY = this.calibrateY ? calibratedInputX : this.inputX;
+      } else {
+        this.motionX = this.calibrateX ? calibratedInputX : this.inputX;
+        this.motionY = this.calibrateY ? calibratedInputY : this.inputY;
+      }
+      this.motionX *= this.elementWidth * (this.scalarX / 100);
+      this.motionY *= this.elementHeight * (this.scalarY / 100);
+      if (!isNaN(parseFloat(this.limitX))) {
+        this.motionX = helpers.clamp(this.motionX, -this.limitX, this.limitX);
+      }
+      if (!isNaN(parseFloat(this.limitY))) {
+        this.motionY = helpers.clamp(this.motionY, -this.limitY, this.limitY);
+      }
+      this.velocityX += (this.motionX - this.velocityX) * this.frictionX;
+      this.velocityY += (this.motionY - this.velocityY) * this.frictionY;
+      for (var index = 0; index < this.layers.length; index++) {
+        var layer = this.layers[index],
+            depthX = this.depthsX[index],
+            depthY = this.depthsY[index],
+            xOffset = this.velocityX * (depthX * (this.invertX ? -1 : 1)),
+            yOffset = this.velocityY * (depthY * (this.invertY ? -1 : 1));
+        this.setPosition(layer, xOffset, yOffset);
+      }
+      this.raf = rqAnFr(this.onAnimationFrame);
+    }
+  }, {
+    key: 'rotate',
+    value: function rotate(beta, gamma) {
+      // Extract Rotation
+      var x = (beta || 0) / MAGIC_NUMBER,
+          //  -90 :: 90
+      y = (gamma || 0) / MAGIC_NUMBER; // -180 :: 180
+
+      // Detect Orientation Change
+      var portrait = this.windowHeight > this.windowWidth;
+      if (this.portrait !== portrait) {
+        this.portrait = portrait;
+        this.calibrationFlag = true;
+      }
+
+      if (this.calibrationFlag) {
+        this.calibrationFlag = false;
+        this.calibrationX = x;
+        this.calibrationY = y;
+      }
+
+      this.inputX = x;
+      this.inputY = y;
+    }
+  }, {
+    key: 'onDeviceOrientation',
+    value: function onDeviceOrientation(event) {
+      var beta = event.beta;
+      var gamma = event.gamma;
+      if (beta !== null && gamma !== null) {
+        this.orientationStatus = 1;
+        this.rotate(beta, gamma);
+      }
+    }
+  }, {
+    key: 'onDeviceMotion',
+    value: function onDeviceMotion(event) {
+      var beta = event.rotationRate.beta;
+      var gamma = event.rotationRate.gamma;
+      if (beta !== null && gamma !== null) {
+        this.motionStatus = 1;
+        this.rotate(beta, gamma);
+      }
+    }
+  }, {
+    key: 'onMouseMove',
+    value: function onMouseMove(event) {
+      var clientX = event.clientX,
+          clientY = event.clientY;
+
+      // reset input to center if hoverOnly is set and we're not hovering the element
+      if (this.hoverOnly && (clientX < this.elementPositionX || clientX > this.elementPositionX + this.elementWidth || clientY < this.elementPositionY || clientY > this.elementPositionY + this.elementHeight)) {
+        this.inputX = 0;
+        this.inputY = 0;
+        return;
+      }
+
+      if (this.relativeInput) {
+        // Clip mouse coordinates inside element bounds.
+        if (this.clipRelativeInput) {
+          clientX = Math.max(clientX, this.elementPositionX);
+          clientX = Math.min(clientX, this.elementPositionX + this.elementWidth);
+          clientY = Math.max(clientY, this.elementPositionY);
+          clientY = Math.min(clientY, this.elementPositionY + this.elementHeight);
+        }
+        // Calculate input relative to the element.
+        if (this.elementRangeX && this.elementRangeY) {
+          this.inputX = (clientX - this.elementPositionX - this.elementCenterX) / this.elementRangeX;
+          this.inputY = (clientY - this.elementPositionY - this.elementCenterY) / this.elementRangeY;
+        }
+      } else {
+        // Calculate input relative to the window.
+        if (this.windowRadiusX && this.windowRadiusY) {
+          this.inputX = (clientX - this.windowCenterX) / this.windowRadiusX;
+          this.inputY = (clientY - this.windowCenterY) / this.windowRadiusY;
+        }
+      }
+    }
+  }, {
+    key: 'destroy',
+    value: function destroy() {
+      this.disable();
+
+      clearTimeout(this.calibrationTimer);
+      clearTimeout(this.detectionTimer);
+
+      this.element.removeAttribute('style');
+      for (var index = 0; index < this.layers.length; index++) {
+        this.layers[index].removeAttribute('style');
+      }
+
+      delete this.element;
+      delete this.layers;
+    }
+  }, {
+    key: 'version',
+    value: function version() {
+      return '3.1.0';
+    }
+  }]);
+
+  return Parallax;
+}();
+
+module.exports = Parallax;
+
+},{"object-assign":1,"raf":4}]},{},[5])(5)
+});
+
+
+// @prepros -prepend lazysizes.min.js
+// @prepros -prepend jquery-3.5.1.min.js
+// @prepros -prepend slick.js
+// @prepros -prepend slick-settings.js
+
+
+
+// var scene = document.getElementById('scene');
+// var parallaxInstance = new Parallax(scene);
