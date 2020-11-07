@@ -1,0 +1,6 @@
+
+
+// когда дисплей изменяет размер перезагружает страницу
+$(window).resize(function () {
+    window.location.reload();
+});

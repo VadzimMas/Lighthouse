@@ -15,3 +15,8 @@ var parallaxInstance = new Parallax(scene);
 $(window).resize(function () {
     window.location.reload();
 });
+
+
+
+
+
