@@ -736,8 +736,8 @@ body {
                         width: 100%;
                         height: 100%;
 
-                        // transform: translateY(50%);
-                        // animation: liighthouse-popup 0.5s linear 1.5s 1 forwards;
+                        transform: translateY(50%);
+                        animation: liighthouse-popup 0.5s linear 1.5s 1 forwards;
                         @keyframes liighthouse-popup {
                             0% {
                                 transform: translateY(50%);
@@ -750,65 +750,128 @@ body {
                             position: absolute;
                             bottom: 9%;
                             transform: scale(0.5);
-                            left: -70%;
+                            left: -68%;
                             width: 240%;
                             height: 25%;
                             background: url("../img/waves/wave-plain.png") center bottom / 100% 100% repeat-x;
                             background-size: contain;
 
-                            animation: wave1-anim-left 4s linear infinite;
+                            animation: wave1-anim-left 6s linear infinite;
                             @keyframes wave1-anim-left {
                                 0% {
-                                    transform: scale(0.5) translate(10px, 0);
+                                    transform: scale(0.5) translate(1%, 0);
                                 }
                                 6.25% {
-                                    transform: scale(0.5) translate(8px, -3px);
+                                    transform: scale(0.5) translate(0.9%, -4%);
                                 }
                                 12.5% {
-                                    transform: scale(0.5) translate(6px, -6px);
+                                    transform: scale(0.5) translate(0.7%, -7%);
                                 }
                                 18.75% {
-                                    transform: scale(0.5) translate(3px, -8px);
+                                    transform: scale(0.5) translate(0.4, -9%);
                                 }
                                 25% {
-                                    transform: scale(0.5) translate(0, -10px);
+                                    transform: scale(0.5) translate(0, -10%);
                                 }
                                 31.25% {
-                                    transform: scale(0.5) translate(-3px, -8px);
+                                    transform: scale(0.5) translate(-0.4%, -9%);
                                 }
                                 37.5% {
-                                    transform: scale(0.5) translate(-6px, -6px);
+                                    transform: scale(0.5) translate(-0.7%, -7%);
                                 }
                                 43.75% {
-                                    transform: scale(0.5) translate(-8px, -3px);
+                                    transform: scale(0.5) translate(-0.9%, -4%);
                                 }
                                 50% {
-                                    transform: scale(0.5) translate(-10px, 0);
+                                    transform: scale(0.5) translate(-1%, 0);
                                 }
                                 56.25% {
-                                    transform: scale(0.5) translate(-8px, 3px);
+                                    transform: scale(0.5) translate(-0.9%, 4%);
                                 }
                                 62.5% {
-                                    transform: scale(0.5) translate(-6px, 6px);
+                                    transform: scale(0.5) translate(-0.7%, 7%);
                                 }
                                 68.75% {
-                                    transform: scale(0.5) translate(-3px, 8px);
+                                    transform: scale(0.5) translate(-0.4%, 9%);
                                 }
                                 75% {
-                                    transform: scale(0.5) translate(0, 10px);
+                                    transform: scale(0.5) translate(0, 10%);
                                 }
                                 81.25% {
-                                    transform: scale(0.5) translate(3px, 8px);
+                                    transform: scale(0.5) translate(0.4%, 9%);
                                 }
                                 87.5% {
-                                    transform: scale(0.5) translate(6px, 6px);
+                                    transform: scale(0.5) translate(0.7%, 7%);
                                 }
                                 93.75% {
-                                    transform: scale(0.5) translate(8px, 3px);
+                                    transform: scale(0.5) translate(0.9%, 4%);
                                 }
                                 100% {
-                                    transform: scale(0.5) translate(10px, 0);
+                                    transform: scale(0.5) translate(1%, 0);
                                 }
+                            }
+                            @media only screen and (orientation: portrait) {
+                                @keyframes wave1-anim-left {
+                                    0% {
+                                        transform: scale(0.5) translate(4%, 0);
+                                    }
+                                    6.25% {
+                                        transform: scale(0.5) translate(3.5%, -4%);
+                                    }
+                                    12.5% {
+                                        transform: scale(0.5) translate(2.5%, -7%);
+                                    }
+                                    18.75% {
+                                        transform: scale(0.5) translate(1.5%, -9%);
+                                    }
+                                    25% {
+                                        transform: scale(0.5) translate(0, -10%);
+                                    }
+                                    31.25% {
+                                        transform: scale(0.5) translate(-1.5%, -9%);
+                                    }
+                                    37.5% {
+                                        transform: scale(0.5) translate(-2.5%, -7%);
+                                    }
+                                    43.75% {
+                                        transform: scale(0.5) translate(-3.5%, -4%);
+                                    }
+                                    50% {
+                                        transform: scale(0.5) translate(-4%, 0);
+                                    }
+                                    56.25% {
+                                        transform: scale(0.5) translate(-3.5%, 4%);
+                                    }
+                                    62.5% {
+                                        transform: scale(0.5) translate(-2.5%, 7%);
+                                    }
+                                    68.75% {
+                                        transform: scale(0.5) translate(-1.5%, 9%);
+                                    }
+                                    75% {
+                                        transform: scale(0.5) translate(0, 10%);
+                                    }
+                                    81.25% {
+                                        transform: scale(0.5) translate(1.5%, 9%);
+                                    }
+                                    87.5% {
+                                        transform: scale(0.5) translate(2.5%, 7%);
+                                    }
+                                    93.75% {
+                                        transform: scale(0.5) translate(3.5%, 4%);
+                                    }
+                                    100% {
+                                        transform: scale(0.5) translate(4%, 0);
+                                    }
+                                }
+                            }
+                            .black {
+                                position: absolute;
+                                width: 130%;
+                                height: 100%;
+                                bottom: -100%;
+                                left: -15%;
+                                background-color: black;
                             }
                         }
                     }
@@ -824,8 +887,8 @@ body {
                         width: 100%;
                         height: 100%;
 
-                        // transform: translateY(50%);
-                        // animation: liighthouse-popup 0.5s linear 1.3s 1 forwards;
+                        transform: translateY(50%);
+                        animation: liighthouse-popup 0.5s linear 1.3s 1 forwards;
                         @keyframes liighthouse-popup {
                             0% {
                                 transform: translateY(50%);
@@ -844,59 +907,122 @@ body {
                             background: url("../img/waves/wave-paint.png") center bottom / 100% 100% repeat-x;
                             background-size: contain;
 
-                            animation: wave2-anim-right 3s linear infinite;
+                            animation: wave2-anim-right 5s linear infinite;
                             @keyframes wave2-anim-right {
                                 0% {
-                                    transform: scale(0.6) translate(-12px, 0);
+                                    transform: scale(0.6) translate(-1%, 0);
                                 }
                                 6.25% {
-                                    transform: scale(0.6) translate(-10px, -4px);
+                                    transform: scale(0.6) translate(-0.9%, -4%);
                                 }
                                 12.5% {
-                                    transform: scale(0.6) translate(-8px, -8px);
+                                    transform: scale(0.6) translate(-0.7%, -7%);
                                 }
                                 18.75% {
-                                    transform: scale(0.6) translate(-4px, -10px);
+                                    transform: scale(0.6) translate(-0.4, -9%);
                                 }
                                 25% {
-                                    transform: scale(0.6) translate(0, -12px);
+                                    transform: scale(0.6) translate(0, -10%);
                                 }
                                 31.25% {
-                                    transform: scale(0.6) translate(4, -10px);
+                                    transform: scale(0.6) translate(0.4%, -9%);
                                 }
                                 37.5% {
-                                    transform: scale(0.6) translate(8px, -8px);
+                                    transform: scale(0.6) translate(0.7%, -7%);
                                 }
                                 43.75% {
-                                    transform: scale(0.6) translate(10px, -4px);
+                                    transform: scale(0.6) translate(0.9%, -4%);
                                 }
                                 50% {
-                                    transform: scale(0.6) translate(12px, 0);
+                                    transform: scale(0.6) translate(1%, 0);
                                 }
                                 56.25% {
-                                    transform: scale(0.6) translate(10px, 4px);
+                                    transform: scale(0.6) translate(0.9%, 4%);
                                 }
                                 62.5% {
-                                    transform: scale(0.6) translate(8px, 8px);
+                                    transform: scale(0.6) translate(0.7%, 7%);
                                 }
                                 68.75% {
-                                    transform: scale(0.6) translate(4px, 10px);
+                                    transform: scale(0.6) translate(0.4%, 9%);
                                 }
                                 75% {
-                                    transform: scale(0.6) translate(0, 12px);
+                                    transform: scale(0.6) translate(0, 10%);
                                 }
                                 81.25% {
-                                    transform: scale(0.6) translate(-4px, 10px);
+                                    transform: scale(0.6) translate(-0.4%, 9%);
                                 }
                                 87.5% {
-                                    transform: scale(0.6) translate(-8px, 8px);
+                                    transform: scale(0.6) translate(-0.7%, 7%);
                                 }
                                 93.75% {
-                                    transform: scale(0.6) translate(-10px, 4px);
+                                    transform: scale(0.6) translate(-0.9%, 4%);
                                 }
                                 100% {
-                                    transform: scale(0.6) translate(-12px, 0);
+                                    transform: scale(0.6) translate(-1%, 0);
                                 }
+                            }
+                            @media only screen and (orientation: portrait) {
+                                @keyframes wave2-anim-right {
+                                    0% {
+                                        transform: scale(0.6) translate(-4%, 0);
+                                    }
+                                    6.25% {
+                                        transform: scale(0.6) translate(-3.5%, -4%);
+                                    }
+                                    12.5% {
+                                        transform: scale(0.6) translate(-2.5%, -7%);
+                                    }
+                                    18.75% {
+                                        transform: scale(0.6) translate(-1.5%, -9%);
+                                    }
+                                    25% {
+                                        transform: scale(0.6) translate(0, -10%);
+                                    }
+                                    31.25% {
+                                        transform: scale(0.6) translate(1.5%, -9%);
+                                    }
+                                    37.5% {
+                                        transform: scale(0.6) translate(2.5%, -7%);
+                                    }
+                                    43.75% {
+                                        transform: scale(0.6) translate(3.5%, -4%);
+                                    }
+                                    50% {
+                                        transform: scale(0.6) translate(4%, 0);
+                                    }
+                                    56.25% {
+                                        transform: scale(0.6) translate(3.5%, 4%);
+                                    }
+                                    62.5% {
+                                        transform: scale(0.6) translate(2.5%, 7%);
+                                    }
+                                    68.75% {
+                                        transform: scale(0.6) translate(1.5%, 9%);
+                                    }
+                                    75% {
+                                        transform: scale(0.6) translate(0, 10%);
+                                    }
+                                    81.25% {
+                                        transform: scale(0.6) translate(-1.5%, 9%);
+                                    }
+                                    87.5% {
+                                        transform: scale(0.6) translate(-2.5%, 7%);
+                                    }
+                                    93.75% {
+                                        transform: scale(0.6) translate(-3.5%, 4%);
+                                    }
+                                    100% {
+                                        transform: scale(0.6) translate(-4%, 0);
+                                    }
+                                }
+                            }
+                            .black {
+                                position: absolute;
+                                width: 130%;
+                                height: 100%;
+                                bottom: -100%;
+                                left: -15%;
+                                background-color: black;
                             }
                         }
                     }
@@ -912,8 +1038,8 @@ body {
                         width: 100%;
                         height: 100%;
 
-                        // transform: translateY(50%);
-                        // animation: liighthouse-popup 0.5s linear 1.1s 1 forwards;
+                        transform: translateY(50%);
+                        animation: liighthouse-popup 0.5s linear 1.1s 1 forwards;
                         @keyframes liighthouse-popup {
                             0% {
                                 transform: translateY(50%);
@@ -926,65 +1052,128 @@ body {
                             position: absolute;
                             transform: scale(0.7);
                             bottom: 3%;
-                            left: -40%;
+                            left: -39%;
                             width: 180%;
                             height: 25%;
                             background: url("../img/waves/wave-plain.png") center bottom / 100% 100% repeat-x;
                             background-size: contain;
 
-                            animation: wave3-anim-left 3s linear infinite;
+                            animation: wave3-anim-left 5.5s linear infinite;
                             @keyframes wave3-anim-left {
                                 0% {
-                                    transform: scale(0.7) translate(14px, 0);
+                                    transform: scale(0.7) translate(1%, 0);
                                 }
                                 6.25% {
-                                    transform: scale(0.7) translate(11px, -4px);
+                                    transform: scale(0.7) translate(0.9%, -4%);
                                 }
                                 12.5% {
-                                    transform: scale(0.7) translate(9px, -9px);
+                                    transform: scale(0.7) translate(0.7%, -7%);
                                 }
                                 18.75% {
-                                    transform: scale(0.7) translate(4px, -11px);
+                                    transform: scale(0.7) translate(0.4, -9%);
                                 }
                                 25% {
-                                    transform: scale(0.7) translate(0, -14px);
+                                    transform: scale(0.7) translate(0, -10%);
                                 }
                                 31.25% {
-                                    transform: scale(0.7) translate(-4px, -11px);
+                                    transform: scale(0.7) translate(-0.4%, -9%);
                                 }
                                 37.5% {
-                                    transform: scale(0.7) translate(-9px, -9px);
+                                    transform: scale(0.7) translate(-0.7%, -7%);
                                 }
                                 43.75% {
-                                    transform: scale(0.7) translate(-11px, -4px);
+                                    transform: scale(0.7) translate(-0.9%, -4%);
                                 }
                                 50% {
-                                    transform: scale(0.7) translate(-14px, 0);
+                                    transform: scale(0.7) translate(-1%, 0);
                                 }
                                 56.25% {
-                                    transform: scale(0.7) translate(-11px, 4px);
+                                    transform: scale(0.7) translate(-0.9%, 4%);
                                 }
                                 62.5% {
-                                    transform: scale(0.7) translate(-9px, 9px);
+                                    transform: scale(0.7) translate(-0.7%, 7%);
                                 }
                                 68.75% {
-                                    transform: scale(0.7) translate(-4px, 11px);
+                                    transform: scale(0.7) translate(-0.4%, 9%);
                                 }
                                 75% {
-                                    transform: scale(0.7) translate(0, 14px);
+                                    transform: scale(0.7) translate(0, 10%);
                                 }
                                 81.25% {
-                                    transform: scale(0.7) translate(4px, 11px);
+                                    transform: scale(0.7) translate(0.4%, 9%);
                                 }
                                 87.5% {
-                                    transform: scale(0.7) translate(9px, 9px);
+                                    transform: scale(0.7) translate(0.7%, 7%);
                                 }
                                 93.75% {
-                                    transform: scale(0.7) translate(11px, 4px);
+                                    transform: scale(0.7) translate(0.9%, 4%);
                                 }
                                 100% {
-                                    transform: scale(0.7) translate(14px, 0);
+                                    transform: scale(0.7) translate(1%, 0);
                                 }
+                            }
+                            @media only screen and (orientation: portrait) {
+                                @keyframes wave3-anim-left {
+                                    0% {
+                                        transform: scale(0.7) translate(4%, 0);
+                                    }
+                                    6.25% {
+                                        transform: scale(0.7) translate(3.5%, -4%);
+                                    }
+                                    12.5% {
+                                        transform: scale(0.7) translate(2.5%, -7%);
+                                    }
+                                    18.75% {
+                                        transform: scale(0.7) translate(1.5%, -9%);
+                                    }
+                                    25% {
+                                        transform: scale(0.7) translate(0, -10%);
+                                    }
+                                    31.25% {
+                                        transform: scale(0.7) translate(-1.5%, -9%);
+                                    }
+                                    37.5% {
+                                        transform: scale(0.7) translate(-2.5%, -7%);
+                                    }
+                                    43.75% {
+                                        transform: scale(0.7) translate(-3.5%, -4%);
+                                    }
+                                    50% {
+                                        transform: scale(0.7) translate(-4%, 0);
+                                    }
+                                    56.25% {
+                                        transform: scale(0.7) translate(-3.5%, 4%);
+                                    }
+                                    62.5% {
+                                        transform: scale(0.7) translate(-2.5%, 7%);
+                                    }
+                                    68.75% {
+                                        transform: scale(0.7) translate(-1.5%, 9%);
+                                    }
+                                    75% {
+                                        transform: scale(0.7) translate(0, 10%);
+                                    }
+                                    81.25% {
+                                        transform: scale(0.7) translate(1.5%, 9%);
+                                    }
+                                    87.5% {
+                                        transform: scale(0.7) translate(2.5%, 7%);
+                                    }
+                                    93.75% {
+                                        transform: scale(0.7) translate(3.5%, 4%);
+                                    }
+                                    100% {
+                                        transform: scale(0.7) translate(4%, 0);
+                                    }
+                                }
+                            }
+                            .black {
+                                position: absolute;
+                                width: 130%;
+                                height: 100%;
+                                bottom: -100%;
+                                left: -15%;
+                                background-color: black;
                             }
                         }
                     }
@@ -1000,8 +1189,8 @@ body {
                         width: 100%;
                         height: 100%;
 
-                        // transform: translateY(50%);
-                        // animation: liighthouse-popup 0.5s linear 0.9s 1 forwards;
+                        transform: translateY(50%);
+                        animation: liighthouse-popup 0.5s linear 0.9s 1 forwards;
                         @keyframes liighthouse-popup {
                             0% {
                                 transform: translateY(50%);
@@ -1014,65 +1203,128 @@ body {
                             position: absolute;
                             bottom: 0%;
                             transform: scale(0.8);
-                            left: -35%;
+                            left: -34%;
                             width: 170%;
                             height: 25%;
                             background: url("../img/waves/wave-paint.png") center bottom / 100% 100% repeat-x;
                             background-size: contain;
 
-                            // animation: wave4-anim-right 4s linear infinite;
+                            animation: wave4-anim-right 4s linear infinite;
                             @keyframes wave4-anim-right {
                                 0% {
-                                    transform: scale(0.8) translate(-20px, 0);
+                                    transform: scale(0.8) translate(-1%, 0);
                                 }
                                 6.25% {
-                                    transform: scale(0.8) translate(-18.5px, -8px);
+                                    transform: scale(0.8) translate(-0.9%, -4%);
                                 }
                                 12.5% {
-                                    transform: scale(0.8) translate(-14.5px, -14.5px);
+                                    transform: scale(0.8) translate(-0.7%, -7%);
                                 }
                                 18.75% {
-                                    transform: scale(0.8) translate(-8px, -18.5px);
+                                    transform: scale(0.8) translate(-0.4, -9%);
                                 }
                                 25% {
-                                    transform: scale(0.8) translate(0, -20px);
+                                    transform: scale(0.8) translate(0, -10%);
                                 }
                                 31.25% {
-                                    transform: scale(0.8) translate(8, -18.5px);
+                                    transform: scale(0.8) translate(0.4%, -9%);
                                 }
                                 37.5% {
-                                    transform: scale(0.8) translate(14.5px, -14.5px);
+                                    transform: scale(0.8) translate(0.7%, -7%);
                                 }
                                 43.75% {
-                                    transform: scale(0.8) translate(18.5px, -8px);
+                                    transform: scale(0.8) translate(0.9%, -4%);
                                 }
                                 50% {
-                                    transform: scale(0.8) translate(20px, 0);
+                                    transform: scale(0.8) translate(1%, 0);
                                 }
                                 56.25% {
-                                    transform: scale(0.8) translate(18.5px, 8);
+                                    transform: scale(0.8) translate(0.9%, 4%);
                                 }
                                 62.5% {
-                                    transform: scale(0.8) translate(14.5px, 14.5px);
+                                    transform: scale(0.8) translate(0.7%, 7%);
                                 }
                                 68.75% {
-                                    transform: scale(0.8) translate(8px, 18.5px);
+                                    transform: scale(0.8) translate(0.4%, 9%);
                                 }
                                 75% {
-                                    transform: scale(0.8) translate(0, 20px);
+                                    transform: scale(0.8) translate(0, 10%);
                                 }
                                 81.25% {
-                                    transform: scale(0.8) translate(-8px, 18.5px);
+                                    transform: scale(0.8) translate(-0.4%, 9%);
                                 }
                                 87.5% {
-                                    transform: scale(0.8) translate(-14.5px, 14.5px);
+                                    transform: scale(0.8) translate(-0.7%, 7%);
                                 }
                                 93.75% {
-                                    transform: scale(0.8) translate(-18.5px, 8px);
+                                    transform: scale(0.8) translate(-0.9%, 4%);
                                 }
                                 100% {
-                                    transform: scale(0.8) translate(-20px, 0);
+                                    transform: scale(0.8) translate(-1%, 0);
                                 }
+                            }
+                            @media only screen and (orientation: portrait) {
+                                @keyframes wave4-anim-right {
+                                    0% {
+                                        transform: scale(0.8) translate(-4%, 0);
+                                    }
+                                    6.25% {
+                                        transform: scale(0.8) translate(-3.5%, -4%);
+                                    }
+                                    12.5% {
+                                        transform: scale(0.8) translate(-2.5%, -7%);
+                                    }
+                                    18.75% {
+                                        transform: scale(0.8) translate(-1.5%, -9%);
+                                    }
+                                    25% {
+                                        transform: scale(0.8) translate(0, -10%);
+                                    }
+                                    31.25% {
+                                        transform: scale(0.8) translate(1.5%, -9%);
+                                    }
+                                    37.5% {
+                                        transform: scale(0.8) translate(2.5%, -7%);
+                                    }
+                                    43.75% {
+                                        transform: scale(0.8) translate(3.5%, -4%);
+                                    }
+                                    50% {
+                                        transform: scale(0.8) translate(4%, 0);
+                                    }
+                                    56.25% {
+                                        transform: scale(0.8) translate(3.5%, 4%);
+                                    }
+                                    62.5% {
+                                        transform: scale(0.8) translate(2.5%, 7%);
+                                    }
+                                    68.75% {
+                                        transform: scale(0.8) translate(1.5%, 9%);
+                                    }
+                                    75% {
+                                        transform: scale(0.8) translate(0, 10%);
+                                    }
+                                    81.25% {
+                                        transform: scale(0.8) translate(-1.5%, 9%);
+                                    }
+                                    87.5% {
+                                        transform: scale(0.8) translate(-2.5%, 7%);
+                                    }
+                                    93.75% {
+                                        transform: scale(0.8) translate(-3.5%, 4%);
+                                    }
+                                    100% {
+                                        transform: scale(0.8) translate(-4%, 0);
+                                    }
+                                }
+                            }
+                            .black {
+                                position: absolute;
+                                width: 130%;
+                                height: 100%;
+                                bottom: -100%;
+                                left: -15%;
+                                background-color: black;
                             }
                         }
                     }
@@ -1088,8 +1340,8 @@ body {
                         width: 100%;
                         height: 100%;
 
-                        // transform: translateY(50%);
-                        // animation: liighthouse-popup 0.5s linear 0.7s 1 forwards;
+                        transform: translateY(50%);
+                        animation: liighthouse-popup 0.5s linear 0.7s 1 forwards;
                         @keyframes liighthouse-popup {
                             0% {
                                 transform: translateY(50%);
@@ -1101,75 +1353,130 @@ body {
                         .wave-img {
                             position: absolute;
                             bottom: -3%;
-                            left: -30%;
+                            left: -31%;
                             transform: scale(0.9);
                             width: 160%;
                             height: 25%;
                             background: url("../img/waves/wave-plain.png") center bottom / 100% 100% repeat-x;
                             background-size: contain;
 
-                            // animation: wave5-anim-left 4s linear infinite;
+                            animation: wave5-anim-left 5s linear infinite;
                             @keyframes wave5-anim-left {
                                 0% {
-                                    transform: scale(0.9) translate(20px, 0);
+                                    transform: scale(0.9) translate(1%, 0);
                                 }
                                 6.25% {
-                                    transform: scale(0.9) translate(18.5px, -8px);
+                                    transform: scale(0.9) translate(0.9%, -4%);
                                 }
                                 12.5% {
-                                    transform: scale(0.9) translate(14.5px, -14.5px);
+                                    transform: scale(0.9) translate(0.7%, -7%);
                                 }
                                 18.75% {
-                                    transform: scale(0.9) translate(8px, -18.5px);
+                                    transform: scale(0.9) translate(0.4, -9%);
                                 }
                                 25% {
-                                    transform: scale(0.9) translate(0, -20px);
+                                    transform: scale(0.9) translate(0, -10%);
                                 }
                                 31.25% {
-                                    transform: scale(0.9) translate(-8, -18px);
+                                    transform: scale(0.9) translate(-0.4%, -9%);
                                 }
                                 37.5% {
-                                    transform: scale(0.9) translate(-14.5px, -14.5px);
+                                    transform: scale(0.9) translate(-0.7%, -7%);
                                 }
                                 43.75% {
-                                    transform: scale(0.9) translate(-18.5px, -8px);
+                                    transform: scale(0.9) translate(-0.9%, -4%);
                                 }
                                 50% {
-                                    transform: scale(0.9) translate(-20px, 0);
+                                    transform: scale(0.9) translate(-1%, 0);
                                 }
                                 56.25% {
-                                    transform: scale(0.9) translate(-18.5px, 8);
+                                    transform: scale(0.9) translate(-0.9%, 4%);
                                 }
                                 62.5% {
-                                    transform: scale(0.9) translate(-14.5px, 14.5px);
+                                    transform: scale(0.9) translate(-0.7%, 7%);
                                 }
                                 68.75% {
-                                    transform: scale(0.9) translate(-8px, 18.5px);
+                                    transform: scale(0.9) translate(-0.4%, 9%);
                                 }
                                 75% {
-                                    transform: scale(0.9) translate(0, 20px);
+                                    transform: scale(0.9) translate(0, 10%);
                                 }
                                 81.25% {
-                                    transform: scale(0.9) translate(8px, 18.5px);
+                                    transform: scale(0.9) translate(0.4%, 9%);
                                 }
                                 87.5% {
-                                    transform: scale(0.9) translate(14.5px, 14.5px);
+                                    transform: scale(0.9) translate(0.7%, 7%);
                                 }
                                 93.75% {
-                                    transform: scale(0.9) translate(18.5px, 8px);
+                                    transform: scale(0.9) translate(0.9%, 4%);
                                 }
                                 100% {
-                                    transform: scale(0.9) translate(20px, 0);
+                                    transform: scale(0.9) translate(1%, 0);
                                 }
                             }
-                        }
-                        .black {
-                            position: absolute;
-                            width: 130%;
-                            height: 100%;
-                            bottom: -100%;
-                            left: -15%;
-                            background-color: black;
+                            @media only screen and (orientation: portrait) {
+                                @keyframes wave5-anim-left {
+                                    0% {
+                                        transform: scale(0.9) translate(4%, 0);
+                                    }
+                                    6.25% {
+                                        transform: scale(0.9) translate(3.5%, -4%);
+                                    }
+                                    12.5% {
+                                        transform: scale(0.9) translate(2.5%, -7%);
+                                    }
+                                    18.75% {
+                                        transform: scale(0.9) translate(1.5%, -9%);
+                                    }
+                                    25% {
+                                        transform: scale(0.9) translate(0, -10%);
+                                    }
+                                    31.25% {
+                                        transform: scale(0.9) translate(-1.5%, -9%);
+                                    }
+                                    37.5% {
+                                        transform: scale(0.9) translate(-2.5%, -7%);
+                                    }
+                                    43.75% {
+                                        transform: scale(0.9) translate(-3.5%, -4%);
+                                    }
+                                    50% {
+                                        transform: scale(0.9) translate(-4%, 0);
+                                    }
+                                    56.25% {
+                                        transform: scale(0.9) translate(-3.5%, 4%);
+                                    }
+                                    62.5% {
+                                        transform: scale(0.9) translate(-2.5%, 7%);
+                                    }
+                                    68.75% {
+                                        transform: scale(0.9) translate(-1.5%, 9%);
+                                    }
+                                    75% {
+                                        transform: scale(0.9) translate(0, 10%);
+                                    }
+                                    81.25% {
+                                        transform: scale(0.9) translate(1.5%, 9%);
+                                    }
+                                    87.5% {
+                                        transform: scale(0.9) translate(2.5%, 7%);
+                                    }
+                                    93.75% {
+                                        transform: scale(0.9) translate(3.5%, 4%);
+                                    }
+                                    100% {
+                                        transform: scale(0.9) translate(4%, 0);
+                                    }
+                                }
+                            }
+                            .black {
+                                position: absolute;
+                                width: 130%;
+                                height: 100%;
+                                bottom: -100%;
+                                left: -15%;
+                                background-color: black;
+                            }
                         }
                     }
                 }
@@ -1184,8 +1491,8 @@ body {
                         width: 100%;
                         height: 100%;
 
-                        // transform: translateY(50%);
-                        // animation: liighthouse-popup 0.5s linear 0.5s 1 forwards;
+                        transform: translateY(50%);
+                        animation: liighthouse-popup 0.5s linear 0.5s 1 forwards;
                         @keyframes liighthouse-popup {
                             0% {
                                 transform: translateY(50%);
@@ -1203,58 +1510,114 @@ body {
                             background: url("../img/waves/wave-paint.png") center bottom / 100% 100% repeat-x;
                             background-size: contain;
 
-                            // animation: wave6-anim-right 3s linear infinite;
+                            animation: wave6-anim-right 3s linear infinite;
                             @keyframes wave6-anim-right {
                                 0% {
-                                    transform: translate(-20px, 0);
+                                    transform: translate(-1%, 0);
                                 }
                                 6.25% {
-                                    transform: translate(-18.5px, -8px);
+                                    transform: translate(-0.9%, -4%);
                                 }
                                 12.5% {
-                                    transform: translate(-14.5px, -14.5px);
+                                    transform: translate(-0.7%, -7%);
                                 }
                                 18.75% {
-                                    transform: translate(-8px, -18.5px);
+                                    transform: translate(-0.4, -9%);
                                 }
                                 25% {
-                                    transform: translate(0, -20px);
+                                    transform: translate(0, -10%);
                                 }
                                 31.25% {
-                                    transform: translate(8, -18.5px);
+                                    transform: translate(0.4%, -9%);
                                 }
                                 37.5% {
-                                    transform: translate(14.5px, -14.5px);
+                                    transform: translate(0.7%, -7%);
                                 }
                                 43.75% {
-                                    transform: translate(18.5px, -8px);
+                                    transform: translate(0.9%, -4%);
                                 }
                                 50% {
-                                    transform: translate(20px, 0);
+                                    transform: translate(1%, 0);
                                 }
                                 56.25% {
-                                    transform: translate(18.5px, 8);
+                                    transform: translate(0.9%, 4%);
                                 }
                                 62.5% {
-                                    transform: translate(14.5px, 14.5px);
+                                    transform: translate(0.7%, 7%);
                                 }
                                 68.75% {
-                                    transform: translate(8px, 18.5px);
+                                    transform: translate(0.4%, 9%);
                                 }
                                 75% {
-                                    transform: translate(0, 20px);
+                                    transform: translate(0, 10%);
                                 }
                                 81.25% {
-                                    transform: translate(-8px, 18.5px);
+                                    transform: translate(-0.4%, 9%);
                                 }
                                 87.5% {
-                                    transform: translate(-14.5px, 14.5px);
+                                    transform: translate(-0.7%, 7%);
                                 }
                                 93.75% {
-                                    transform: translate(-18.5px, 8px);
+                                    transform: translate(-0.9%, 4%);
                                 }
                                 100% {
-                                    transform: translate(-20px, 0);
+                                    transform: translate(-1%, 0);
+                                }
+                            }
+
+                            @media only screen and (orientation: portrait) {
+                                @keyframes wave6-anim-right {
+                                    0% {
+                                        transform: translate(-4%, 0);
+                                    }
+                                    6.25% {
+                                        transform: translate(-3.5%, -4%);
+                                    }
+                                    12.5% {
+                                        transform: translate(-2.5%, -7%);
+                                    }
+                                    18.75% {
+                                        transform: translate(-1.5%, -9%);
+                                    }
+                                    25% {
+                                        transform: translate(0, -10%);
+                                    }
+                                    31.25% {
+                                        transform: translate(1.5%, -9%);
+                                    }
+                                    37.5% {
+                                        transform: translate(2.5%, -7%);
+                                    }
+                                    43.75% {
+                                        transform: translate(3.5%, -4%);
+                                    }
+                                    50% {
+                                        transform: translate(4%, 0);
+                                    }
+                                    56.25% {
+                                        transform: translate(3.5%, 4%);
+                                    }
+                                    62.5% {
+                                        transform: translate(2.5%, 7%);
+                                    }
+                                    68.75% {
+                                        transform: translate(1.5%, 9%);
+                                    }
+                                    75% {
+                                        transform: translate(0, 10%);
+                                    }
+                                    81.25% {
+                                        transform: translate(-1.5%, 9%);
+                                    }
+                                    87.5% {
+                                        transform: translate(-2.5%, 7%);
+                                    }
+                                    93.75% {
+                                        transform: translate(-3.5%, 4%);
+                                    }
+                                    100% {
+                                        transform: translate(-4%, 0);
+                                    }
                                 }
                             }
                         }
